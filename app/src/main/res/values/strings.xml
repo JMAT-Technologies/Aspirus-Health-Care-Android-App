@@ -10,4 +10,8 @@
     <string name="hint_password">Password</string>
     <string name="forgotPW">Forgot Password</string>
     <string name="tv_loginwith">or Login with</string>
+  
+    <string name="hint_Search">Search</string>
+    <string name="btn_Checkout">Checkout</string>
+
 </resources>
