@@ -28,7 +28,17 @@
     <string name="btn_addNewAddress">Add new Address</string>
     <string name="btn_Save">Save</string>
     <string name="btn_Confirm">Confirm</string>
-
+    <string name="et_cardname">Name on Card</string>
+    <string name="et_accountno">Account Number</string>
+    <string name="et_branch">Branch</string>
+    <string name="et_bank">Bank Name</string>
+    <string name="et_speciality">Speciality</string>
+    <string name="et_work">Current Working Place</string>
+    <string name="et_charge">Charge per consult</string>
+    <string name="tv_available">Available Times</string>
+    <string name="tv_profilepic">Upload Profile Picture</string>
+    <string name="tv_slmcimg">Upload SLMC Certificate</string>
+    <string name="tv_nic">Upload NIC</string>
 
 
 </resources>
