@@ -4,4 +4,6 @@
     <string name="btn_addToCart">Add To Cart</string>
     <string name="btn_signup">Sign Up</string>
     <string name="btn_signin">Sign In</string>
+    <string name="hint_Search">Search</string>
+    <string name="btn_Checkout">Checkout</string>
 </resources>
