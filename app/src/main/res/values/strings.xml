@@ -14,5 +14,8 @@
     <string name="hint_Search">Search</string>
     <string name="btn_Checkout">Checkout</string>
     <string name="tv_total">Total</string>
+    <string name="btn_addNewAddress">Add new Address</string>
+    <string name="btn_Save">Save</string>
+    <string name="btm_Confirm">Confirm</string>
 
 </resources>
