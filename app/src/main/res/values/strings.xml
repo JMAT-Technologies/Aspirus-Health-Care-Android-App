@@ -9,6 +9,12 @@
     <string name="et_loginUsername">Username or Email</string>
     <string name="et_password">Password</string>
     <string name="tv_loginwith">or Login with</string>
+    <string name="et_username">Username</string>
+    <string name="et_email">Email</string>
+    <string name="et_phone">Phone</string>
+    <string name="et_confirmPW">Confirm Password</string>
+    <string name="btn_signup">Sign Up</string>
+    <string name="tv_signupwith">or Sign Up with</string>
   
     <string name="et_Search">Search</string>
     <string name="btn_Checkout">Checkout</string>
@@ -16,11 +22,6 @@
     <string name="btn_addNewAddress">Add new Address</string>
     <string name="btn_Save">Save</string>
     <string name="btn_Confirm">Confirm</string>
-    <string name="et_username">Username</string>
-    <string name="et_email">Email</string>
-    <string name="et_phone">Phone</string>
-    <string name="et_confirmPW">Confirm Password</string>
-    <string name="btn_signup">Sign Up</string>
-    <string name="tv_signupwith">or Sign Up with</string>
+
 
 </resources>
