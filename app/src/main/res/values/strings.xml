@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">Aspirus Health Care Android App</string>
-    <string name="btn_addToCart">Add To Cart</string>
+    <string name="btn_phAddToCart">Add To Cart</string>
+    <string name="btn_phQA">Questions And Answers</string>
+    <string name="btn_phEditDelete">Edit or Delete Product</string>
+    <string name="btn_phApplyChanges">Apply Changes</string>
+    <string name="btn_phDelete">Delete</string>
+    <string name="btn_phAddProduct">Add Product</string>
+    <string name="et_phProductName">Product Name</string>
+    <string name="et_phProductDescription">Product Description</string>
+    <string name="et_phProductPrice">Product Price</string>
 </resources>
