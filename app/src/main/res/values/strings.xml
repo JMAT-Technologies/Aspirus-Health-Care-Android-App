@@ -1,9 +1,17 @@
 <resources>
-    <string name="app_name">Aspirus Health Care Android App</string>
+    <string name="app_name">Aspirus Health Care</string>
 
     <string name="btn_addToCart">Add To Cart</string>
-    <string name="btn_signup">Sign Up</string>
+
     <string name="btn_signin">Sign In</string>
+    <string name="label_patientLogin">Patient Login</string>
+    <string name="tv_tagline">All your health needs at one place</string>
+    <string name="hint_loginUsername">Username or Email</string>
+    <string name="hint_password">Password</string>
+    <string name="forgotPW">Forgot Password</string>
+    <string name="tv_loginwith">or Login with</string>
+  
     <string name="hint_Search">Search</string>
     <string name="btn_Checkout">Checkout</string>
+
 </resources>
