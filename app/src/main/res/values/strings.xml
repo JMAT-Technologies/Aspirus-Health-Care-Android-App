@@ -6,16 +6,21 @@
     <string name="btn_signin">Sign In</string>
     <string name="label_patientLogin">Patient Login</string>
     <string name="tv_tagline">All your health needs at one place</string>
-    <string name="hint_loginUsername">Username or Email</string>
-    <string name="hint_password">Password</string>
-    <string name="forgotPW">Forgot Password</string>
+    <string name="et_loginUsername">Username or Email</string>
+    <string name="et_password">Password</string>
     <string name="tv_loginwith">or Login with</string>
   
-    <string name="hint_Search">Search</string>
+    <string name="et_Search">Search</string>
     <string name="btn_Checkout">Checkout</string>
     <string name="tv_total">Total</string>
     <string name="btn_addNewAddress">Add new Address</string>
     <string name="btn_Save">Save</string>
-    <string name="btm_Confirm">Confirm</string>
+    <string name="btn_Confirm">Confirm</string>
+    <string name="et_username">Username</string>
+    <string name="et_email">Email</string>
+    <string name="et_phone">Phone</string>
+    <string name="et_confirmPW">Confirm Password</string>
+    <string name="btn_signup">Sign Up</string>
+    <string name="tv_signupwith">or Sign Up with</string>
 
 </resources>
