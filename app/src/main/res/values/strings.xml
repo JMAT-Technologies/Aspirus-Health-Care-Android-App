@@ -15,6 +15,12 @@
     <string name="et_confirmPW">Confirm Password</string>
     <string name="btn_signup">Sign Up</string>
     <string name="tv_signupwith">or Sign Up with</string>
+    <string name="rbtn_male">Male</string>
+    <string name="rbtn_female">Female</string>
+    <string name="tv_gender">Gender</string>
+    <string name="tv_dob">Date of birth</string>
+    <string name="et_address">Address</string>
+    <string name="btn_next">Next</string>
   
     <string name="et_Search">Search</string>
     <string name="btn_Checkout">Checkout</string>
@@ -22,6 +28,7 @@
     <string name="btn_addNewAddress">Add new Address</string>
     <string name="btn_Save">Save</string>
     <string name="btn_Confirm">Confirm</string>
+
 
 
 </resources>
