@@ -10,7 +10,6 @@
     <string name="et_phProductName">Product Name</string>
     <string name="et_phProductDescription">Product Description</string>
     <string name="et_phProductPrice">Product Price</string>
-    <string name="btn_phAddToCart">Add To Cart</string>
 
     <string name="btn_signin">Sign In</string>
     <string name="label_patientLogin">Patient Login</string>
