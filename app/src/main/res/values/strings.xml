@@ -32,6 +32,7 @@
     <string name="tv_profilepic">Upload Profile Picture</string>
     <string name="tv_slmcimg">Upload SLMC Certificate</string>
     <string name="tv_nic">Upload NIC</string>
+    <string name="btn_done">Done</string>
   
     <string name="et_Search">Search</string>
     <string name="btn_Checkout">Checkout</string>
@@ -39,6 +40,6 @@
     <string name="btn_addNewAddress">Add new Address</string>
     <string name="btn_Save">Save</string>
     <string name="btn_Confirm">Confirm</string>
-    <string name="btn_done">Done</string>
+
 
 </resources>
