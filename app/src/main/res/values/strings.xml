@@ -49,4 +49,6 @@
     <string name="btn_Save">Save</string>
     <string name="btn_Confirm">Confirm</string>
 
+    <string name="btn_channel">Channel</string>
+
 </resources>
