@@ -39,7 +39,6 @@
     <string name="btn_addNewAddress">Add new Address</string>
     <string name="btn_Save">Save</string>
     <string name="btn_Confirm">Confirm</string>
-
-
+    <string name="btn_done">Done</string>
 
 </resources>
