@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">Aspirus Health Care Android App</string>
+    <string name="app_name">Aspirus Health Care</string>
+
     <string name="btn_phAddToCart">Add To Cart</string>
     <string name="btn_phQA">Questions And Answers</string>
     <string name="btn_phEditDelete">Edit or Delete Product</string>
@@ -9,4 +10,44 @@
     <string name="et_phProductName">Product Name</string>
     <string name="et_phProductDescription">Product Description</string>
     <string name="et_phProductPrice">Product Price</string>
+    <string name="btn_phAddToCart">Add To Cart</string>
+
+    <string name="btn_signin">Sign In</string>
+    <string name="label_patientLogin">Patient Login</string>
+    <string name="tv_tagline">All your health needs at one place</string>
+    <string name="et_loginUsername">Username or Email</string>
+    <string name="et_password">Password</string>
+    <string name="tv_loginwith">or Login with</string>
+    <string name="et_username">Username</string>
+    <string name="et_email">Email</string>
+    <string name="et_phone">Phone</string>
+    <string name="et_confirmPW">Confirm Password</string>
+    <string name="btn_signup">Sign Up</string>
+    <string name="tv_signupwith">or Sign Up with</string>
+    <string name="rbtn_male">Male</string>
+    <string name="rbtn_female">Female</string>
+    <string name="tv_gender">Gender</string>
+    <string name="tv_dob">Date of birth</string>
+    <string name="et_address">Address</string>
+    <string name="btn_next">Next</string>
+    <string name="et_cardname">Name on Card</string>
+    <string name="et_accountno">Account Number</string>
+    <string name="et_branch">Branch</string>
+    <string name="et_bank">Bank Name</string>
+    <string name="et_speciality">Speciality</string>
+    <string name="et_work">Current Working Place</string>
+    <string name="et_charge">Charge per consult</string>
+    <string name="tv_available">Available Times</string>
+    <string name="tv_profilepic">Upload Profile Picture</string>
+    <string name="tv_slmcimg">Upload SLMC Certificate</string>
+    <string name="tv_nic">Upload NIC</string>
+    <string name="btn_done">Done</string>
+  
+    <string name="et_Search">Search</string>
+    <string name="btn_Checkout">Checkout</string>
+    <string name="tv_total">Total</string>
+    <string name="btn_addNewAddress">Add new Address</string>
+    <string name="btn_Save">Save</string>
+    <string name="btn_Confirm">Confirm</string>
+
 </resources>
