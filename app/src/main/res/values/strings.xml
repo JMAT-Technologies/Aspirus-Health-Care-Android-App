@@ -50,5 +50,16 @@
     <string name="btn_Confirm">Confirm</string>
 
     <string name="btn_channel">Channel</string>
+    <string name="tv_topdoc">Top Doctors</string>
+    <string name="tv_covid">Covid-19 Statistics</string>
+    <string name="tv_covid_recover">Recovered</string>
+    <string name="btn_add">Add</string>
+    <string name="tv_sort">Sort by</string>
+    <string name="btn_download">Download</string>
+    <string name="btn_startConf">Start Conference</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="tv_patient_detail">Patient Details</string>
+    <string name="tv_prescription_detail">Prescription Details</string>
+    <string name="btn_view">View</string>
 
 </resources>
