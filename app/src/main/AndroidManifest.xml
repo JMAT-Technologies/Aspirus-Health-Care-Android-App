@@ -13,6 +13,9 @@
             android:name=".PatientLogin"
             android:exported="true" />
         <activity
+            android:name=".PharmcyStore"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true" >
             <intent-filter>
