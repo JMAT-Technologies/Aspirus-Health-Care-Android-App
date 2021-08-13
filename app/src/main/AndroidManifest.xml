@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AspirusHealthCareAndroidApp">
         <activity
+            android:name=".PharmcyStore"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

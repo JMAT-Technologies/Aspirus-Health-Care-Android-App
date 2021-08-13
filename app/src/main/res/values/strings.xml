@@ -41,7 +41,7 @@
     <string name="tv_slmcimg">Upload SLMC Certificate</string>
     <string name="tv_nic">Upload NIC</string>
     <string name="btn_done">Done</string>
-  
+
     <string name="et_Search">Search</string>
     <string name="btn_Checkout">Checkout</string>
     <string name="tv_total">Total</string>
