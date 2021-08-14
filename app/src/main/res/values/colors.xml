@@ -29,4 +29,5 @@
     <color name="shadow">#C7D0F8</color>
     <color name="profile_card_top">#7AEFA8</color>
     <color name="profile_card_bottom">#63CCF0</color>
+    <color name="et_hint">#BABABA</color>
 </resources>
