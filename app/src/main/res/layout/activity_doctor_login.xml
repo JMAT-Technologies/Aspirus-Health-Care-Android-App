@@ -30,51 +30,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/login_dots" />
 
-    <EditText
-        android:id="@+id/et_loginUsername"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:width="@dimen/et_width"
-        android:height="@dimen/et_height"
-        android:background="@drawable/edittext"
-        android:drawableEnd="@drawable/ic_baseline_person_24"
-        android:elevation="10dp"
-        android:ems="10"
-        android:hint="@string/et_loginUsername"
-        android:inputType="textPersonName|textEmailAddress"
-        android:minHeight="48dp"
-        android:paddingLeft="@dimen/et_padding_lr"
-        android:paddingRight="@dimen/et_padding_lr"
-        android:textColorHint="@color/et_hint"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_tagline"
-        tools:ignore="TextContrastCheck" />
-
-    <EditText
-        android:id="@+id/et_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:width="@dimen/et_width"
-        android:height="@dimen/et_height"
-        android:background="@drawable/edittext"
-        android:drawableEnd="@drawable/ic_baseline_visibility_24"
-        android:elevation="10dp"
-        android:ems="10"
-        android:hint="@string/et_password"
-        android:inputType="textPassword"
-        android:minHeight="48dp"
-        android:paddingLeft="@dimen/et_padding_lr"
-        android:paddingRight="@dimen/et_padding_lr"
-        android:textColorHint="@color/et_hint"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_loginUsername"
-        tools:ignore="MissingConstraints,TextContrastCheck" />
-
     <TextView
         android:id="@+id/label_patientLabel"
         android:layout_width="wrap_content"
@@ -103,24 +58,57 @@
         app:layout_constraintTop_toBottomOf="@+id/label_patientLabel"
         tools:ignore="TextContrastCheck" />
 
-    <Button
-        android:id="@+id/btn_signin"
+    <EditText
+        android:id="@+id/et_loginUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:width="@dimen/btn_sign_width"
-        android:height="@dimen/btn_sign_height"
-        android:background="@drawable/btn_sign"
-        android:drawableEnd="@drawable/ic_baseline_navigate_next_24"
-        android:text="@string/btn_signin"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="16sp"
+        android:layout_marginTop="24dp"
+        android:width="@dimen/et_width"
+        android:height="@dimen/et_height"
+        android:background="@drawable/edittext"
+        android:drawableEnd="@drawable/ic_baseline_person_24"
+        android:elevation="10dp"
+        android:ems="10"
+        android:hint="@string/et_loginUsername"
+        android:inputType="textPersonName|textEmailAddress"
+        android:minHeight="48dp"
+        android:paddingLeft="@dimen/et_padding_lr"
+        android:paddingRight="@dimen/et_padding_lr"
+        android:textColorHint="@color/et_hint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_password"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tagline"
         tools:ignore="TextContrastCheck" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/et_password"
+        android:layout_width="@dimen/et_width"
+        android:layout_height="@dimen/et_height"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edittext"
+        android:elevation="10dp"
+        android:hint="@string/et_password"
+        android:textColorHint="@color/et_hint"
+        app:boxBackgroundColor="@null"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_loginUsername"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="@dimen/et_width"
+            android:layout_height="@dimen/et_height"
+            android:background="@drawable/edittext"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:paddingLeft="@dimen/et_padding_lr"
+            android:paddingRight="@dimen/et_padding_lr" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/tv_forgotpw"
@@ -137,8 +125,30 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_password" />
 
+    <Button
+        android:id="@+id/btn_signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:width="@dimen/btn_sign_width"
+        android:height="@dimen/btn_sign_height"
+        app:backgroundTint="@null"
+        android:background="@drawable/btn_sign"
+        android:drawableEnd="@drawable/ic_baseline_navigate_next_24"
+        android:drawablePadding="-30dp"
+        android:paddingRight="@dimen/btn_sign_padding"
+        android:text="@string/btn_signin"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_password"
+        tools:ignore="TextContrastCheck" />
+
     <TextView
-        android:id="@+id/tv_forgotpw2"
+        android:id="@+id/tv_loginsignup"
         android:layout_width="198dp"
         android:layout_height="48dp"
         android:clickable="true"
@@ -147,21 +157,21 @@
         android:minHeight="48dp"
         android:text="@string/tv_loginsignup"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/tv_forgotpw3"
+        app:layout_constraintBottom_toTopOf="@+id/tv_loginpatientdoc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/tv_forgotpw3"
-        android:layout_width="184dp"
+        android:id="@+id/tv_loginpatientdoc"
+        android:layout_width="190dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="16dp"
         android:clickable="true"
         android:focusable="true"
         android:gravity="center"
         android:minHeight="48dp"
-        android:text="@string/tv_loginpatientdoc"
+        android:text="@string/tv_logindocpatient"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
