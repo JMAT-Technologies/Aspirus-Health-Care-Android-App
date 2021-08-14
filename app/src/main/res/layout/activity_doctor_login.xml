@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PatientLogin">
+    tools:context=".DoctorLogin">
 
     <ImageView
         android:id="@+id/logo"
@@ -20,8 +20,8 @@
 
     <ImageView
         android:id="@+id/stars"
-        android:layout_width="325.28dp"
-        android:layout_height="477.25dp"
+        android:layout_width="327dp"
+        android:layout_height="502dp"
         android:layout_marginTop="147dp"
         android:contentDescription="star"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,7 +80,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="@string/label_patientLogin"
+        android:text="@string/label_doctorLogin"
         android:textColor="@color/blue"
         android:textSize="28sp"
         android:textStyle="bold"
@@ -156,7 +156,7 @@
         android:id="@+id/tv_forgotpw3"
         android:layout_width="184dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="24dp"
         android:clickable="true"
         android:focusable="true"
         android:gravity="center"
