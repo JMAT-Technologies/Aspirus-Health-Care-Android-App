@@ -2,8 +2,9 @@
 <resources>
     <dimen name="btn_sign_width">143dp</dimen>
     <dimen name="btn_sign_height">44dp</dimen>
-    <dimen name="et_height">44dp</dimen>
+    <dimen name="et_height">48dp</dimen>
     <dimen name="et_width">307dp</dimen>
     <dimen name="et_padding_lr">20dp</dimen>
+    <dimen name="btn_sign_padding">16dp</dimen>
     <dimen name="heading_textsize">30sp</dimen>
 </resources>
