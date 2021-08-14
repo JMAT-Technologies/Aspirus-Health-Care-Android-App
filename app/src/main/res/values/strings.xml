@@ -62,4 +62,9 @@
     <string name="tv_prescription_detail">Prescription Details</string>
     <string name="btn_view">View</string>
 
+    <string name="et_forgotpw">Forgot Password?</string>
+    <string name="tv_loginsignup">Don\'t have an account? Sign Up</string>
+    <string name="tv_loginpatientdoc">Are you a doctor? Login Here </string>
+    <string name="label_doctorLogin">Doctor Login</string>
+
 </resources>
