@@ -65,4 +65,9 @@
     <string name="tv_doctorname">Doctor Name</string>
     <string name="tv_heading_channeling">Channeling</string>
 
+    <string name="et_forgotpw">Forgot Password?</string>
+    <string name="tv_loginsignup">Don\'t have an account? Sign Up</string>
+    <string name="tv_loginpatientdoc">Are you a doctor? Login Here </string>
+    <string name="label_doctorLogin">Doctor Login</string>
+
 </resources>

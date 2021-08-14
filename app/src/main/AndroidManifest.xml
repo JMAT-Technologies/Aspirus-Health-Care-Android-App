@@ -19,6 +19,9 @@
             android:name=".Homepage"
             android:exported="true" />
         <activity
+            android:name=".DoctorLogin"
+            android:exported="true" />
+        <activity
             android:name=".PatientLogin"
             android:exported="true" />
         <activity
@@ -29,7 +32,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
