@@ -61,5 +61,8 @@
     <string name="tv_patient_detail">Patient Details</string>
     <string name="tv_prescription_detail">Prescription Details</string>
     <string name="btn_view">View</string>
+    <string name="tv_highlight1">Highlight</string>
+    <string name="tv_doctorname">Doctor Name</string>
+    <string name="tv_heading_channeling">Channeling</string>
 
 </resources>
