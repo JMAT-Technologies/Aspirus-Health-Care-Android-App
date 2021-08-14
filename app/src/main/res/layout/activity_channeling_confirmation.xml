@@ -25,7 +25,7 @@
         android:fontFamily="arial"
         android:text="@string/tv_heading_channeling"
         android:textColor="@color/blue"
-        android:textSize="28"
+        android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/imageView7"
         app:layout_constraintTop_toTopOf="parent" />

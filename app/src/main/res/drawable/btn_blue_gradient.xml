@@ -5,6 +5,7 @@
     <corners android:radius="100dp" />
 
     <gradient
+        android:type="linear"
         android:startColor="@color/btn_blue_left"
         android:centerColor="@color/btn_blue_middle"
         android:endColor="@color/btn_blue_end" />

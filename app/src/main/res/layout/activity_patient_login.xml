@@ -134,7 +134,7 @@
         android:width="@dimen/btn_sign_width"
         android:height="@dimen/btn_sign_height"
         app:backgroundTint="@null"
-        android:background="@drawable/btn_sign"
+        android:background="@drawable/btn_blue_gradient"
         android:drawableEnd="@drawable/ic_baseline_navigate_next_24"
         android:drawablePadding="-30dp"
         android:paddingRight="@dimen/btn_sign_padding"
