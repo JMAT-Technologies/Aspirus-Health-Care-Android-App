@@ -42,7 +42,6 @@
         android:elevation="10dp"
         android:ems="10"
         android:hint="@string/et_loginUsername"
-        android:hintTextColor="#78909C"
         android:inputType="textPersonName|textEmailAddress"
         android:minHeight="48dp"
         android:paddingLeft="@dimen/et_padding_lr"
