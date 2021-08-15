@@ -70,5 +70,9 @@
     <string name="tv_loginpatientdoc">Are you a doctor? Login Here </string>
     <string name="label_doctorLogin">Doctor Login</string>
     <string name="tv_logindocpatient">Are you a patient? Login Here</string>
+    <string name="label_bloodpressure">Blood Pressure - </string>
+    <string name="label_sugar">Sugar Level - </string>
+    <string name="heading_profile">My Profile</string>
+    <string name="label_bloodgroup">Blood Group</string>
 
 </resources>
