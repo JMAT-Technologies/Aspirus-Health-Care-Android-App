@@ -3,3 +3,6 @@
 <a href="https://github.com/MininduSenadheera">
   <img src="https://avatars.githubusercontent.com/u/69930656?size=50&v=4">
 </a>
+<a href="https://github.com/MininduSenadheera">
+  <img src="https://avatars.githubusercontent.com/u/69930656?size=50&v=4">
+</a>
