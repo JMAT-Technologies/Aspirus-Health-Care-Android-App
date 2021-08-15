@@ -1,15 +1,7 @@
 # Aspirus Health Care Android Application
 # Contributors
-  <a href="https://github.com/MininduSenadheera">
-    <img src="https://avatars.githubusercontent.com/u/69930656?size=50&v=4">
+  <a href="https://github.com/JMAT-Technologies/Aspirus-Health-Care-Android-App/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=JMAT-Technologies/Aspirus-Health-Care-Android-App" />
   </a>
-  <a href="https://github.com/dasundoloswala">
-    <img src="https://avatars.githubusercontent.com/u/86093844?size=50&v=4">
-  </a>
-  <a href="https://github.com/JoshuaAmarasinghe">
-    <img src="https://avatars.githubusercontent.com/u/86247140?size=50&v=4">
-  </a>
-  <a href="https://github.com/Ashen-Ravisara">
-    <img src="https://avatars.githubusercontent.com/u/85801642?size=50&v=4">
-  </a>
+  Made with [contributors-img](https://contrib.rocks).
 
