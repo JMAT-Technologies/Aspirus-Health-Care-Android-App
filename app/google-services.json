@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "74071680271",
+    "project_id": "aspirus-health-care",
+    "storage_bucket": "aspirus-health-care.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:74071680271:android:73d63437b735b31ba40a7a",
+        "android_client_info": {
+          "package_name": "com.example.aspirushealthcareandroidapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "74071680271-fe99apuhaeifmums32qvfikokom39fi8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.aspirushealthcareandroidapp",
+            "certificate_hash": "2b8adae43084abe2205d22412d361efddec7b1b6"
+          }
+        },
+        {
+          "client_id": "74071680271-ua59780ba9772jhpq62kjhgtasaf9m8o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHQNS028n1rNsFzo-nm5lKVQyOLukXX4Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "74071680271-ua59780ba9772jhpq62kjhgtasaf9m8o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
