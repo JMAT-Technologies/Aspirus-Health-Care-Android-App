@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PatientLogin">
+    tools:context=".DoctorLogin">
 
     <ImageView
         android:id="@+id/logo"
@@ -20,8 +20,8 @@
 
     <ImageView
         android:id="@+id/stars"
-        android:layout_width="325.28dp"
-        android:layout_height="477.25dp"
+        android:layout_width="327dp"
+        android:layout_height="502dp"
         android:layout_marginTop="147dp"
         android:contentDescription="star"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,8 +34,8 @@
         android:id="@+id/label_patientLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="@string/label_patientLogin"
+        android:layout_marginTop="50dp"
+        android:text="@string/label_doctorLogin"
         android:textColor="@color/blue"
         android:textSize="28sp"
         android:textStyle="bold"
@@ -102,7 +102,6 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="@dimen/et_width"
             android:layout_height="@dimen/et_height"
-            android:minHeight="48dp"
             android:background="@drawable/edittext"
             android:ems="10"
             android:inputType="textPassword"
@@ -165,19 +164,18 @@
 
     <TextView
         android:id="@+id/tv_loginpatientdoc"
-        android:layout_width="184dp"
+        android:layout_width="190dp"
         android:layout_height="48dp"
         android:layout_marginBottom="16dp"
         android:clickable="true"
         android:focusable="true"
         android:gravity="center"
         android:minHeight="48dp"
-        android:text="@string/tv_loginpatientdoc"
+        android:text="@string/tv_logindocpatient"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
