@@ -21,6 +21,7 @@ public class PatientSignUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_sign_up);
 
+        //date picker popup
         dob = findViewById(R.id.signup_dob);
         dob.getEditText().setInputType(InputType.TYPE_NULL);
         dob.getEditText().setOnClickListener(new View.OnClickListener() {
