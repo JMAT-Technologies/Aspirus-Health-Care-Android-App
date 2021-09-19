@@ -1,41 +1,34 @@
 {
   "project_info": {
-    "project_number": "74071680271",
-    "project_id": "aspirus-health-care",
-    "storage_bucket": "aspirus-health-care.appspot.com"
+    "project_number": "164681053884",
+    "firebase_url": "https://aspirus-health-care-b40b9-default-rtdb.firebaseio.com",
+    "project_id": "aspirus-health-care-b40b9",
+    "storage_bucket": "aspirus-health-care-b40b9.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:74071680271:android:73d63437b735b31ba40a7a",
+        "mobilesdk_app_id": "1:164681053884:android:ca8f3f66b69dab918f82b9",
         "android_client_info": {
           "package_name": "com.example.aspirushealthcareandroidapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "74071680271-fe99apuhaeifmums32qvfikokom39fi8.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.aspirushealthcareandroidapp",
-            "certificate_hash": "2b8adae43084abe2205d22412d361efddec7b1b6"
-          }
-        },
-        {
-          "client_id": "74071680271-ua59780ba9772jhpq62kjhgtasaf9m8o.apps.googleusercontent.com",
+          "client_id": "164681053884-8ienorh470s4ark5n5vj0amoks3svi4a.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAHQNS028n1rNsFzo-nm5lKVQyOLukXX4Q"
+          "current_key": "AIzaSyAN_HYfMCHKkP7sOW0_eXOU_gqnym6x0qA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "74071680271-ua59780ba9772jhpq62kjhgtasaf9m8o.apps.googleusercontent.com",
+              "client_id": "164681053884-8ienorh470s4ark5n5vj0amoks3svi4a.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
