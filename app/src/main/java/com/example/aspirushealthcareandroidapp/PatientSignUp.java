@@ -6,6 +6,7 @@ import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.RadioButton;
 
@@ -24,6 +25,7 @@ public class PatientSignUp extends AppCompatActivity {
     RadioButton female;
     TextInputLayout password;
     TextInputLayout confirmPassword;
+    Button signup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,7 @@ public class PatientSignUp extends AppCompatActivity {
         female = findViewById(R.id.rbtn_female);
         password = findViewById(R.id.signup_password);
         confirmPassword = findViewById(R.id.signup_confirm_pw);
+        signup = findViewById(R.id.btn_signup);
 
         //date picker popup
         dob.getEditText().setInputType(InputType.TYPE_NULL);
