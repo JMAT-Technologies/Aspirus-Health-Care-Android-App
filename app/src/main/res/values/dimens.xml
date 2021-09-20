@@ -14,9 +14,10 @@
     <dimen name="email_fontsize">12sp</dimen>
     <dimen name="bloodpressure_width">347dp</dimen>
     <dimen name="bloodpressure_height">70dp</dimen>
-    <dimen name="bloodgroup_card_width">135dp</dimen>
+    <dimen name="bloodgroup_card_width">170dp</dimen>
     <dimen name="profile_card_sm_height">82dp</dimen>
     <dimen name="card_radius">12dp</dimen>
-    <dimen name="bmi_card_width">180dp</dimen>
-    <dimen name="earnings_card_width">155</dimen>
+    <dimen name="bmi_card_width">160dp</dimen>
+    <dimen name="earnings_card_width">160</dimen>
+    <dimen name="et_signup">330dp</dimen>
 </resources>
