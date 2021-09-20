@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -61,6 +62,83 @@ public class PatientSignUp extends AppCompatActivity {
                 calendar.show();
             }
         });
+
+
+        //sign up function
+        btn_signup.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                SignUp();
+            }
+        });
+
+    }
+
+    public void SignUp(){
+        String username = et_username.getEditText().getText().toString();
+        String email = et_email.getEditText().getText().toString();
+        String phone = et_phone.getEditText().getText().toString();
+        String dob = et_dob.getEditText().getText().toString();
+        String password = et_password.getEditText().getText().toString();
+        String confirmPassword = et_confirmPassword.getEditText().getText().toString();
+        String gender;
+        if(rbtn_male.isChecked()){
+            gender = "male";
+        } else if(rbtn_female.isChecked()) {
+            gender = "female";
+        } else if (!rbtn_female.isChecked() | !rbtn_male.isChecked()){
+            rbtn_female.setError("Require");
+            rbtn_male.setError("Require");
+        } else {
+            rbtn_male.setError(null);
+            rbtn_female.setError(null);
+        }
+
+        if(username.isEmpty()){
+            et_username.setError("Required");
+        }else{
+            et_username.setError(null);
+            et_username.setErrorEnabled(false);
+        }
+
+        if(dob.isEmpty()){
+            et_dob.setError("Required");
+        } else {
+            et_dob.setError(null);
+            et_dob.setErrorEnabled(false);
+        }
+
+        if(!UserValidations.emailValidate(email)){
+            et_email.setError("This must be an email");
+        }else {
+            et_email.setError(null);
+            et_email.setErrorEnabled(false);
+        }
+
+        if(!UserValidations.phoneValidate(phone)){
+            et_phone.setError("This must be a phone number");
+        }else {
+            et_phone.setError(null);
+            et_phone.setErrorEnabled(false);
+        }
+
+        if(!UserValidations.passwordValidate(password)){
+            et_password.setError("Password must contain upper and lower case letters and numbers");
+        }else {
+            et_password.setError(null);
+            et_password.setErrorEnabled(false);
+        }
+
+        if(!UserValidations.passwordValidate(confirmPassword)){
+            et_confirmPassword.setError("Password must contain upper and lower case letters and numbers");
+        }else {
+            et_confirmPassword.setError(null);
+            et_confirmPassword.setErrorEnabled(false);
+        }
+
+        if(!password.equals(confirmPassword)){
+            Toast.makeText(this,"Password and Confirm Password must be equal", Toast.LENGTH_SHORT);
+        }
     }
 
 }
