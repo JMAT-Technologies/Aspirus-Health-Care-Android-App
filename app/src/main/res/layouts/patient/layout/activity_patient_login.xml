@@ -59,7 +59,7 @@
         tools:ignore="TextContrastCheck" />
 
     <EditText
-        android:id="@+id/et_loginUsername"
+        android:id="@+id/login_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -69,8 +69,8 @@
         android:drawableEnd="@drawable/ic_baseline_person_24"
         android:elevation="10dp"
         android:ems="10"
-        android:hint="@string/et_loginUsername"
-        android:inputType="textPersonName|textEmailAddress"
+        android:hint="@string/et_email"
+        android:inputType="textEmailAddress"
         android:minHeight="48dp"
         android:paddingLeft="@dimen/et_padding_lr"
         android:paddingRight="@dimen/et_padding_lr"
@@ -83,7 +83,7 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/et_password"
+        android:id="@+id/login_password"
         android:layout_width="@dimen/et_width"
         android:layout_height="@dimen/et_height"
         android:layout_marginTop="20dp"
@@ -96,7 +96,7 @@
         app:boxStrokeWidthFocused="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_loginUsername"
+        app:layout_constraintTop_toBottomOf="@+id/login_email"
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -124,16 +124,15 @@
         android:text="@string/et_forgotpw"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_password" />
+        app:layout_constraintTop_toBottomOf="@+id/login_password" />
 
     <Button
-        android:id="@+id/btn_signin"
+        android:id="@+id/btn_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:width="@dimen/btn_sign_width"
         android:height="@dimen/btn_sign_height"
-        app:backgroundTint="@null"
         android:background="@drawable/btn_blue_gradient"
         android:drawableEnd="@drawable/ic_baseline_navigate_next_24"
         android:drawablePadding="-30dp"
@@ -142,10 +141,11 @@
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="16sp"
+        app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_password"
+        app:layout_constraintTop_toBottomOf="@+id/login_password"
         tools:ignore="TextContrastCheck" />
 
     <TextView
