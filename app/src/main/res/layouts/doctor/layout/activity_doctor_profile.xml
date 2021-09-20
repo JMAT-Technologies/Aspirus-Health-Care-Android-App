@@ -110,7 +110,7 @@
         app:layout_constraintTop_toBottomOf="@+id/profile_card">
 
         <TextView
-            android:id="@+id/label_monthly"
+            android:id="@+id/label_bloodgroup"
             android:layout_width="135dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -121,7 +121,7 @@
             android:textSize="14sp" />
 
         <TextView
-            android:id="@+id/tv_monthlyearnings"
+            android:id="@+id/tv_bloodgroup"
             android:layout_width="135dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -148,7 +148,7 @@
         app:layout_constraintTop_toBottomOf="@+id/profile_card">
 
         <TextView
-            android:id="@+id/label_totalearnings"
+            android:id="@+id/label_bmi"
             android:layout_width="133dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -160,7 +160,7 @@
             tools:ignore="TextContrastCheck" />
 
         <TextView
-            android:id="@+id/tv_totalearnings"
+            android:id="@+id/tv_bmi"
             android:layout_width="134dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
