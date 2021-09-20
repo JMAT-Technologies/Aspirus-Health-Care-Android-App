@@ -87,42 +87,56 @@
         android:layout_height="@dimen/profile_card_sm_height"
         android:layout_marginStart="26dp"
         android:layout_marginTop="10dp"
-        app:cardBackgroundColor="@color/red"
+        app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="@dimen/card_radius"
         app:cardElevation="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profile_card">
 
         <TextView
-            android:id="@+id/label_monthly"
+            android:id="@+id/label_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="40dp"
+            android:text="@string/label_age"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="40dp"
+            android:text="21"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/label_bloodgroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="10dp"
             android:text="@string/label_bloodgroup"
-            android:textColor="@color/white"
+            android:textColor="@color/red"
             android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tv_monthlyearnings"
+            android:id="@+id/tv_bloodgroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="10dp"
             android:text="B+"
-            android:textColor="@color/white"
+            android:textColor="@color/red"
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <ImageView
-            android:id="@+id/icon_bloodgroup"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="95dp"
-            android:layout_marginTop="45dp"
-            android:contentDescription="@string/label_bloodgroup"
-            app:srcCompat="@drawable/ic_baseline_bloodtype_24" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -162,7 +176,7 @@
             tools:ignore="TextContrastCheck" />
 
         <TextView
-            android:id="@+id/label_totalearnings"
+            android:id="@+id/label_bmi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -196,7 +210,7 @@
             tools:ignore="TextContrastCheck" />
 
         <TextView
-            android:id="@+id/tv_totalearnings"
+            android:id="@+id/tv_bmi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="75dp"
