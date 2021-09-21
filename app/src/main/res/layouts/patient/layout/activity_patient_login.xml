@@ -10,7 +10,7 @@
         android:id="@+id/logo"
         android:layout_width="163.25dp"
         android:layout_height="160.98dp"
-        android:layout_marginTop="67dp"
+        android:layout_marginTop="60dp"
         android:contentDescription="Logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -66,7 +66,6 @@
         android:width="@dimen/et_width"
         android:height="@dimen/et_height"
         android:background="@drawable/edittext"
-        android:drawableEnd="@drawable/ic_baseline_person_24"
         android:elevation="10dp"
         android:ems="10"
         android:hint="@string/et_email"
@@ -81,35 +80,28 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_tagline"
         tools:ignore="TextContrastCheck" />
 
-
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
         android:id="@+id/login_password"
-        android:layout_width="@dimen/et_width"
-        android:layout_height="@dimen/et_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:width="@dimen/et_width"
+        android:height="@dimen/et_height"
         android:background="@drawable/edittext"
         android:elevation="10dp"
+        android:ems="10"
         android:hint="@string/et_password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:paddingLeft="@dimen/et_padding_lr"
+        android:paddingRight="@dimen/et_padding_lr"
         android:textColorHint="@color/et_hint"
-        app:boxBackgroundColor="@null"
-        app:boxStrokeWidth="0dp"
-        app:boxStrokeWidthFocused="0dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_email"
-        app:passwordToggleEnabled="true">
+        tools:ignore="TextContrastCheck" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="@dimen/et_width"
-            android:layout_height="@dimen/et_height"
-            android:minHeight="48dp"
-            android:background="@drawable/edittext"
-            android:ems="10"
-            android:inputType="textPassword"
-            android:paddingLeft="@dimen/et_padding_lr"
-            android:paddingRight="@dimen/et_padding_lr" />
-
-    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/tv_forgotpw"
@@ -127,7 +119,7 @@
         app:layout_constraintTop_toBottomOf="@+id/login_password" />
 
     <Button
-        android:id="@+id/btn_signup"
+        android:id="@+id/btn_signin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
@@ -152,32 +144,62 @@
         android:id="@+id/tv_loginsignup"
         android:layout_width="198dp"
         android:layout_height="48dp"
+        android:layout_marginBottom="8dp"
         android:clickable="true"
         android:focusable="true"
         android:gravity="center"
         android:minHeight="48dp"
         android:text="@string/tv_loginsignup"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/tv_loginpatientdoc"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/tv_loginpatientdoc"
-        android:layout_width="184dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="16dp"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_google"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="8dp"
         android:clickable="true"
-        android:focusable="true"
-        android:gravity="center"
-        android:minHeight="48dp"
-        android:text="@string/tv_loginpatientdoc"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:tint="@null"
+        android:src="@drawable/ic_google"
+        app:backgroundTint="@color/white"
+        app:fabSize="mini"
+        app:icon="@drawable/ic_google"
+        app:layout_constraintEnd_toStartOf="@+id/fab_facebook"
+        app:layout_constraintTop_toBottomOf="@+id/btn_signin" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_facebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:clickable="true"
+        app:tint="@null"
+        app:iconSize="28dp"
+        android:src="@drawable/ic_facebook"
+        app:backgroundTint="@color/white"
+        app:fabSize="mini"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_signin" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_twitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:clickable="true"
+        app:tint="@null"
+        android:src="@drawable/ic_twitter"
+        app:backgroundTint="@color/white"
+        app:fabSize="mini"
+        app:layout_constraintStart_toEndOf="@+id/fab_facebook"
+        app:layout_constraintTop_toBottomOf="@+id/btn_signin" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
