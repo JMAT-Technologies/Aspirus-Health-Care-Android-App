@@ -59,14 +59,13 @@
         tools:ignore="TextContrastCheck" />
 
     <EditText
-        android:id="@+id/login_email"
+        android:id="@+id/doc_login_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:width="@dimen/et_width"
         android:height="@dimen/et_height"
         android:background="@drawable/edittext"
-        android:drawableEnd="@drawable/ic_baseline_person_24"
         android:elevation="10dp"
         android:ems="10"
         android:hint="@string/et_email"
@@ -81,34 +80,27 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_tagline"
         tools:ignore="TextContrastCheck" />
 
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/login_password"
-        android:layout_width="@dimen/et_width"
-        android:layout_height="@dimen/et_height"
+    <EditText
+        android:id="@+id/doc_login_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:width="@dimen/et_width"
+        android:height="@dimen/et_height"
         android:background="@drawable/edittext"
         android:elevation="10dp"
+        android:ems="10"
         android:hint="@string/et_password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:paddingLeft="@dimen/et_padding_lr"
+        android:paddingRight="@dimen/et_padding_lr"
         android:textColorHint="@color/et_hint"
-        app:boxBackgroundColor="@null"
-        app:boxStrokeWidth="0dp"
-        app:boxStrokeWidthFocused="0dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_email"
-        app:passwordToggleEnabled="true">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="@dimen/et_width"
-            android:layout_height="@dimen/et_height"
-            android:background="@drawable/edittext"
-            android:ems="10"
-            android:inputType="textPassword"
-            android:paddingLeft="@dimen/et_padding_lr"
-            android:paddingRight="@dimen/et_padding_lr" />
-
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintTop_toBottomOf="@+id/doc_login_email"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/tv_forgotpw"
@@ -123,7 +115,7 @@
         android:text="@string/et_forgotpw"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_password" />
+        app:layout_constraintTop_toBottomOf="@+id/doc_login_password" />
 
     <Button
         android:id="@+id/btn_signup"
@@ -144,7 +136,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_password"
+        app:layout_constraintTop_toBottomOf="@+id/doc_login_password"
         tools:ignore="TextContrastCheck" />
 
     <TextView
@@ -157,25 +149,9 @@
         android:minHeight="48dp"
         android:text="@string/tv_loginsignup"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/tv_loginpatientdoc"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_loginpatientdoc"
-        android:layout_width="190dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="16dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:gravity="center"
-        android:minHeight="48dp"
-        android:text="@string/tv_logindocpatient"
-        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
