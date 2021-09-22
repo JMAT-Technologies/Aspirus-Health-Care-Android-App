@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:elevation="10dp"
     tools:context=".PatientProfile">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,7 +23,7 @@
             android:id="@+id/username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
             android:text="Minindu Senadheera"
             android:textAlignment="viewStart"
@@ -36,7 +37,7 @@
             android:id="@+id/email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="10dp"
             android:text="minindusenadheera@gmail.com"
             android:textColor="@color/white"
             android:textSize="@dimen/email_fontsize"
@@ -59,232 +60,357 @@
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btn_editprofile"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="6dp"
             android:layout_marginBottom="6dp"
             android:clickable="true"
             android:hapticFeedbackEnabled="true"
-            android:scaleType="fitCenter"
-            android:verticalScrollbarPosition="defaultPosition"
-            android:visibility="visible"
             app:backgroundTint="@color/btn_edit"
+            android:src="@drawable/ic_user_edit_solid"
             app:borderWidth="0dp"
-            app:fabCustomSize="40dp"
             app:fabSize="mini"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:maxImageSize="28dp"
-            app:srcCompat="@drawable/ic_user_edit_solid"
-            app:tint="@color/white"
+            app:tint="@null"
             tools:ignore="SpeakableTextPresentCheck" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_bloodgroup"
-        android:layout_width="@dimen/bloodgroup_card_width"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bloodGroup_age_card"
+        android:layout_width="@dimen/profile_card_sm_width"
         android:layout_height="@dimen/profile_card_sm_height"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="10dp"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="@dimen/card_radius"
-        app:cardElevation="10dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/white_card"
+        android:elevation="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profile_card">
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_bloodtype_24" />
+
+        <TextView
+            android:id="@+id/tv_bloodGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="B+"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/label_bloodGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/label_bloodgroup"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_bloodGroup" />
 
         <TextView
             android:id="@+id/label_age"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginStart="8dp"
             android:text="@string/label_age"
-            android:textColor="@color/red"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_age"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/tv_age"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="130dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
             android:text="21"
-            android:textColor="@color/red"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/label_bloodgroup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/label_bloodgroup"
-            android:textColor="@color/red"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/tv_bloodgroup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="130dp"
-            android:layout_marginTop="10dp"
-            android:text="B+"
-            android:textColor="@color/red"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_bmi"
-        android:layout_width="@dimen/bmi_card_width"
-        android:layout_height="@dimen/profile_card_sm_height"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="26dp"
-        app:cardBackgroundColor="@color/light_blue"
-        app:cardCornerRadius="@dimen/card_radius"
-        app:cardElevation="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_card">
-
-        <TextView
-            android:id="@+id/label_weight"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/label_weight"
-            android:textColor="@color/white"
-            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
             android:textStyle="bold"
-            tools:ignore="TextContrastCheck" />
-
-        <TextView
-            android:id="@+id/label_height"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="30dp"
-            android:text="@string/label_height"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            tools:ignore="TextContrastCheck" />
-
-        <TextView
-            android:id="@+id/label_bmi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="50dp"
-            android:text="@string/label_bmi"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            tools:ignore="TextContrastCheck" />
-
-        <TextView
-            android:id="@+id/tv_weight"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="75dp"
-            android:layout_marginTop="10dp"
-            android:text="60kg"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            tools:ignore="TextContrastCheck" />
-
-        <TextView
-            android:id="@+id/tv_height"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="75dp"
-            android:layout_marginTop="30dp"
-            android:text="6.5ft"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            tools:ignore="TextContrastCheck" />
-
-        <TextView
-            android:id="@+id/tv_bmi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="75dp"
-            android:layout_marginTop="50dp"
-            android:text="16"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            tools:ignore="TextContrastCheck" />
-    </androidx.cardview.widget.CardView>
+            app:layout_constraintStart_toEndOf="@+id/label_age"
+            app:layout_constraintTop_toBottomOf="@+id/label_bloodGroup" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/bloodpressure_sugar"
-        android:layout_width="@dimen/bloodpressure_width"
-        android:layout_height="@dimen/bloodpressure_height"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/bloodpressure_sugar_gradient"
+        android:id="@+id/sugar_card"
+        android:layout_width="@dimen/profile_card_sm_width"
+        android:layout_height="@dimen/profile_card_sm_height"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/green_gradient"
         android:elevation="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card_bloodgroup">
+        app:layout_constraintEnd_toStartOf="@+id/bloodPressure_card"
+        app:layout_constraintStart_toEndOf="@+id/bloodGroup_age_card"
+        app:layout_constraintTop_toBottomOf="@+id/profile_card">
 
-        <TextView
-            android:id="@+id/label_bloodpressure"
+        <ImageView
+            android:id="@+id/img_sugar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="22dp"
-            android:layout_marginTop="12dp"
-            android:text="@string/label_bloodpressure"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="bold"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="TextContrastCheck" />
+            app:srcCompat="@drawable/ic_baseline_bar_chart_24" />
+
+        <TextView
+            android:id="@+id/tv_sugarLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="69 mg/dL"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_sugar" />
 
         <TextView
             android:id="@+id/label_sugar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="22dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
             android:text="@string/label_sugar"
             android:textColor="@color/white"
-            android:textSize="18sp"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sugarLevel" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bloodPressure_card"
+        android:layout_width="@dimen/profile_card_sm_width"
+        android:layout_height="@dimen/profile_card_sm_height"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/pink_orange_gradient"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_card">
+
+        <ImageView
+            android:id="@+id/img_bloodPressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_bar_chart_24" />
+
+        <TextView
+            android:id="@+id/tv_bloodPressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="69 mm/Hg"
+            android:textColor="@color/white"
+            android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/label_bloodpressure"
-            tools:ignore="TextContrastCheck" />
+            app:layout_constraintTop_toBottomOf="@+id/img_bloodPressure" />
 
         <TextView
-            android:id="@+id/tv_bloodpressure"
+            android:id="@+id/label_bloodPressure"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="12dp"
-            android:text="130mm/Hg"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/label_bloodpressure"
             android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/label_bloodpressure"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="TextContrastCheck" />
-
-        <TextView
-            android:id="@+id/tv_sugarlevel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:text="100"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/label_sugar"
-            app:layout_constraintTop_toBottomOf="@+id/tv_bloodpressure"
-            tools:ignore="TextContrastCheck" />
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_bloodPressure" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bmi_card"
+        android:layout_width="@dimen/profile_card_width"
+        android:layout_height="@dimen/profile_card_height"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bmi_card"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bloodGroup_age_card">
+
+        <TextView
+            android:id="@+id/label_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/label_height"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_height"
+            app:layout_constraintStart_toStartOf="@+id/tv_height"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/label_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/label_weight"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_weight"
+            app:layout_constraintStart_toStartOf="@+id/tv_weight"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/label_bmi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/label_bmi"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_bmi"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/label_weight"
+            app:layout_constraintStart_toStartOf="@+id/tv_bmi"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="1.69 m"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tv_weight"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_height" />
+
+        <TextView
+            android:id="@+id/tv_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="69 kg"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tv_bmi"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv_height"
+            app:layout_constraintTop_toBottomOf="@+id/label_weight" />
+
+        <TextView
+            android:id="@+id/tv_bmi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="24.1"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv_weight"
+            app:layout_constraintTop_toBottomOf="@+id/label_bmi" />
+
+        <TextView
+            android:id="@+id/bmi_card_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="3dp"
+            android:text="@string/bmi_card_label"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/bmi_orange_icon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/label_underweight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bmi_card"
+        app:srcCompat="@drawable/ic_circle_orange_20" />
+
+    <TextView
+        android:id="@+id/label_underweight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="47dp"
+        android:text="@string/label_underweight"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bmi_orange_icon"
+        app:layout_constraintEnd_toStartOf="@+id/bmi_green_icon"
+        app:layout_constraintTop_toTopOf="@+id/bmi_orange_icon" />
+
+    <TextView
+        android:id="@+id/label_Normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="45dp"
+        android:text="@string/label_Normal"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bmi_green_icon"
+        app:layout_constraintEnd_toStartOf="@+id/bmi_red_icon"
+        app:layout_constraintTop_toTopOf="@+id/bmi_green_icon" />
+
+    <TextView
+        android:id="@+id/label_overweight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/label_overweight"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bmi_card" />
+
+    <ImageView
+        android:id="@+id/bmi_green_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/label_Normal"
+        app:layout_constraintTop_toBottomOf="@+id/bmi_card"
+        app:srcCompat="@drawable/ic_circle_green_20" />
+
+    <ImageView
+        android:id="@+id/bmi_red_icon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/label_overweight"
+        app:layout_constraintEnd_toStartOf="@+id/label_overweight"
+        app:layout_constraintTop_toTopOf="@+id/label_overweight"
+        app:srcCompat="@drawable/ic_circle_red_20" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

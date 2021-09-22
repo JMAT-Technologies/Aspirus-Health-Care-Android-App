@@ -71,15 +71,25 @@
     <string name="tv_loginpatientdoc">Are you a doctor? Login Here </string>
     <string name="label_doctorLogin">Doctor Login</string>
     <string name="tv_logindocpatient">Are you a patient? Login Here</string>
-    <string name="label_bloodpressure">Blood Pressure - </string>
-    <string name="label_sugar">Sugar Level - </string>
+    <string name="label_bloodpressure">Blood Pressure</string>
+    <string name="label_sugar">Sugar Level</string>
     <string name="heading_profile">My Profile</string>
     <string name="label_bloodgroup">Blood Group</string>
-    <string name="label_age">Age</string>
-    <string name="label_weight">Weight - </string>
-    <string name="label_height">Height - </string>
-    <string name="label_bmi">BMI - </string>
+    <string name="label_age">Age - </string>
+    <string name="label_weight">Weight</string>
+    <string name="label_height">Height</string>
+    <string name="label_bmi">BMI</string>
     <string name="label_monthlyearning">Earned This Month</string>
     <string name="label_totalearnings">Total Earnings</string>
+    <string name="tv_signupLogin">Already have an account? Sign In</string>
+    <string name="logo">Logo</string>
+    <string name="google">Google</string>
+    <string name="facebook">Facebook</string>
+    <string name="twitter">Twitter</string>
+    <string name="doctor">Doctor</string>
+    <string name="bmi_card_label">Body Mass Index</string>
+    <string name="label_underweight">Underweight</string>
+    <string name="label_Normal">Normal</string>
+    <string name="label_overweight">Overweight</string>
 
 </resources>
