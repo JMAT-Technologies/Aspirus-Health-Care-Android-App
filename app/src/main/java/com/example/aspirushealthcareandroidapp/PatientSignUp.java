@@ -1,17 +1,28 @@
 package com.example.aspirushealthcareandroidapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Calendar;
 
@@ -27,39 +38,36 @@ public class PatientSignUp extends AppCompatActivity {
     TextInputLayout et_password;
     TextInputLayout et_confirmPassword;
     Button btn_signup;
+    TextView tv_signupLogin;
+
+    FirebaseAuth firebaseAuth;
+    FirebaseDatabase database;
+    DatabaseReference reference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_sign_up);
 
-        et_username = findViewById(R.id.signup_username);
-        et_email = findViewById(R.id.signup_email);
-        et_phone = findViewById(R.id.signup_phone);
-        et_dob = findViewById(R.id.signup_dob);
-        rbtn_male = findViewById(R.id.rbtn_male);
-        rbtn_female = findViewById(R.id.rbtn_female);
-        et_password = findViewById(R.id.signup_password);
+        et_username        = findViewById(R.id.signup_username);
+        et_email           = findViewById(R.id.signup_email);
+        et_phone           = findViewById(R.id.signup_phone);
+        et_dob             = findViewById(R.id.signup_dob);
+        rbtn_male          = findViewById(R.id.rbtn_male);
+        rbtn_female        = findViewById(R.id.rbtn_female);
+        et_password        = findViewById(R.id.signup_password);
         et_confirmPassword = findViewById(R.id.signup_confirm_pw);
-        btn_signup = findViewById(R.id.btn_signup);
+        btn_signup         = findViewById(R.id.btn_signup);
+        tv_signupLogin     = findViewById(R.id.tv_signupLogin);
+
+        firebaseAuth = FirebaseAuth.getInstance();
 
         //date picker popup
         et_dob.getEditText().setInputType(InputType.TYPE_NULL);
         et_dob.getEditText().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Calendar cldr = Calendar.getInstance();
-                int day = cldr.get(Calendar.DAY_OF_MONTH);
-                int month = cldr.get(Calendar.MONTH);
-                int year = cldr.get(Calendar.YEAR);
-                // date picker dialog
-                calendar = new DatePickerDialog(PatientSignUp.this, new DatePickerDialog.OnDateSetListener() {
-                    @Override
-                    public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                        et_dob.getEditText().setText(dayOfMonth + "/" + (monthOfYear + 1) + "/" + year);
-                    }
-                }, year, month, day);
-                calendar.show();
+                calendarPopUp();
             }
         });
 
@@ -72,6 +80,38 @@ public class PatientSignUp extends AppCompatActivity {
             }
         });
 
+        //link to login screen
+        tv_signupLogin.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                startActivity(new Intent(getApplicationContext(), PatientLogin.class));
+            }
+        });
+
+    }
+
+    //check whether an user is already logged in
+    @Override
+    protected void onStart(){
+        super.onStart();
+        if(firebaseAuth.getCurrentUser() != null){
+            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+            finish();
+        }
+    }
+
+    public void calendarPopUp(){
+        final Calendar cldr = Calendar.getInstance();
+        int day = cldr.get(Calendar.DAY_OF_MONTH);
+        int month = cldr.get(Calendar.MONTH);
+        int year = cldr.get(Calendar.YEAR);
+        // date picker dialog
+        calendar = new DatePickerDialog(PatientSignUp.this, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                et_dob.getEditText().setText(dayOfMonth + "/" + (monthOfYear + 1) + "/" + year);
+            }
+        }, year, month, day);
+        calendar.show();
     }
 
     public void SignUp(){
@@ -81,64 +121,75 @@ public class PatientSignUp extends AppCompatActivity {
         String dob = et_dob.getEditText().getText().toString();
         String password = et_password.getEditText().getText().toString();
         String confirmPassword = et_confirmPassword.getEditText().getText().toString();
-        String gender;
+        String gender = rbtn_male.getText().toString();
+
+        if(UserValidations.usernameNull(et_username)){
+            return;
+        }
+
+        if(!UserValidations.emailValidate(et_email)) {
+            return;
+        }
+
+        if(!UserValidations.phoneValidate(et_phone)) {
+            return;
+        }
+
+        if(UserValidations.dobNull(et_dob)){
+            return;
+        }
+
         if(rbtn_male.isChecked()){
-            gender = "male";
+            gender = rbtn_male.getText().toString();;
         } else if(rbtn_female.isChecked()) {
-            gender = "female";
-        } else if (!rbtn_female.isChecked() | !rbtn_male.isChecked()){
-            rbtn_female.setError("Require");
-            rbtn_male.setError("Require");
-        } else {
-            rbtn_male.setError(null);
-            rbtn_female.setError(null);
+            gender = rbtn_female.getText().toString();;
+        } else if(UserValidations.genderNull(rbtn_male,rbtn_female)){
+            return;
+        }
+        String finalGender = gender;
+
+        if(!UserValidations.passwordValidate(et_password)){
+            return;
         }
 
-        if(username.isEmpty()){
-            et_username.setError("Required");
-        }else{
-            et_username.setError(null);
-            et_username.setErrorEnabled(false);
+        if(!UserValidations.passwordValidate(et_confirmPassword)){
+            return;
         }
 
-        if(dob.isEmpty()){
-            et_dob.setError("Required");
-        } else {
-            et_dob.setError(null);
-            et_dob.setErrorEnabled(false);
+        if(!password.equals(confirmPassword)) {
+            Toast.makeText(PatientSignUp.this, "Password and Confirm Password must be equal", Toast.LENGTH_SHORT).show();
+            return;
         }
+        
+        //registering the user in firebase
+        firebaseAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()){
+                    String userID = firebaseAuth.getCurrentUser().getUid();
 
-        if(!UserValidations.emailValidate(email)){
-            et_email.setError("This must be an email");
-        }else {
-            et_email.setError(null);
-            et_email.setErrorEnabled(false);
-        }
+                    database = FirebaseDatabase.getInstance();
+                    reference = database.getReference("patients");
 
-        if(!UserValidations.phoneValidate(phone)){
-            et_phone.setError("This must be a phone number");
-        }else {
-            et_phone.setError(null);
-            et_phone.setErrorEnabled(false);
-        }
+                    Patient newPatient = new Patient(userID,username,email,phone,dob,finalGender,password);
 
-        if(!UserValidations.passwordValidate(password)){
-            et_password.setError("Password must contain upper and lower case letters and numbers");
-        }else {
-            et_password.setError(null);
-            et_password.setErrorEnabled(false);
-        }
-
-        if(!UserValidations.passwordValidate(confirmPassword)){
-            et_confirmPassword.setError("Password must contain upper and lower case letters and numbers");
-        }else {
-            et_confirmPassword.setError(null);
-            et_confirmPassword.setErrorEnabled(false);
-        }
-
-        if(!password.equals(confirmPassword)){
-            Toast.makeText(this,"Password and Confirm Password must be equal", Toast.LENGTH_SHORT);
-        }
+                    reference.child(userID).setValue(newPatient).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if(task.isSuccessful()){
+                                Toast.makeText(PatientSignUp.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                                finish();
+                            } else {
+                                Toast.makeText(PatientSignUp.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+                } else {
+                    Toast.makeText(PatientSignUp.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
 }
