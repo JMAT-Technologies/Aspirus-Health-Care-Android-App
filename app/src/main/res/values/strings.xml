@@ -80,5 +80,10 @@
     <string name="label_monthlyearning">Earned This Month</string>
     <string name="label_totalearnings">Total Earnings</string>
     <string name="et_search">Search</string>
+    <string name="et_appointmentDate">Date</string>
+    <string name="et_appointmentTime">Time</string>
+    <string name="btn_appointmmentChannel">Channel</string>
+    <string name="tv_heading_addPrescription">Add Prescription</string>
+    <string name="et_doctorName">Doctor Name</string>
 
 </resources>

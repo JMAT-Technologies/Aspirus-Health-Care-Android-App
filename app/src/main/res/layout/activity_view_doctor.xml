@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewDoctorActivity">
+
+
+    <ImageView
+        android:id="@+id/doctor_single_view"
+        android:layout_width="wrap_content"
+        android:layout_height="420dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:scaleType="centerCrop"
+ />
+
+    <EditText
+        android:id="@+id/et_doctorName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/doctor_single_view"
+        android:layout_marginTop="4dp"
+        android:background="@android:color/transparent"
+        android:editable="false"
+        android:gravity="center"
+        android:hint="Doctor Name"
+        android:textSize="26dp"
+        android:textStyle="bold"
+        tools:ignore="Deprecated" />
+
+    <TextView
+        android:id="@+id/speciality_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_doctorName"
+        android:layout_marginTop="1dp"
+        android:gravity="center"
+        android:text="Speciality"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_appointmentDate"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/speciality_name"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:hint="@string/et_appointmentDate"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/et_doctorName"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/et_appointmentTime"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/speciality_name"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="35dp"
+        android:gravity="center"
+        android:hint="@string/et_appointmentTime"
+
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_doctorName"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/btn_appointmmentChannel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/speciality_name"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="68dp"
+        android:width="@dimen/btn_sign_width"
+        android:height="@dimen/btn_sign_height"
+        android:background="@drawable/btn_blue_gradient"
+        android:drawablePadding="-30dp"
+        android:text="@string/btn_appointmmentChannel"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:backgroundTint="@null"
+        app:layout_constraintTop_toBottomOf="@+id/et_doctorName"
+        tools:ignore="TextContrastCheck" />
+
+</RelativeLayout>

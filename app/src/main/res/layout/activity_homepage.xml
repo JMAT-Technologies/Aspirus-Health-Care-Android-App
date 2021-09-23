@@ -6,186 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".Homepage">
 
-    <EditText
-        android:id="@+id/et_search"
-        android:layout_width="376dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="40dp"
-        android:width="@dimen/et_width"
-        android:height="@dimen/et_height"
-        android:background="@drawable/edittext"
-        android:drawableEnd="?android:attr/actionModeWebSearchDrawable"
-        android:elevation="10dp"
-        android:ems="10"
-        android:hint="@string/et_search"
-        android:inputType="textPersonName|textEmailAddress"
-        android:minHeight="48dp"
-        android:paddingLeft="@dimen/et_padding_lr"
-        android:paddingRight="@dimen/et_padding_lr"
-        android:textColorHint="@color/et_hint"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TextContrastCheck" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="94dp"
-        android:layout_height="118dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_doctorname"
-        tools:srcCompat="@drawable/doctor" />
-
-    <TextView
-        android:id="@+id/tv_doctorname5"
-        android:layout_width="84dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/tv_doctorname"
-        app:layout_constraintStart_toEndOf="@+id/tv_doctorname4"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
-
-    <TextView
-        android:id="@+id/tv_doctorname6"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/tv_doctorname"
-        app:layout_constraintStart_toEndOf="@+id/tv_doctorname5"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="94dp"
-        android:layout_height="118dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/tv_doctorname3"
-        tools:srcCompat="@drawable/doctor" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="94dp"
-        android:layout_height="118dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/tv_doctorname2"
-        tools:srcCompat="@drawable/doctor" />
-
-    <TextView
-        android:id="@+id/tv_doctorname4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/tv_doctorname"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
-
     <TextView
         android:id="@+id/tv_topdoc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="41dp"
+        android:layout_marginStart="16dp"
         android:text="@string/tv_topdoc"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_search" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="94dp"
-        android:layout_height="118dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_topdoc"
-        tools:srcCompat="@drawable/doctor" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="94dp"
-        android:layout_height="118dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/tv_topdoc"
-        tools:srcCompat="@drawable/doctor" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="94dp"
-        android:layout_height="118dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/tv_topdoc"
-        tools:srcCompat="@drawable/doctor" />
-
-    <TextView
-        android:id="@+id/tv_doctorname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/tv_doctorname"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <TextView
-        android:id="@+id/tv_doctorname2"
-        android:layout_width="84dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/tv_doctorname"
-        app:layout_constraintStart_toEndOf="@+id/tv_doctorname"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-    <TextView
-        android:id="@+id/tv_doctorname3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/tv_doctorname"
-        app:layout_constraintStart_toEndOf="@+id/tv_doctorname2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        tools:layout_editor_absoluteY="139dp" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
         android:text="@string/tv_covid"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_doctorname4" />
-
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:srcCompat="@drawable/stat1"
-        tools:layout_editor_absoluteX="31dp" />
-
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="186dp"
-        android:layout_height="218dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:srcCompat="@drawable/stat2" />
+        tools:layout_editor_absoluteY="487dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
