@@ -67,6 +67,8 @@ public class ViewDoctorActivity extends AppCompatActivity {
             }
         });
 
+        //Add Appointment
+
         appointmentRef = FirebaseDatabase.getInstance().getReference().child("Appointments");
         btn_appointmmentChannel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,16 +79,15 @@ public class ViewDoctorActivity extends AppCompatActivity {
 
     }
 
-    private void insertAppointmentData(){
+    private void insertAppointmentData() {
 
-        String Date = et_appointmentDate.getText().toString();
-        String Time = et_appointmentTime.getText().toString();
-        String DoctorName = name.getText().toString();
+        String date = et_appointmentDate.getText().toString();
+        String time = et_appointmentTime.getText().toString();
+        String doctorName = name.getText().toString();
 
-        AppointmentModel appointmentModel = new AppointmentModel(Date, Time, DoctorName);
+        AppointmentModel appointmentModel = new AppointmentModel(date, time, doctorName);
 
         appointmentRef.push().setValue(appointmentModel);
         Toast.makeText(ViewDoctorActivity.this, "Appointment Added", Toast.LENGTH_SHORT).show();
     }
-
 }
