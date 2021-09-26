@@ -18,5 +18,6 @@
     <dimen name="profile_card_sm_width">110dp</dimen>
     <dimen name="card_radius">12dp</dimen>
     <dimen name="earnings_card_width">160</dimen>
-    <dimen name="et_signup">330dp</dimen>
+    <dimen name="et_material">330dp</dimen>
+    <dimen name="et_material_sm">160dp</dimen>
 </resources>
