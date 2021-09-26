@@ -2,27 +2,40 @@ package com.example.aspirushealthcareandroidapp;
 
 public class AppointmentModel {
 
-    String Date;
-    String Time;
-    String DoctorName;
+    String date;
+    String time;
+    String doctorName;
 
-    public AppointmentModel(String date, String time, String doctorName ) {
-        Date = date;
-        Time = time;
-        DoctorName = doctorName;
+    public AppointmentModel() {
+    }
+
+    public AppointmentModel(String date, String time, String doctorName) {
+        this.date = date;
+        this.time = time;
+        this.doctorName = doctorName;
     }
 
     public String getDate() {
+        return date;
+    }
 
-        return Date;
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public String getTime() {
+        return time;
+    }
 
-        return Time;
+    public void setTime(String time) {
+        this.time = time;
     }
 
     public String getDoctorName() {
-        return DoctorName;
+        return doctorName;
+    }
+
+    public void setDoctorName(String doctorName) {
+        this.doctorName = doctorName;
     }
 }
