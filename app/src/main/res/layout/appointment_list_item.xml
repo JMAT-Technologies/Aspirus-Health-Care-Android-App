@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="370dp"
+    android:layout_height="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="19dp"
+    app:cardCornerRadius="10dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        >
+
+        <ImageView
+            android:id="@+id/appointment_icon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:clipToOutline="true"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/appointment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="11dp"
+            android:alpha="0.4"/>
+
+
+        <TextView
+            android:id="@+id/doctor_name"
+            android:layout_width="82dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="11dp"
+            android:layout_toEndOf="@+id/appointment_icon"
+            android:text="Doctor Name :"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="82dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="31dp"
+            android:layout_toEndOf="@+id/appointment_icon"
+            android:text="Time                : "
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="82dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_toEndOf="@+id/appointment_icon"
+            android:text="Date                 : "
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:id="@+id/appointment_doc_name"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="11dp"
+            android:layout_toEndOf="@+id/doctor_name"
+            android:text="Doctor Name"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/appointment_date"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="31dp"
+            android:layout_toEndOf="@+id/tv_date"
+            android:text="Time"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/appointment_time"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_toEndOf="@+id/tv_time"
+            android:text="Date"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="65dp"
+            android:layout_height="31dp"
+            android:layout_marginLeft="295dp"
+            android:layout_marginTop="43dp"
+            android:backgroundTint="@color/btn_blue_end"
+            android:text="Delete"
+            android:textSize="8sp" />
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
