@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PatientSignUp">
+    tools:context=".UserManagement.PatientSignUp">
 
     <TextView
         android:id="@+id/tv_heading_signup"
@@ -21,10 +21,10 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/signup_username"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="@dimen/et_signup"
+        android:layout_width="@dimen/et_material"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:hint="@string/et_username"
+        android:hint="@string/username"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,10 +39,10 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/signup_email"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="@dimen/et_signup"
+        android:layout_width="@dimen/et_material"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:hint="@string/et_email"
+        android:hint="@string/email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,10 +57,10 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/signup_phone"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="@dimen/et_signup"
+        android:layout_width="@dimen/et_material"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:hint="@string/et_phone"
+        android:hint="@string/phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,7 +76,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/signup_dob"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="@dimen/et_signup"
+        android:layout_width="@dimen/et_material"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:hint="@string/dob"
@@ -133,10 +133,10 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/signup_password"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="@dimen/et_signup"
+        android:layout_width="@dimen/et_material"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:hint="@string/et_password"
+        android:hint="@string/password"
         app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -152,10 +152,10 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/signup_confirm_pw"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="@dimen/et_signup"
+        android:layout_width="@dimen/et_material"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:hint="@string/et_confirmPW"
+        android:hint="@string/confirmPW"
         app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
