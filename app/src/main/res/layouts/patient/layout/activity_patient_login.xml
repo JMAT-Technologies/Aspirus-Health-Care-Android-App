@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PatientLogin">
+    tools:context=".UserManagement.PatientLogin">
 
     <ImageView
         android:id="@+id/logo"
         android:layout_width="163.25dp"
         android:layout_height="160.98dp"
         android:layout_marginTop="60dp"
-        android:contentDescription="Logo"
+        android:contentDescription="@string/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,7 +68,7 @@
         android:background="@drawable/edittext"
         android:elevation="10dp"
         android:ems="10"
-        android:hint="@string/et_email"
+        android:hint="emai"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
         android:paddingLeft="@dimen/et_padding_lr"
@@ -90,7 +90,7 @@
         android:background="@drawable/edittext"
         android:elevation="10dp"
         android:ems="10"
-        android:hint="@string/et_password"
+        android:hint="@string/password"
         android:inputType="textPassword"
         android:minHeight="48dp"
         android:paddingLeft="@dimen/et_padding_lr"
@@ -163,13 +163,14 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="8dp"
         android:clickable="true"
-        app:tint="@null"
         android:src="@drawable/ic_google"
         app:backgroundTint="@color/white"
         app:fabSize="mini"
-        app:icon="@drawable/ic_google"
         app:layout_constraintEnd_toStartOf="@+id/fab_facebook"
-        app:layout_constraintTop_toBottomOf="@+id/btn_signin" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_signin"
+        app:tint="@null"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:contentDescription="@string/google" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_facebook"
@@ -177,15 +178,17 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:clickable="true"
-        app:tint="@null"
-        app:iconSize="28dp"
         android:src="@drawable/ic_facebook"
         app:backgroundTint="@color/white"
         app:fabSize="mini"
+        app:iconSize="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_signin" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_signin"
+        app:tint="@null"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:contentDescription="@string/facebook" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_twitter"
@@ -194,12 +197,27 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="15dp"
         android:clickable="true"
-        app:tint="@null"
         android:src="@drawable/ic_twitter"
         app:backgroundTint="@color/white"
         app:fabSize="mini"
         app:layout_constraintStart_toEndOf="@+id/fab_facebook"
-        app:layout_constraintTop_toBottomOf="@+id/btn_signin" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_signin"
+        app:tint="@null"
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck"
+        android:contentDescription="@string/twitter" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_pic"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="10dp"
+        android:src="@drawable/ic_doctor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@null"
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
