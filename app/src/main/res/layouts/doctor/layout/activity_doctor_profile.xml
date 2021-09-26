@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DoctorProfile">
+    tools:context=".UserManagement.DoctorProfile">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/profile_card"
@@ -52,7 +52,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:src="@drawable/profile"
+            android:src="@drawable/avatar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -145,34 +145,7 @@
         app:cardCornerRadius="@dimen/card_radius"
         app:cardElevation="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_card">
-
-        <TextView
-            android:id="@+id/label_bmi"
-            android:layout_width="133dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="50dp"
-            android:gravity="center"
-            android:text="@string/label_totalearnings"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            tools:ignore="TextContrastCheck" />
-
-        <TextView
-            android:id="@+id/tv_bmi"
-            android:layout_width="134dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="10dp"
-            android:gravity="center"
-            android:text="Rs. 60000"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            tools:ignore="TextContrastCheck" />
-    </androidx.cardview.widget.CardView>
+        app:layout_constraintTop_toBottomOf="@+id/profile_card"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

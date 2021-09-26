@@ -1,8 +1,10 @@
-package com.example.aspirushealthcareandroidapp;
+package com.example.aspirushealthcareandroidapp.UserManagement;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.aspirushealthcareandroidapp.R;
 
 public class DoctorProfile extends AppCompatActivity {
 
