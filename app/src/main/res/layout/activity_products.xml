@@ -8,15 +8,14 @@
 
     <EditText
         android:id="@+id/inputSeacrh"
-        android:layout_width="254dp"
+        android:layout_width="383dp"
         android:layout_height="37dp"
-        android:layout_below="@+id/products"
+        android:layout_below="@+id/product"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="84dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="20dp"
         android:width="@dimen/et_width"
         android:height="@dimen/et_height"
         android:background="@drawable/edittext"
@@ -32,11 +31,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/products"
         tools:ignore="TextContrastCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="35dp"
+        android:layout_height="37dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:onClick="homePage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
     <TextView
-        android:id="@+id/products"
+        android:id="@+id/product"
         android:layout_width="183dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -44,44 +55,40 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="14dp"
         android:layout_marginEnd="136dp"
-        android:layout_toEndOf="@+id/backtohome"
+        android:layout_toEndOf="@+id/back"
         android:fontFamily="arial"
-        android:text="@string/pharmacy"
+        android:text="Pharmacy"
         android:textColor="@color/blue"
         android:textSize="28sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/backtohome"
+        app:layout_constraintStart_toEndOf="@+id/back"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/backtohome"
-        android:layout_width="35dp"
-        android:layout_height="37dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recylerView"
-        android:layout_width="394dp"
-        android:layout_height="569dp"
-        android:layout_below="@+id/product_search"
+        android:layout_width="393dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputSeacrh"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="-1dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="59dp"
+        android:layout_marginStart="-4dp"
+        android:layout_marginTop="-2dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="38dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.976"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/product_search"
         tools:ignore="MissingConstraints" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/white"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:menu="@menu/menu_navigation" />
 
 </RelativeLayout>
