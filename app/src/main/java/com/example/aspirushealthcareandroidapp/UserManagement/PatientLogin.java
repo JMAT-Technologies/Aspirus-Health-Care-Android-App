@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +29,7 @@ public class PatientLogin extends AppCompatActivity {
     FloatingActionButton fab_google;
     FloatingActionButton fab_facebook;
     FloatingActionButton fab_twitter;
+    ImageView btn_doc_login;
     FirebaseAuth firebaseAuth;
 
     @Override
@@ -45,6 +47,7 @@ public class PatientLogin extends AppCompatActivity {
         fab_google     = findViewById(R.id.fab_google);
         fab_facebook   = findViewById(R.id.fab_facebook);
         fab_twitter    = findViewById(R.id.fab_twitter);
+        btn_doc_login  = findViewById(R.id.btn_doc_login);
 
         //animations for floating action buttons
         fab_google.setTranslationY(300);
@@ -93,6 +96,14 @@ public class PatientLogin extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 twitterSignIn();
+            }
+        });
+
+        //doctor login in function
+        btn_doc_login.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                startActivity(new Intent(getApplicationContext(), DoctorLogin.class));
             }
         });
     }
