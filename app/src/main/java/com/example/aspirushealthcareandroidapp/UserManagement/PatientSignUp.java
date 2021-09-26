@@ -1,4 +1,4 @@
-package com.example.aspirushealthcareandroidapp;
+package com.example.aspirushealthcareandroidapp.UserManagement;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,15 +7,15 @@ import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.aspirushealthcareandroidapp.MainActivity;
+import com.example.aspirushealthcareandroidapp.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
@@ -43,6 +43,10 @@ public class PatientSignUp extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
     FirebaseDatabase database;
     DatabaseReference reference;
+
+    int age;
+
+    public static final String EXTRA_USERID = "com.example.myapplication.userID";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,16 +93,6 @@ public class PatientSignUp extends AppCompatActivity {
 
     }
 
-    //check whether an user is already logged in
-    @Override
-    protected void onStart(){
-        super.onStart();
-        if(firebaseAuth.getCurrentUser() != null){
-            startActivity(new Intent(getApplicationContext(),MainActivity.class));
-            finish();
-        }
-    }
-
     public void calendarPopUp(){
         final Calendar cldr = Calendar.getInstance();
         int day = cldr.get(Calendar.DAY_OF_MONTH);
@@ -109,6 +103,7 @@ public class PatientSignUp extends AppCompatActivity {
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
                 et_dob.getEditText().setText(dayOfMonth + "/" + (monthOfYear + 1) + "/" + year);
+                age = UserValidations.calculateAge(year);
             }
         }, year, month, day);
         calendar.show();
@@ -171,14 +166,20 @@ public class PatientSignUp extends AppCompatActivity {
                     database = FirebaseDatabase.getInstance();
                     reference = database.getReference("patients");
 
-                    Patient newPatient = new Patient(userID,username,email,phone,dob,finalGender,password);
+                    //creating a patient object with the data
+                    Patient newPatient = new Patient(userID,username,email,phone,dob,age,finalGender,password);
 
+                    //saving data to database
                     reference.child(userID).setValue(newPatient).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if(task.isSuccessful()){
                                 Toast.makeText(PatientSignUp.this, "Registration Successful", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+
+                                //redirecting to the profile picture upload
+                                Intent profilePicUploadIntent = new Intent(getApplicationContext(), PatientProfilePicUpload.class);
+                                profilePicUploadIntent.putExtra(EXTRA_USERID,userID);
+                                startActivity(profilePicUploadIntent);
                                 finish();
                             } else {
                                 Toast.makeText(PatientSignUp.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
@@ -191,5 +192,4 @@ public class PatientSignUp extends AppCompatActivity {
             }
         });
     }
-
 }
