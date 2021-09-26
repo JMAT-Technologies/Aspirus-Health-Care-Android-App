@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:elevation="10dp"
-    tools:context=".PatientProfile">
+    tools:context=".UserManagement.PatientProfile">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/profile_card"
@@ -25,7 +25,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
-            android:text="Minindu Senadheera"
             android:textAlignment="viewStart"
             android:textColor="@color/white"
             android:textSize="@dimen/username_fontsize"
@@ -38,7 +37,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:text="minindusenadheera@gmail.com"
             android:textColor="@color/white"
             android:textSize="@dimen/email_fontsize"
             android:textStyle="bold"
@@ -53,27 +51,21 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:src="@drawable/profile"
+            android:src="@drawable/avatar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/btn_editprofile"
+        <ImageView
+            android:id="@+id/profile_more_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="6dp"
-            android:layout_marginBottom="6dp"
-            android:clickable="true"
-            android:hapticFeedbackEnabled="true"
-            app:backgroundTint="@color/btn_edit"
-            android:src="@drawable/ic_user_edit_solid"
-            app:borderWidth="0dp"
-            app:fabSize="mini"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:tint="@null"
-            tools:ignore="SpeakableTextPresentCheck" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_more_vert_24" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -104,7 +96,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="B+"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -117,7 +108,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
-            android:text="@string/label_bloodgroup"
+            android:text="@string/bloodGroup"
             android:textColor="@color/black"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -128,7 +119,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="@string/label_age"
+            android:text="@string/age"
             android:textColor="@color/black"
             android:textSize="14sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/tv_age"
@@ -140,7 +131,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:layout_marginTop="4dp"
-            android:text="21"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -165,9 +155,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="2dp"
             android:layout_marginTop="2dp"
+            android:contentDescription="barchart_icon"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_bar_chart_24" />
+            app:srcCompat="@drawable/ic_baseline_bar_chart_24"
+            tools:ignore="ImageContrastCheck" />
 
         <TextView
             android:id="@+id/tv_sugarLevel"
@@ -175,7 +167,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
-            android:text="69 mg/dL"
             android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -188,11 +179,22 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
-            android:text="@string/label_sugar"
+            android:text="@string/sugar"
             android:textColor="@color/white"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_sugarLevel" />
+
+        <TextView
+            android:id="@+id/suagrLevel_SI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/sugarLevel_SI"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_sugarLevel"
+            app:layout_constraintStart_toEndOf="@+id/tv_sugarLevel" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -222,7 +224,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
-            android:text="69 mm/Hg"
             android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -235,11 +236,22 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
-            android:text="@string/label_bloodpressure"
+            android:text="@string/bloodPressure"
             android:textColor="@color/white"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_bloodPressure" />
+
+        <TextView
+            android:id="@+id/bloodPressure_SI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/BloodPressure_SI"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_bloodPressure"
+            app:layout_constraintStart_toEndOf="@+id/tv_bloodPressure" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -259,7 +271,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="@string/label_height"
+            android:text="@string/height"
             android:textColor="@color/black"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="@+id/tv_height"
@@ -271,7 +283,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="@string/label_weight"
+            android:text="@string/weight"
             android:textColor="@color/black"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="@+id/tv_weight"
@@ -283,7 +295,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="@string/label_bmi"
+            android:text="@string/bmi"
             android:textColor="@color/black"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="@+id/tv_bmi"
@@ -297,7 +309,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="1.69 m"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -311,7 +322,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="69 kg"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -325,7 +335,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="24.1"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -412,5 +421,16 @@
         app:layout_constraintEnd_toStartOf="@+id/label_overweight"
         app:layout_constraintTop_toTopOf="@+id/label_overweight"
         app:srcCompat="@drawable/ic_circle_red_20" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/white"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/menu_navigation" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
