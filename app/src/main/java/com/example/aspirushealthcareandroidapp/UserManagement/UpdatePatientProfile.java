@@ -13,11 +13,13 @@ import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.text.InputType;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -31,6 +33,9 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.AuthCredential;
+import com.google.firebase.auth.EmailAuthCredential;
+import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -49,6 +54,7 @@ public class UpdatePatientProfile extends AppCompatActivity {
 
     private static final int CAMERA_REQUEST = 1888;
     private static final int Gallery_Image = 1;
+
     ImageView profilePic;
     Uri ImageURI = Uri.EMPTY;
     TextInputLayout et_username;
@@ -151,9 +157,71 @@ public class UpdatePatientProfile extends AppCompatActivity {
         profilePic.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-//                showDialog();
+                showDialog();
             }
         });
+    }
+
+    //profile picture update popup
+    private void showDialog(){
+        final Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.bottom_dialog_image_upload);
+
+        ImageView open_gallery = dialog.findViewById(R.id.img_gallery);
+        ImageView open_camera = dialog.findViewById(R.id.img_camera);
+        ImageView close = dialog.findViewById(R.id.img_close);
+
+        dialog.show();
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.getWindow().getAttributes().windowAnimations = R.style.BottomDialogAnimation;
+        dialog.getWindow().setGravity(Gravity.BOTTOM);
+
+        open_gallery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //opening the gallery
+                Intent gallery = new Intent();
+                gallery.setType("image/*");
+                gallery.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(Intent.createChooser(gallery,"Choose Profile Picture"),Gallery_Image);
+                dialog.dismiss();
+
+            }
+        });
+
+        open_camera.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //direct to camera activity
+                Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(cameraIntent, CAMERA_REQUEST);
+                dialog.dismiss();
+            }
+        });
+
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode,resultCode,data);
+        if(requestCode == CAMERA_REQUEST && resultCode == RESULT_OK && data != null){
+            Bitmap photo = (Bitmap) data.getExtras().get("data");
+            profilePic.setImageBitmap(photo);
+        }
+
+        if(requestCode == Gallery_Image && resultCode == RESULT_OK && data != null){
+            ImageURI = data.getData();
+            profilePic.setImageURI(ImageURI);
+        }
     }
 
     public void updateProfile(){
@@ -219,17 +287,35 @@ public class UpdatePatientProfile extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),e.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+
+
     }
 
     public void deleteProfile(){
         AlertDialog.Builder dialog = new AlertDialog.Builder(UpdatePatientProfile.this);
-        dialog.setTitle("Are you sure?");
-        dialog.setMessage("This action will delete your profile along with all your user data.\nThis action can't be undone");
+        dialog.setTitle("Confirm Your Password");
+        // Set up the input
+        final EditText input = new EditText(UpdatePatientProfile.this);
+        // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+        input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+        input.setHint("Enter Your Password");
+        dialog.setView(input);
+
+        dialog.setMessage("This action can't be undone");
         dialog.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                //deleting the user from the database
-                database.child(userID).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+
+                String confirmPW = input.getText().toString();
+
+                if(confirmPW.isEmpty()){
+                    return;
+                }
+
+                AuthCredential credential = EmailAuthProvider.getCredential(user.getEmail(),confirmPW);
+
+                //re authenticate the user
+                user.reauthenticate(credential).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful()){
@@ -238,28 +324,39 @@ public class UpdatePatientProfile extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
-                                        //remove the profile picture from firebase storage
-                                        StorageReference ProfilePicRef = FirebaseStorage.getInstance().getReference().child("Patient Profile Pictures");
-                                        ProfilePicRef.child(userID + ".jpg").delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+                                        //deleting the user from the database
+                                        database.child(userID).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
                                             @Override
-                                            public void onSuccess(Void aVoid) {
-                                                Toast.makeText(UpdatePatientProfile.this, "Account Deleted Successfully", Toast.LENGTH_SHORT).show();
-                                                startActivity(new Intent(getApplicationContext(), PatientLogin.class));
-                                                finish();
-                                            }
-                                        }).addOnFailureListener(new OnFailureListener() {
-                                            @Override
-                                            public void onFailure(@NonNull Exception exception) {
-                                                Toast.makeText(UpdatePatientProfile.this, exception.getMessage(), Toast.LENGTH_SHORT).show();
+                                            public void onComplete(@NonNull Task<Void> task) {
+                                                if(task.isSuccessful()){
+                                                    //remove the profile picture from firebase storage
+                                                    StorageReference ProfilePicRef = FirebaseStorage.getInstance().getReference().child("Patient Profile Pictures");
+                                                    ProfilePicRef.child(userID + ".jpg").delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                        @Override
+                                                        public void onSuccess(Void aVoid) {
+                                                            Toast.makeText(UpdatePatientProfile.this, "Account Deleted Successfully", Toast.LENGTH_SHORT).show();
+                                                            startActivity(new Intent(getApplicationContext(), PatientLogin.class));
+                                                            finish();
+                                                        }
+                                                    }).addOnFailureListener(new OnFailureListener() {
+                                                        @Override
+                                                        public void onFailure(@NonNull Exception exception) {
+                                                            Toast.makeText(UpdatePatientProfile.this, exception.getMessage(), Toast.LENGTH_SHORT).show();
+                                                        }
+                                                    });
+                                                } else {
+                                                    Toast.makeText(UpdatePatientProfile.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                                }
                                             }
                                         });
+
                                     } else {
-                                        Toast.makeText(UpdatePatientProfile.this, "Failed to delete the user", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(UpdatePatientProfile.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                                     }
                                 }
                             });
                         } else {
-                            Toast.makeText(UpdatePatientProfile.this, "Failed to delete the user data", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(UpdatePatientProfile.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -275,6 +372,4 @@ public class UpdatePatientProfile extends AppCompatActivity {
 
         dialog.show();
     }
-
-
 }
