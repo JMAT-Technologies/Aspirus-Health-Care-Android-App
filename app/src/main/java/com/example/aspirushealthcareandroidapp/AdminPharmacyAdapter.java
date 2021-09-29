@@ -47,7 +47,7 @@ public class AdminPharmacyAdapter extends FirebaseRecyclerAdapter<AdminPharmacyM
     protected void onBindViewHolder(@NonNull myViewHolder holder, @SuppressLint("RecyclerView") int position, @NonNull AdminPharmacyModel model) {
         holder.productName.setText(model.getProductName());
         holder.price.setText("Rs "+model.getPrice()+".00");
-        //holder.description.setText(model.getDescription());
+
 
         Glide.with(holder.image.getContext())
                 .load(model.getImage())
@@ -60,7 +60,7 @@ public class AdminPharmacyAdapter extends FirebaseRecyclerAdapter<AdminPharmacyM
             public void onClick(View view) {
                     final DialogPlus dialogPlus = DialogPlus.newDialog(holder.image.getContext())
                             .setContentHolder(new ViewHolder(R.layout.admin_product_update_popup))
-                            .setExpanded(true,2022)
+                            .setExpanded(true,1500)
                             .create();
                    // dialogPlus.show();
                 view = dialogPlus.getHolderView();
@@ -68,14 +68,16 @@ public class AdminPharmacyAdapter extends FirebaseRecyclerAdapter<AdminPharmacyM
                 TextInputLayout productName = view.findViewById(R.id.productName);
                 TextInputLayout price = view.findViewById(R.id.product_price);
                 TextInputLayout description = view.findViewById(R.id.product_description);
-               // EditText image = view.findViewById(R.id.ImageUrl);
+                TextInputLayout image = view.findViewById(R.id.ImageUrl);
 
                 Button btnUpdate =view.findViewById(R.id.btnUpdate);
 
                 description.getEditText().setText(model.getDescription());
                 productName.getEditText().setText (model.getProductName());
                 price.getEditText().setText(model.getPrice());
-                //image.setText(model.getImage());
+                image.getEditText().setText(model.getImage());
+
+
 
                 dialogPlus.show();
 
@@ -86,7 +88,8 @@ public class AdminPharmacyAdapter extends FirebaseRecyclerAdapter<AdminPharmacyM
                         map.put("productName",productName.getEditText().getText().toString());
                         map.put("price",price.getEditText().getText().toString());
                         map.put("description",description.getEditText().getText().toString());
-                       // map.put("image",image.getText().toString());
+                        map.put("image",image.getEditText().getText().toString());
+                        /////////image
 
                         FirebaseDatabase.getInstance().getReference().child("Products")
                                 .child(getRef(position).getKey()).updateChildren(map)
@@ -130,7 +133,8 @@ public class AdminPharmacyAdapter extends FirebaseRecyclerAdapter<AdminPharmacyM
                 buildDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        Toast.makeText(holder.productName.getContext(), "Cancelled", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(holder.productName.getContext(), "Cancelled",
+                                Toast.LENGTH_SHORT).show();
                     }
                 });
                 buildDialog.show();
