@@ -94,7 +94,7 @@
         android:textColor="@color/white"
         android:textSize="20dp"
         android:textStyle="bold"
-        tools:ignore="Deprecated" />
+        tools:ignore="Deprecated,TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/speciality_name"
