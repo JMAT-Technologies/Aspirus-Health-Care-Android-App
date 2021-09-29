@@ -2,7 +2,7 @@ package com.example.aspirushealthcareandroidapp.UserManagement;
 
 public class Patient extends Person {
     private double sugarLevel;
-    private double bloodPressure;
+    private String bloodPressure;
     private String bloodGroup;
     private double height;
     private double weight;
@@ -12,14 +12,15 @@ public class Patient extends Person {
         super();
     }
 
-    public Patient(String userID, String username, String email, String phone, String dob, int age, String gender, String password) {
-        super(userID, username, email, phone, dob, age, gender, password);
-        this.sugarLevel = 0;
-        this.bloodPressure = 0;
-        this.bloodGroup = "null";
-        this.height = 0;
-        this.weight = 0;
-        this.bmi = 0;
+    public Patient(String userID, String username, String email, String phone, String dob, int age, String gender, String password, String image, double sugarLevel,
+                   String bloodPressure, String bloodGroup, double height, double weight, double bmi) {
+        super(userID, username, email, phone, dob, age, gender, password, image);
+        this.sugarLevel = sugarLevel;
+        this.bloodPressure = bloodPressure;
+        this.bloodGroup = bloodGroup;
+        this.height = height;
+        this.weight = weight;
+        this.bmi = bmi;
     }
 
     public double getSugarLevel() {
@@ -30,11 +31,11 @@ public class Patient extends Person {
         this.sugarLevel = sugarLevel;
     }
 
-    public double getBloodPressure() {
+    public String getBloodPressure() {
         return bloodPressure;
     }
 
-    public void setBloodPressure(double bloodPressure) {
+    public void setBloodPressure(String bloodPressure) {
         this.bloodPressure = bloodPressure;
     }
 

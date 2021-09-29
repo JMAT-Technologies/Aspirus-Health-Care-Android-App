@@ -9,11 +9,12 @@ public abstract class Person {
     private int age;
     private String gender;
     private String password;
+    private String image;
 
     public Person() {
     }
 
-    public Person(String userID, String username, String email, String phone, String dob,int age, String gender, String password) {
+    public Person(String userID, String username, String email, String phone, String dob,int age, String gender, String password, String image) {
         this.userID = userID;
         this.username = username;
         this.email = email;
@@ -22,6 +23,8 @@ public abstract class Person {
         this.age = age;
         this.gender = gender;
         this.password = password;
+        this.image = image;
+
     }
 
     public String getUserID() {
@@ -86,5 +89,13 @@ public abstract class Person {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }
