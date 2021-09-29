@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="370dp"
-    android:layout_height="100dp"
+    android:layout_height="120dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="19dp"
     app:cardCornerRadius="10dp"
@@ -17,15 +18,18 @@
             android:id="@+id/appointment_icon"
             android:layout_width="70dp"
             android:layout_height="70dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:alpha="0.4"
             android:clipToOutline="true"
-            android:layout_margin="10dp"
             android:scaleType="centerCrop"
             android:src="@drawable/appointment"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:riv_corner_radius="11dp"
-            android:alpha="0.4"/>
+            app:riv_corner_radius="11dp" />
 
 
         <TextView
@@ -92,14 +96,26 @@
             android:textSize="12sp" />
 
         <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="68dp"
+            android:layout_height="31dp"
+            android:layout_marginLeft="220dp"
+            android:layout_marginTop="75dp"
+            android:backgroundTint="@color/btn_blue_end"
+            android:text="Edit"
+            android:textSize="8sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
             android:id="@+id/btnDelete"
             android:layout_width="65dp"
             android:layout_height="31dp"
             android:layout_marginLeft="295dp"
-            android:layout_marginTop="43dp"
-            android:backgroundTint="@color/btn_blue_end"
+            android:layout_marginTop="75dp"
+            android:backgroundTint="@color/red"
             android:text="Delete"
-            android:textSize="8sp" />
+            android:textSize="8sp"
+            tools:ignore="TouchTargetSizeCheck" />
 
     </RelativeLayout>
 

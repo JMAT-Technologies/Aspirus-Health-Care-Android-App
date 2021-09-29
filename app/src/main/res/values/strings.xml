@@ -85,5 +85,6 @@
     <string name="btn_appointmmentChannel">Channel</string>
     <string name="tv_heading_addPrescription">Add Prescription</string>
     <string name="et_doctorName">Doctor Name</string>
+    <string name="btn_appointmmentUpdate">Update</string>
 
 </resources>
