@@ -36,8 +36,10 @@
         android:textColor="@color/blue"
         android:textSize="28sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/rv"
         app:layout_constraintStart_toEndOf="@+id/backtohome"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/backtohome"
@@ -53,7 +55,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv"
         android:layout_width="396dp"
-        android:layout_height="682dp"
+        android:layout_height="664dp"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="-3dp" />
