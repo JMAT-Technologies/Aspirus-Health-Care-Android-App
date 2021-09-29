@@ -23,7 +23,6 @@
         android:layout_width="327dp"
         android:layout_height="502dp"
         android:layout_marginTop="147dp"
-        android:contentDescription="star"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -118,7 +117,7 @@
         app:layout_constraintTop_toBottomOf="@+id/doc_login_password" />
 
     <Button
-        android:id="@+id/btn_signup"
+        android:id="@+id/doc_btn_signin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
@@ -127,7 +126,6 @@
         android:background="@drawable/btn_blue_gradient"
         android:drawableEnd="@drawable/ic_baseline_navigate_next_24"
         android:drawablePadding="-30dp"
-        android:paddingRight="@dimen/btn_sign_padding"
         android:text="@string/btn_signin"
         android:textAllCaps="false"
         android:textColor="@color/white"
@@ -140,7 +138,7 @@
         tools:ignore="TextContrastCheck" />
 
     <TextView
-        android:id="@+id/tv_loginsignup"
+        android:id="@+id/doc_loginsignup"
         android:layout_width="198dp"
         android:layout_height="48dp"
         android:clickable="true"
@@ -154,15 +152,20 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Button"
+    <TextView
+        android:id="@+id/doc_patientLogin"
+        android:layout_width="198dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:minHeight="48dp"
+        android:text="@string/tv_logindocpatient"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/doc_loginsignup"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_signup" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
