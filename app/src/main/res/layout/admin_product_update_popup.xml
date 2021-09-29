@@ -18,30 +18,30 @@
         android:gravity="center"
         android:textColor="#FFF"
         />
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/imageCard"
-        android:layout_width="362dp"
-        android:layout_height="198dp"
-        android:layout_below="@+id/products"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/image_item"
-        android:elevation="10dp">
+    <!--   <androidx.constraintlayout.widget.ConstraintLayout
+           android:id="@+id/imageCard"
+           android:layout_width="362dp"
+           android:layout_height="198dp"
+           android:layout_below="@+id/products"
+           android:layout_marginStart="20dp"
+           android:layout_marginTop="20dp"
+           android:layout_marginEnd="20dp"
+           android:layout_marginBottom="20dp"
+           android:background="@drawable/image_item"
+           andrelevation="10dp">
 
-        <ImageView
-            android:id="@+id/updateimage"
-            android:layout_width="227dp"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/product" />
+          <ImageView
+               android:id="@+id/updateimage"
+               android:layout_width="227dp"
+               android:layout_height="match_parent"
+               android:layout_margin="10dp"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:srcCompat="@drawable/product" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>-->
 
 
     <com.google.android.material.textfield.TextInputLayout
@@ -49,7 +49,6 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/select_product_image"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="43dp"
@@ -71,7 +70,6 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/select_product_image"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="43dp"
@@ -127,6 +125,28 @@
             android:layout_marginLeft="30dp"
             android:inputType="text"
             android:text="@string/et_phProductDescription" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ImageUrl"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/select_product_image"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="43dp"
+        android:hint="@string/et_phImgUrl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="@string/et_phImgUrl"
+            android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
