@@ -20,6 +20,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.example.aspirushealthcareandroidapp.Homepage;
 import com.example.aspirushealthcareandroidapp.MainActivity;
 import com.example.aspirushealthcareandroidapp.R;
 import com.google.android.gms.tasks.Continuation;
@@ -57,7 +58,7 @@ public class PatientProfilePicUpload extends AppCompatActivity {
         Intent userIDIntent = getIntent();
         userID = userIDIntent.getStringExtra(PatientSignUp.EXTRA_USERID);
 
-        profile_pic_preview = findViewById(R.id.profile_pic);
+        profile_pic_preview = findViewById(R.id.profile_pic_upload);
         skip                = findViewById(R.id.btn_skip);
         btn_lets_go         = findViewById(R.id.btn_lets_go);
         progressBar         = findViewById(R.id.profilepic_progress);
@@ -198,7 +199,7 @@ public class PatientProfilePicUpload extends AppCompatActivity {
                                         Toast.makeText(PatientProfilePicUpload.this, "Profile Picture Uploaded", Toast.LENGTH_SHORT).show();
 
                                         //redirecting to the profile picture upload
-                                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                                        startActivity(new Intent(getApplicationContext(), Homepage.class));
                                         finish();
 
                                     } else {
