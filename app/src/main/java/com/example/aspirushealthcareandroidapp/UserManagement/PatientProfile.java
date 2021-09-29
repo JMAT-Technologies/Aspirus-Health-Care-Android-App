@@ -11,9 +11,12 @@ import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 
+import com.example.aspirushealthcareandroidapp.Channeling;
+import com.example.aspirushealthcareandroidapp.Homepage;
 import com.example.aspirushealthcareandroidapp.MainActivity;
+import com.example.aspirushealthcareandroidapp.PharmcyStore;
 import com.example.aspirushealthcareandroidapp.R;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -41,11 +44,19 @@ public class PatientProfile extends AppCompatActivity implements PopupMenu.OnMen
     DatabaseReference database;
 
     @Override
+    protected void onStart() {
+        super.onStart();
+        if(FirebaseAuth.getInstance().getCurrentUser() == null){
+            startActivity(new Intent(getApplicationContext(), PatientLogin.class));
+        }
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_profile);
 
-        profilePic       = findViewById(R.id.profile_pic);
+        profilePic       = findViewById(R.id.profile_picture);
         profile_more_btn = findViewById(R.id.profile_more_btn);
         tv_username      = findViewById(R.id.username);
         tv_email         = findViewById(R.id.email);
@@ -56,6 +67,37 @@ public class PatientProfile extends AppCompatActivity implements PopupMenu.OnMen
         tv_height        = findViewById(R.id.tv_height);
         tv_weight        = findViewById(R.id.tv_weight);
         tv_bmi           = findViewById(R.id.tv_bmi);
+
+        //navigation bar
+        BottomNavigationView bottomNavigationView=findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setSelectedItemId((R.id.profilepage));
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.homepage:
+                        startActivity(new Intent(getApplicationContext(), Homepage.class));
+                        overridePendingTransition(0,0);
+                        return true;
+//                    case R.id.pharmacypage:
+//                        startActivity(new Intent(getApplicationContext() , Pharmacy.class));
+//                        overridePendingTransition(0,0);
+//                        return true;
+                    case R.id.channelingpage:
+                        startActivity(new Intent(getApplicationContext() , Channeling.class));
+                        overridePendingTransition(0,0);
+                        return true;
+//                    case R.id.cartpage:
+//                        startActivity(new Intent(getApplicationContext() , CartActivity.class));
+//                        overridePendingTransition(0,0);
+//                        return true;
+                    case R.id.profilepage:
+                        return true;
+                }
+                return false;
+            }
+        });
 
         firebaseAuth = FirebaseAuth.getInstance();
         userID = firebaseAuth.getCurrentUser().getUid();
@@ -89,7 +131,7 @@ public class PatientProfile extends AppCompatActivity implements PopupMenu.OnMen
                         updateBloodGroup();
                     }
 
-                    if(!bloodPressure.isEmpty()){
+                    if(!bloodPressure.equals("null")){
                         tv_bloodPressure.setText(bloodPressure);
                     }else{
                         updateBloodPressure();
