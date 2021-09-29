@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/username"
+            android:id="@+id/doc_username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -29,11 +29,11 @@
             android:textColor="@color/white"
             android:textSize="@dimen/username_fontsize"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/profile_pic"
+            app:layout_constraintStart_toEndOf="@+id/doc_profile_pic"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/email"
+            android:id="@+id/doc_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -41,12 +41,12 @@
             android:textColor="@color/white"
             android:textSize="@dimen/email_fontsize"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/profile_pic"
-            app:layout_constraintTop_toBottomOf="@+id/username"
+            app:layout_constraintStart_toEndOf="@+id/doc_profile_pic"
+            app:layout_constraintTop_toBottomOf="@+id/doc_username"
             tools:ignore="TextContrastCheck" />
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/profile_pic"
+            android:id="@+id/doc_profile_pic"
             android:layout_width="@dimen/profile_pic"
             android:layout_height="@dimen/profile_pic"
             android:layout_marginStart="10dp"
@@ -56,28 +56,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/btn_editprofile"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginEnd="6dp"
-            android:layout_marginBottom="6dp"
-            android:clickable="true"
-            android:hapticFeedbackEnabled="true"
-            android:scaleType="fitCenter"
-            android:verticalScrollbarPosition="defaultPosition"
-            android:visibility="visible"
-            app:backgroundTint="@color/btn_edit"
-            app:borderWidth="0dp"
-            app:fabCustomSize="40dp"
-            app:fabSize="normal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:maxImageSize="28dp"
-            app:srcCompat="@drawable/ic_user_edit_solid"
-            app:tint="@color/white"
-            tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/tv_doc_specialization"
@@ -95,57 +73,135 @@
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent" />
 
+        <ImageView
+            android:id="@+id/doc_profile_more_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_more_vert_24" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_bloodgroup"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/monthlyEarnings_card"
         android:layout_width="@dimen/earnings_card_width"
         android:layout_height="@dimen/profile_card_sm_height"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="10dp"
-        app:cardBackgroundColor="@color/red"
-        app:cardCornerRadius="@dimen/card_radius"
-        app:cardElevation="10dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/green_gradient"
+        android:elevation="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profile_card">
 
-        <TextView
-            android:id="@+id/label_bloodgroup"
-            android:layout_width="135dp"
+        <ImageView
+            android:id="@+id/img_monthlyIcon"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="50dp"
-            android:gravity="center"
-            android:text="@string/label_monthlyearning"
-            android:textColor="@color/white"
-            android:textSize="14sp" />
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:contentDescription="barchart_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_bar_chart_24"
+            tools:ignore="ImageContrastCheck" />
 
         <TextView
-            android:id="@+id/tv_bloodgroup"
-            android:layout_width="135dp"
+            android:id="@+id/doc_monthly"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="10dp"
-            android:gravity="center"
-            android:text="Rs. 15000"
+            android:layout_marginStart="8dp"
+            android:text="699"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/monthly_unit"
+            app:layout_constraintTop_toBottomOf="@+id/img_monthlyIcon" />
 
-    </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/label_monthly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/label_monthlyearning"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/doc_monthly" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_bmi"
+        <TextView
+            android:id="@+id/monthly_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/lkr"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/doc_monthly"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/totalEarnings_card"
         android:layout_width="@dimen/earnings_card_width"
         android:layout_height="@dimen/profile_card_sm_height"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="26dp"
-        app:cardBackgroundColor="#00CCF2"
-        app:cardCornerRadius="@dimen/card_radius"
-        app:cardElevation="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/pink_orange_gradient"
+        android:elevation="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_card"/>
+        app:layout_constraintTop_toBottomOf="@+id/profile_card">
+
+        <ImageView
+            android:id="@+id/img_totalIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_bar_chart_24" />
+
+        <TextView
+            android:id="@+id/doc_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="699"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/total_SI"
+            app:layout_constraintTop_toBottomOf="@+id/img_totalIcon" />
+
+        <TextView
+            android:id="@+id/label_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/label_totalearnings"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/doc_total" />
+
+        <TextView
+            android:id="@+id/total_SI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/lkr"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/doc_total"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
