@@ -2,6 +2,7 @@ package com.example.aspirushealthcareandroidapp.PharmacyManagement;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -11,9 +12,13 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.aspirushealthcareandroidapp.Channeling;
+import com.example.aspirushealthcareandroidapp.Homepage;
+import com.example.aspirushealthcareandroidapp.PatientProfile;
 import com.example.aspirushealthcareandroidapp.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -48,13 +53,10 @@ public class ProductOneView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_one_view);
 
-
         imageView=findViewById(R.id.image_single_viewActivity);
         productName = findViewById(R.id.product_nameActivity);
         price = findViewById(R.id.product_priceActivity);
         description = findViewById(R.id.product_descriptionActivity);
-
-
 
         //Add To Cart
         ItemKey = getIntent().getStringExtra("ItemKey");
@@ -64,20 +66,16 @@ public class ProductOneView extends AppCompatActivity {
         cartimage=findViewById(R.id.image_single_viewActivity);
 
         ///buy button
-
         ItemKey = getIntent().getStringExtra("ItemKey");
         buybtn=findViewById(R.id.btn_buy); // cart
         buycartproductname=findViewById(R.id.product_nameActivity);
         buyprice=findViewById(R.id.product_priceActivity);
         buyimage=findViewById(R.id.image_single_viewActivity);
 
-///////////////////////////////////////////////////////////////////////////
         //calculate product quantity
         plus = findViewById(R.id.plus);
         minus = findViewById(R.id.minus);
         cartqty = findViewById(R.id.cartqty);
-
-
 
         plus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,33 +83,27 @@ public class ProductOneView extends AppCompatActivity {
                 if(mCounter < 10) {
                     mCounter++;
                     cartqty.setText(Integer.toString(mCounter));
-
                 }
             }
         });
+
         minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(mCounter > 1) {
                     mCounter--;
                     cartqty.setText(Integer.toString(mCounter));
-
-
                 }
             }
         });
 
-
-
-
-/////////////////////////////ADD TO CART //////////////////////////////////////////////////////
+              //ADD TO CART
         getProductDetails(ItemKey);
         addToCartBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 addingToCartList();
             }
-
         });
 
         //buy
@@ -120,12 +112,10 @@ public class ProductOneView extends AppCompatActivity {
             public void onClick(View view) {
                 addToBuy();
             }
-
         });
 
- //////////////////// view one product/////////////////////////
+           // view one product
         DatabaseReference CartRef;
-
         ProductRef= FirebaseDatabase.getInstance().getReference().child("Products");
 
         String ItemKey = getIntent().getStringExtra("ItemKey");
@@ -140,13 +130,10 @@ public class ProductOneView extends AppCompatActivity {
                     String Price = dataSnapshot.child("price").getValue().toString();
                     String Description = dataSnapshot.child("description").getValue().toString();
 
-
-
                     Picasso.get().load(image).into(imageView);
                     productName.setText(ProductName);
                     price.setText("Rs."+Price+".00");
                     description.setText(Description);
-
 
                 }
             }
@@ -156,14 +143,42 @@ public class ProductOneView extends AppCompatActivity {
 
             }
         });
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+        BottomNavigationView bottomNavigationView=findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setSelectedItemId((R.id.pharmacypage));
 
-     
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                        case R.id.homepage:
+                            startActivity(new Intent(getApplicationContext(), Homepage.class));
+                            overridePendingTransition(0,0);
+                            return true;
+                        case R.id.pharmacypage:
+                            startActivity(new Intent(getApplicationContext() , Pharmacy.class));
+                            overridePendingTransition(0,0);
+                            return true;
+                        case R.id.channelingpage:
+                            startActivity(new Intent(getApplicationContext() , Channeling.class));
+                            overridePendingTransition(0,0);
+                            return true;
+                        case R.id.cartpage:
+                            startActivity(new Intent(getApplicationContext() , CartActivity.class));
+                            overridePendingTransition(0,0);
+                            return true;
+                        case R.id.profilepage:
+                            startActivity(new Intent(getApplicationContext() , PatientProfile.class));
+                            overridePendingTransition(0,0);
+                            return true;
+
+                }
+                return false;
+            }
+        });
     }
 
     //buy addToBuy method
-
     private void addToBuy() {
         String saveCurrentTime, saveCurrentDate;
 
@@ -184,9 +199,6 @@ public class ProductOneView extends AppCompatActivity {
         cartMap.put("time", saveCurrentTime);
         cartMap.put("quantity", cartqty.getText().toString());
         //cartMap.put("image",imageView);
-
-
-
 
         CartListRef.child(UserId)
                 .child(ItemKey)
@@ -228,31 +240,20 @@ public class ProductOneView extends AppCompatActivity {
         cartMap.put("quantity", cartqty.getText().toString());
         //cartMap.put("image",imageView);//sending image to the cart
 
+        CartListRef.child(UserId).child(ItemKey).updateChildren(cartMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull @NotNull Task<Void> task)
+            {
+                if(task.isSuccessful())
+                {
+                    Toast.makeText(ProductOneView.this,"Added to cart List", Toast.LENGTH_SHORT).show();
 
-        CartListRef.child(UserId)
-                .child(ItemKey)
-                .updateChildren(cartMap)
-                .addOnCompleteListener(new OnCompleteListener<Void>() {
-
-                                        @Override
-                                        public void onComplete(@NonNull @NotNull Task<Void> task)
-                                        {
-                                            if(task.isSuccessful())
-                                            {
-                                                Toast.makeText(ProductOneView.this,"Added to cart List", Toast.LENGTH_SHORT).show();
-
-                                                Intent intent = new Intent(ProductOneView.this, Pharmacy.class);
-                                                startActivity(intent);
-                                            }
-                                        }
-                                    });
-
-                    }
-
-
-
-
-
+                    Intent intent = new Intent(ProductOneView.this, Pharmacy.class);
+                    startActivity(intent);
+                }
+            }
+        });
+    }
 
     private void getProductDetails(String itemKey) {
         DatabaseReference productsRef = FirebaseDatabase.getInstance().getReference().child("CartList");
@@ -266,22 +267,13 @@ public class ProductOneView extends AppCompatActivity {
                     productName.setText(productsModel.getProductName());
                     price.setText(productsModel.getPrice());
                     Picasso.get().load(productsModel.getImage()).into(imageView);
-
                 }
-
             }
             @Override
             public void onCancelled(@NonNull @NotNull DatabaseError error) {
-
             }
-
         });
     }
-
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
     public void userAllProducts(View view) {
         Intent intent = new Intent(this, Pharmacy.class);

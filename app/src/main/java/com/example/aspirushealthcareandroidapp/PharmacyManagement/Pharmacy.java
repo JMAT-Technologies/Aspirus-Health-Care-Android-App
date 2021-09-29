@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.aspirushealthcareandroidapp.Channeling;
 import com.example.aspirushealthcareandroidapp.Homepage;
+import com.example.aspirushealthcareandroidapp.PatientProfile;
 import com.example.aspirushealthcareandroidapp.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -92,8 +93,6 @@ public class Pharmacy extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.pharmacypage:
-                        startActivity(new Intent(getApplicationContext() , profilepage.class));
-                        overridePendingTransition(0,0);
                         return true;
                     case R.id.channelingpage:
                         startActivity(new Intent(getApplicationContext() , Channeling.class));
@@ -103,7 +102,9 @@ public class Pharmacy extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext() , CartActivity.class));
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.pharmacypage:
+                    case R.id.profilepage:
+                        startActivity(new Intent(getApplicationContext() , PatientProfile.class));
+                        overridePendingTransition(0,0);
                         return true;
 
                 }
