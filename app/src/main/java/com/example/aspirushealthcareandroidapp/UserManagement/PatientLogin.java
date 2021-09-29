@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.aspirushealthcareandroidapp.Homepage;
 import com.example.aspirushealthcareandroidapp.MainActivity;
 import com.example.aspirushealthcareandroidapp.R;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -118,7 +119,7 @@ public class PatientLogin extends AppCompatActivity {
         }
     }
 
-    public void SignIn(){
+    private void SignIn(){
         String email = et_email.getText().toString();
         String password = et_password.getText().toString();
 
@@ -139,7 +140,7 @@ public class PatientLogin extends AppCompatActivity {
         firebaseAuth.signInWithEmailAndPassword(email,password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
             @Override
             public void onSuccess(AuthResult authResult) {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                startActivity(new Intent(getApplicationContext(), Homepage.class));
                 finish();
             }
         }).addOnFailureListener(new OnFailureListener() {
@@ -150,15 +151,15 @@ public class PatientLogin extends AppCompatActivity {
         });
     }
 
-    public void googleSignIn(){
+    private void googleSignIn(){
 
     }
 
-    public void facebookSignIn(){
+    private void facebookSignIn(){
 
     }
 
-    public void twitterSignIn(){
+    private void twitterSignIn(){
 
     }
 }
