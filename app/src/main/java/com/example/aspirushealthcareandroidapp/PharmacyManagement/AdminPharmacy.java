@@ -1,4 +1,4 @@
-package com.example.aspirushealthcareandroidapp;
+package com.example.aspirushealthcareandroidapp.PharmacyManagement;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.aspirushealthcareandroidapp.R;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -63,7 +64,7 @@ public class AdminPharmacy extends AppCompatActivity {
     }
 
     public void Adminaddnewproduct(View view) {
-        Intent intent = new Intent(this,AdminAddNewProductActivity.class);
+        Intent intent = new Intent(this, AdminAddNewProductActivity.class);
                startActivity(intent);
     }
 

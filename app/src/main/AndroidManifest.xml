@@ -11,16 +11,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AspirusHealthCareAndroidApp">
         <activity
-            android:name=".AdminPharmacy"
+            android:name=".PharmacyManagement.AdminPharmacy"
             android:exported="true"/>
         <activity
-            android:name=".Pharmacy"
+            android:name=".PharmacyManagement.Pharmacy"
             android:exported="true"/>
         <activity
-            android:name=".ProductOneView"
+            android:name=".PharmacyManagement.ProductOneView"
             android:exported="true"/>
         <activity
-            android:name=".AdminAddNewProductActivity"
+            android:name=".PharmacyManagement.AdminAddNewProductActivity"
             android:exported="true" />
         <activity
             android:name=".DoctorProfile"

@@ -1,4 +1,4 @@
-package com.example.aspirushealthcareandroidapp;
+package com.example.aspirushealthcareandroidapp.PharmacyManagement;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.aspirushealthcareandroidapp.R;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -241,7 +242,7 @@ public class AdminAddNewProductActivity extends AppCompatActivity
 
 
     public void AdminHome(View view) {
-        Intent intent = new Intent(this,AdminPharmacy.class);
+        Intent intent = new Intent(this, AdminPharmacy.class);
         startActivity(intent);
     }
 }

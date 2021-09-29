@@ -1,17 +1,27 @@
-package com.example.aspirushealthcareandroidapp;
+package com.example.aspirushealthcareandroidapp.PharmacyManagement;
 
-public class ProductModel
-{
-    private String productName,price;
-    private String image;
+public class AdminPharmacyModel {
+    String productName,price,image,description;
 
-    public ProductModel(String productName, String price, String image) {
+    AdminPharmacyModel(){
+
+    }
+
+    public AdminPharmacyModel(String productName, String price, String image, String description) {
         this.productName = productName;
         this.price = price;
         this.image = image;
+        this.description = description;
+
+
     }
 
-    public ProductModel() {
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getProductName() {
