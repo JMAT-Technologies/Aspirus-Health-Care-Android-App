@@ -34,27 +34,32 @@ public class Appointment extends AppCompatActivity {
         appointmentAdapter = new AppointmentAdapter(options);
         recyclerView.setAdapter(appointmentAdapter);
 
+        //Navigation
         BottomNavigationView bottomNavigationView=findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setSelectedItemId((R.id.profilepage));
-
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.homepage:
-                        startActivity(new Intent(getApplicationContext()
-                                ,Homepage.class));
+                        startActivity(new Intent(getApplicationContext(), Homepage.class));
                         overridePendingTransition(0,0);
+                        return true;
+                    case R.id.pharmacypage:
+//                        startActivity(new Intent(getApplicationContext() , Pharmacy.class));
+//                        overridePendingTransition(0,0);
                         return true;
                     case R.id.channelingpage:
-                        startActivity(new Intent(getApplicationContext()
-                                ,Channeling.class));
+                        startActivity(new Intent(getApplicationContext() , Channeling.class));
                         overridePendingTransition(0,0);
                         return true;
-
-                    case R.id.pharmacypage:
+                    case R.id.cartpage:
+//                        startActivity(new Intent(getApplicationContext() , CartActivity.class));
+//                        overridePendingTransition(0,0);
                         return true;
-
+                    case R.id.profilepage:
+                        startActivity(new Intent(getApplicationContext() , PatientProfile.class));
+                        overridePendingTransition(0,0);
+                        return true;
                 }
                 return false;
             }
