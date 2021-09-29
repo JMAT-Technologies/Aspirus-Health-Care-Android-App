@@ -120,14 +120,14 @@
             android:layout_width="88dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/rbtn_male" />
+            android:text="@string/male" />
 
         <RadioButton
             android:id="@+id/rbtn_female"
             android:layout_width="104dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/rbtn_female" />
+            android:text="@string/female" />
     </RadioGroup>
 
     <com.google.android.material.textfield.TextInputLayout
