@@ -29,7 +29,7 @@
             android:textColor="@color/white"
             android:textSize="@dimen/username_fontsize"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/profile_pic"
+            app:layout_constraintStart_toEndOf="@+id/profile_picture"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -40,12 +40,12 @@
             android:textColor="@color/white"
             android:textSize="@dimen/email_fontsize"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/profile_pic"
+            app:layout_constraintStart_toEndOf="@+id/profile_picture"
             app:layout_constraintTop_toBottomOf="@+id/username"
             tools:ignore="TextContrastCheck" />
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/profile_pic"
+            android:id="@+id/profile_picture"
             android:layout_width="@dimen/profile_pic"
             android:layout_height="@dimen/profile_pic"
             android:layout_marginStart="10dp"
@@ -428,8 +428,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         app:itemBackground="@color/white"
-        app:itemIconTint="@drawable/selector"
-        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/nav_selector"
+        app:itemTextColor="@drawable/nav_selector"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/menu_navigation" />
 
