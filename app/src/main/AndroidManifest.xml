@@ -14,7 +14,7 @@
             android:name=".AdminPharmacy"
             android:exported="true"/>
         <activity
-            android:name=".Products"
+            android:name=".Pharmacy"
             android:exported="true"/>
         <activity
             android:name=".ProductOneView"

@@ -198,7 +198,7 @@ public class ProductOneView extends AppCompatActivity {
                         {
                             Toast.makeText(ProductOneView.this,"Ready to Buy", Toast.LENGTH_SHORT).show();
 
-                            Intent intent = new Intent(ProductOneView.this,Products.class);
+                            Intent intent = new Intent(ProductOneView.this, Pharmacy.class);
                             startActivity(intent);
                         }
                     }
@@ -240,7 +240,7 @@ public class ProductOneView extends AppCompatActivity {
                                             {
                                                 Toast.makeText(ProductOneView.this,"Added to cart List", Toast.LENGTH_SHORT).show();
 
-                                                Intent intent = new Intent(ProductOneView.this,Products.class);
+                                                Intent intent = new Intent(ProductOneView.this, Pharmacy.class);
                                                 startActivity(intent);
                                             }
                                         }
@@ -283,7 +283,7 @@ public class ProductOneView extends AppCompatActivity {
 
 
     public void userAllProducts(View view) {
-        Intent intent = new Intent(this,Products.class);
+        Intent intent = new Intent(this, Pharmacy.class);
         startActivity(intent);
     }
 }

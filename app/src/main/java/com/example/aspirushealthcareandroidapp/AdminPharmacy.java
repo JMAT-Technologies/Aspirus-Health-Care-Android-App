@@ -68,7 +68,7 @@ public class AdminPharmacy extends AppCompatActivity {
     }
 
     public void AdminHome(View view) {
-        Intent intent = new Intent(this,Products.class);
+        Intent intent = new Intent(this, Pharmacy.class);
         startActivity(intent);
     }
 }

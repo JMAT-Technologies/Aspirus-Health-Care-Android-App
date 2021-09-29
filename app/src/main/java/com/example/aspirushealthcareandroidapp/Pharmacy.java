@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
@@ -17,12 +18,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.squareup.picasso.Picasso;
 
-public class Products extends AppCompatActivity {
+public class Pharmacy extends AppCompatActivity {
 
     EditText inputSearch;
     RecyclerView recyclerView;
@@ -44,7 +46,7 @@ public class Products extends AppCompatActivity {
         //LinearLayoutManager horizontalLayoutManagaer = new LinearLayoutManager(Products.this, LinearLayoutManager.HORIZONTAL, false);
         //recyclerView.setLayoutManager(horizontalLayoutManagaer);
 
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,2);
         recyclerView.setLayoutManager(gridLayoutManager);
 
         recyclerView.setHasFixedSize(true);
@@ -75,7 +77,36 @@ public class Products extends AppCompatActivity {
             }
         });
 
+        BottomNavigationView bottomNavigationView=findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setSelectedItemId((R.id.pharmacypage));
 
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.homepage:
+                        startActivity(new Intent(getApplicationContext(), Homepage.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.pharmacypage:
+                        startActivity(new Intent(getApplicationContext() , profilepage.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.channelingpage:
+                        startActivity(new Intent(getApplicationContext() , Channeling.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.cartpage:
+                        startActivity(new Intent(getApplicationContext() , CartActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.pharmacypage:
+                        return true;
+
+                }
+                return false;
+            }
+        });
     }
 
     private void LoadData(String data)
@@ -93,13 +124,13 @@ public class Products extends AppCompatActivity {
                     int position, @NonNull ProductModel model) {
 
                 holder.productName.setText(model.getProductName());
-                holder.price.setText("Rs "+ model.getPrice()+".00");
+                holder.price.setText("Rs."+ model.getPrice()+".00");
                 Picasso.get().load(model.getImage()).into(holder.imageView);
 
                 holder.view.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Intent intent = new Intent(Products.this,ProductOneView.class);
+                        Intent intent = new Intent(Pharmacy.this,ProductOneView.class);
                         intent.putExtra("ItemKey",getRef(position).getKey());
 
                         startActivity(intent);
