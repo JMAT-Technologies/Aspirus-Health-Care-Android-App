@@ -62,7 +62,7 @@ public class PatientSignUp extends AppCompatActivity {
         rbtn_female        = findViewById(R.id.rbtn_female);
         et_password        = findViewById(R.id.signup_password);
         et_confirmPassword = findViewById(R.id.signup_confirm_pw);
-        btn_signup         = findViewById(R.id.doc_btn_signin);
+        btn_signup         = findViewById(R.id.btn_signup);
         tv_signupLogin     = findViewById(R.id.tv_signupLogin);
 
         firebaseAuth = FirebaseAuth.getInstance();
