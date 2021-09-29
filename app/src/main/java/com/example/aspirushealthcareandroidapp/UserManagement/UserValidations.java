@@ -90,8 +90,8 @@ public class UserValidations {
     public static boolean genderNull(final RadioButton rbtn_male, final  RadioButton rbtn_female){
 
         if (!rbtn_female.isChecked() | !rbtn_male.isChecked()){
-            rbtn_female.setError("Require");
-            rbtn_male.setError("Require");
+            rbtn_female.setError("Required");
+            rbtn_male.setError("Required");
             return true;
         } else {
             rbtn_male.setError(null);
@@ -126,7 +126,7 @@ public class UserValidations {
         String weight = et_weight.getEditText().getText().toString();
 
         if(weight.isEmpty()){
-            et_weight.setError("This can't be empty");
+            et_weight.setError("Required");
             return false;
         }else if(Double.parseDouble(weight) == 0){
             et_weight.setError("Can't be zero");
@@ -144,7 +144,7 @@ public class UserValidations {
         String height = et_height.getEditText().getText().toString();
 
         if(height.isEmpty()){
-            et_height.setError("This can't be empty");
+            et_height.setError("Required");
             return false;
         }else if(Double.parseDouble(height) == 0){
             et_height.setError("Can't be zero");
@@ -173,7 +173,7 @@ public class UserValidations {
         String bloodGroup = et_bloodGroup.getEditText().getText().toString();
 
         if(bloodGroup.isEmpty()){
-            et_bloodGroup.setError("This can't be empty");
+            et_bloodGroup.setError("Required");
             return false;
         } else {
             et_bloodGroup.setError(null);
@@ -188,7 +188,7 @@ public class UserValidations {
         String bloodPressure = et_bloodPressure.getEditText().getText().toString();
 
         if(bloodPressure.isEmpty()){
-            et_bloodPressure.setError("This can't be empty");
+            et_bloodPressure.setError("Required");
             return false;
         } else {
             et_bloodPressure.setError(null);
@@ -203,7 +203,7 @@ public class UserValidations {
         String sugarLevel = et_sugarLevel.getEditText().getText().toString();
 
         if(sugarLevel.isEmpty()){
-            et_sugarLevel.setError("This can't be empty");
+            et_sugarLevel.setError("Required");
             return false;
         }else if(Double.parseDouble(sugarLevel) == 0){
             et_sugarLevel.setError("Can't be zero");
@@ -211,6 +211,85 @@ public class UserValidations {
         } else {
             et_sugarLevel.setError(null);
             et_sugarLevel.setErrorEnabled(false);
+            return true;
+        }
+    }
+
+    //these validations are related to doctor
+    //bloodPressure validation
+    public static boolean nicValidation(final TextInputLayout et_nic) {
+
+        String nic = et_nic.getEditText().getText().toString();
+
+        if(nic.isEmpty()){
+            et_nic.setError("Required");
+            return false;
+        } else {
+            et_nic.setError(null);
+            et_nic.setErrorEnabled(false);
+            return true;
+        }
+    }
+
+    //slmc validation
+    public static boolean slmcValidation(final TextInputLayout et_slmc) {
+
+        String slmc = et_slmc.getEditText().getText().toString();
+
+        if(slmc.isEmpty()){
+            et_slmc.setError("Required");
+            return false;
+        } else {
+            et_slmc.setError(null);
+            et_slmc.setErrorEnabled(false);
+            return true;
+        }
+    }
+
+    //checking speciality is null
+    public static boolean specialityNull(final TextInputLayout et_speciality) {
+
+        String speciality = et_speciality.getEditText().getText().toString();
+
+        if(speciality.isEmpty()){
+            et_speciality.setError("Required");
+            return true;
+        } else {
+            et_speciality.setError(null);
+            et_speciality.setErrorEnabled(false);
+            return false;
+        }
+    }
+
+    //checking work is null
+    public static boolean workNull(final TextInputLayout et_work) {
+
+        String work = et_work.getEditText().getText().toString();
+
+        if(work.isEmpty()){
+            et_work.setError("Required");
+            return true;
+        } else {
+            et_work.setError(null);
+            et_work.setErrorEnabled(false);
+            return false;
+        }
+    }
+
+    //charge per consultation validation
+    public static boolean feeValidation(final TextInputLayout et_fee) {
+
+        String fee = et_fee.getEditText().getText().toString();
+
+        if(fee.isEmpty()){
+            et_fee.setError("Required");
+            return false;
+        }else if(Double.parseDouble(fee) == 0){
+            et_fee.setError("Can't be zero");
+            return false;
+        } else {
+            et_fee.setError(null);
+            et_fee.setErrorEnabled(false);
             return true;
         }
     }
