@@ -17,6 +17,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AspirusHealthCareAndroidApp">
         <activity
+            android:name=".PharmacyManagement.AdminPharmacy"
+            android:exported="true"/>
+        <activity
+            android:name=".PharmacyManagement.Pharmacy"
+            android:exported="true"/>
+        <activity
             android:name=".UserManagement.UpdatePatientProfile"
             android:exported="true" />
         <activity
@@ -32,13 +38,10 @@
             android:name=".UserManagement.PatientProfile"
             android:exported="true" />
         <activity
-            android:name=".ChannelingConfirmation"
-            android:exported="true" />
+            android:name=".PharmacyManagement.ProductOneView"
+            android:exported="true"/>
         <activity
-            android:name=".Channeling"
-            android:exported="true" />
-        <activity
-            android:name=".Homepage"
+            android:name=".PharmacyManagement.AdminAddNewProductActivity"
             android:exported="true" />
         <activity
             android:name=".UserManagement.DoctorLogin"
@@ -47,17 +50,18 @@
             android:name=".UserManagement.PatientLogin"
             android:exported="true" />
         <activity
-            android:name=".PharmcyStore"
+            android:name=".Channeling"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Homepage"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"/> >
     </application>
-
 </manifest>
