@@ -14,7 +14,6 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.aspirushealthcareandroidapp.MainActivity;
 import com.example.aspirushealthcareandroidapp.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -25,6 +24,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
 
 public class PatientSignUp extends AppCompatActivity {
 
@@ -61,7 +62,7 @@ public class PatientSignUp extends AppCompatActivity {
         rbtn_female        = findViewById(R.id.rbtn_female);
         et_password        = findViewById(R.id.signup_password);
         et_confirmPassword = findViewById(R.id.signup_confirm_pw);
-        btn_signup         = findViewById(R.id.btn_signup);
+        btn_signup         = findViewById(R.id.doc_btn_signin);
         tv_signupLogin     = findViewById(R.id.tv_signupLogin);
 
         firebaseAuth = FirebaseAuth.getInstance();
@@ -109,7 +110,7 @@ public class PatientSignUp extends AppCompatActivity {
         calendar.show();
     }
 
-    public void SignUp(){
+    private void SignUp(){
         String username = et_username.getEditText().getText().toString();
         String email = et_email.getEditText().getText().toString();
         String phone = et_phone.getEditText().getText().toString();
@@ -167,7 +168,21 @@ public class PatientSignUp extends AppCompatActivity {
                     reference = database.getReference("patients");
 
                     //creating a patient object with the data
-                    Patient newPatient = new Patient(userID,username,email,phone,dob,age,finalGender,password);
+                    Map<String, Object> newPatient = new HashMap< >();
+                    newPatient.put("userID",userID);
+                    newPatient.put("username",username);
+                    newPatient.put("email",email);
+                    newPatient.put("phone",phone);
+                    newPatient.put("dob",dob);
+                    newPatient.put("age",age);
+                    newPatient.put("finalGender",finalGender);
+                    newPatient.put("password",password);
+                    newPatient.put("bloodGroup","null");
+                    newPatient.put("bloodPressure","null");
+                    newPatient.put("sugarLevel",0);
+                    newPatient.put("height",0);
+                    newPatient.put("weight",0);
+                    newPatient.put("bmi",0);
 
                     //saving data to database
                     reference.child(userID).setValue(newPatient).addOnCompleteListener(new OnCompleteListener<Void>() {
