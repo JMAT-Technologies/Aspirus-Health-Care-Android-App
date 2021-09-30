@@ -104,10 +104,10 @@ public class Homepage extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext() , Channeling.class));
                         overridePendingTransition(0,0);
                         return true;
-//                    case R.id.cartpage:
-//                        startActivity(new Intent(getApplicationContext() , CartActivity.class));
-//                        overridePendingTransition(0,0);
-//                        return true;
+                    case R.id.cartpage:
+                        startActivity(new Intent(getApplicationContext() , CartActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
                     case R.id.profilepage:
                         startActivity(new Intent(getApplicationContext(), PatientProfile.class));
                         overridePendingTransition(0,0);
