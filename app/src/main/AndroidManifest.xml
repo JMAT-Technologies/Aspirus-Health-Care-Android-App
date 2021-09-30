@@ -50,7 +50,13 @@
             android:name=".PharmacyManagement.ProductOneView"
             android:exported="true"/>
         <activity
-            android:name=".Channeling"
+            android:name=".AppointmentManagement.Channeling"
+            android:exported="true" />
+        <activity
+            android:name=".AppointmentManagement.ViewDoctor"
+            android:exported="true" />
+        <activity
+            android:name=".AppointmentManagement.Appointment"
             android:exported="true" />
         <activity
             android:name=".Homepage"
