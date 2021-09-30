@@ -17,6 +17,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 
 import com.example.aspirushealthcareandroidapp.PharmacyManagement.Pharmacy;
+import com.example.aspirushealthcareandroidapp.PharmacyManagement.ProductOneView;
 import com.example.aspirushealthcareandroidapp.UserManagement.Doctor.Doctor;
 import com.example.aspirushealthcareandroidapp.UserManagement.Doctor.DoctorViewHolder;
 import com.example.aspirushealthcareandroidapp.UserManagement.Patient.PatientLogin;
@@ -58,7 +59,7 @@ public class Homepage extends AppCompatActivity {
         LinearLayoutManager horizontalLayoutManagaer = new LinearLayoutManager(Homepage.this, LinearLayoutManager.HORIZONTAL, false);
         doctor_recycle_view.setLayoutManager(horizontalLayoutManagaer);
 
-        //this code is for vertical recycle view
+//        this code is for vertical recycle view
 //        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,3);
 //        doctor_recycle_view.setLayoutManager(gridLayoutManager);
 
@@ -104,10 +105,10 @@ public class Homepage extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext() , Channeling.class));
                         overridePendingTransition(0,0);
                         return true;
-//                    case R.id.cartpage:
-//                        startActivity(new Intent(getApplicationContext() , CartActivity.class));
-//                        overridePendingTransition(0,0);
-//                        return true;
+                    case R.id.cartpage:
+                        startActivity(new Intent(getApplicationContext() , CartActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
                     case R.id.profilepage:
                         startActivity(new Intent(getApplicationContext(), PatientProfile.class));
                         overridePendingTransition(0,0);
@@ -132,14 +133,14 @@ public class Homepage extends AppCompatActivity {
                 holder.speciality.setText(doctor.getSpeciality());
                 Picasso.get().load(doctor.getImage()).into(holder.doctor_image);
 
-                holder.doctorView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent intent = new Intent(Homepage.this, ViweDoctor.class);
-                        intent.putExtra("DoctorID",doctor.getUserID());
-                        startActivity(intent);
-                    }
-                });
+//                holder.doctorView.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View view) {
+//                        Intent intent = new Intent(Homepage.this, ViewDoctor.class);
+//                        intent.putExtra("DoctorID",doctor.getUserID());
+//                        startActivity(intent);
+//                    }
+//                });
             }
 
             @NonNull
@@ -153,6 +154,10 @@ public class Homepage extends AppCompatActivity {
         doctor_recycle_view.setAdapter(adapter);
     }
 
+
+    public void PharmacyGif(View view) {
+        startActivity(new Intent(getApplicationContext() , Pharmacy.class));
+    }
 }
 
 
