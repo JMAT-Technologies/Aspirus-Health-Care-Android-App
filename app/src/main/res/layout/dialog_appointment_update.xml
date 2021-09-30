@@ -24,7 +24,7 @@
         android:id="@+id/tv_doctorName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:background="@android:color/transparent"
         android:editable="false"
         android:gravity="center"
@@ -53,8 +53,8 @@
 
     <Button
         android:id="@+id/btn_appointmmentUpdate"
-        android:layout_width="102dp"
-        android:layout_height="33dp"
+        android:layout_width="100dp"
+        android:layout_height="39dp"
         android:layout_centerVertical="true"
         android:layout_marginTop="132dp"
         android:background="@drawable/btn_blue_gradient"
