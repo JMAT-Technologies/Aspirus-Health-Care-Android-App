@@ -5,17 +5,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ViewDoctorActivity">
+    tools:context=".ViewDoctor">
 
 
     <ImageView
-        android:id="@+id/back"
+        android:id="@+id/back_btn"
         android:layout_width="35dp"
         android:layout_height="37dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
+        android:onClick="ChannelingPage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/back" />
@@ -29,13 +30,12 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="14dp"
         android:layout_marginEnd="136dp"
-        android:layout_toEndOf="@+id/back"
+        android:layout_toEndOf="@+id/back_btn"
         android:fontFamily="arial"
         android:text="Channeling"
         android:textColor="@color/blue"
         android:textSize="28sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/back"
         app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -147,9 +147,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/speciality_name"
-        android:layout_centerVertical="true"
         android:layout_marginStart="130dp"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="79dp"
         android:width="@dimen/btn_sign_width"
         android:height="@dimen/btn_sign_height"
         android:background="@drawable/btn_blue_gradient"
