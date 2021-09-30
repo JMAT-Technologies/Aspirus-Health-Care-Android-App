@@ -21,7 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
-public class ViewDoctorActivity extends AppCompatActivity {
+public class ViewDoctor extends AppCompatActivity {
 
     private ImageView imageView;
     TextView speciality;
@@ -62,16 +62,10 @@ public class ViewDoctorActivity extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(), Homepage.class));
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.pharmacypage:
-//                        startActivity(new Intent(getApplicationContext() , Pharmacy.class));
-//                        overridePendingTransition(0,0);
-                        return true;
+
                     case R.id.channelingpage:
                         return true;
-                    case R.id.cartpage:
-//                        startActivity(new Intent(getApplicationContext() , CartActivity.class));
-//                        overridePendingTransition(0,0);
-                        return true;
+
                     case R.id.profilepage:
                         startActivity(new Intent(getApplicationContext() , PatientProfile.class));
                         overridePendingTransition(0,0);
@@ -125,7 +119,7 @@ public class ViewDoctorActivity extends AppCompatActivity {
                 else
                 {
                     insertAppointmentData();
-                    Intent intent = new Intent(ViewDoctorActivity.this, Appointment.class);
+                    Intent intent = new Intent(ViewDoctor.this, Appointment.class);
                     startActivity(intent);
                 }
             }
@@ -141,7 +135,11 @@ public class ViewDoctorActivity extends AppCompatActivity {
         AppointmentModel appointmentModel = new AppointmentModel(date, time, doctorName);
 
         appointmentRef.push().setValue(appointmentModel);
-        Toast.makeText(ViewDoctorActivity.this, "Appointment Added", Toast.LENGTH_SHORT).show();
+        Toast.makeText(ViewDoctor.this, "Appointment Added", Toast.LENGTH_SHORT).show();
 
+    }
+    public void ChannelingPage(View view) {
+        Intent intent = new Intent(this,Channeling.class);
+        startActivity(intent);
     }
 }
