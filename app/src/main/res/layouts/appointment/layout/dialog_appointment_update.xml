@@ -38,7 +38,7 @@
     <EditText
         android:id="@+id/et_appointmentUpdateTime"
         android:layout_width="150dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="40dp"
         android:layout_marginTop="64dp"
@@ -53,8 +53,8 @@
 
     <Button
         android:id="@+id/btn_appointmmentUpdate"
-        android:layout_width="100dp"
-        android:layout_height="39dp"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
         android:layout_centerVertical="true"
         android:layout_marginTop="132dp"
         android:background="@drawable/btn_blue_gradient"
@@ -62,7 +62,7 @@
         android:text="Update"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="12sp"
+        android:textSize="16sp"
         app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -73,7 +73,7 @@
     <EditText
         android:id="@+id/et_appointmentUpdateDate"
         android:layout_width="150dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_alignParentStart="true"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="40dp"

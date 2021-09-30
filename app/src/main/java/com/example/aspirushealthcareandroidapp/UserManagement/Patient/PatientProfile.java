@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 
-import com.example.aspirushealthcareandroidapp.Channeling;
+import com.example.aspirushealthcareandroidapp.AppointmentManagement.Channeling;
 import com.example.aspirushealthcareandroidapp.Homepage;
 import com.example.aspirushealthcareandroidapp.PharmacyManagement.Pharmacy;
 import com.example.aspirushealthcareandroidapp.R;
@@ -87,10 +87,10 @@ public class PatientProfile extends AppCompatActivity implements PopupMenu.OnMen
                         startActivity(new Intent(getApplicationContext() , Channeling.class));
                         overridePendingTransition(0,0);
                         return true;
-//                    case R.id.cartpage:
-//                        startActivity(new Intent(getApplicationContext() , CartActivity.class));
-//                        overridePendingTransition(0,0);
-//                        return true;
+                    case R.id.cartpage:
+                        startActivity(new Intent(getApplicationContext() , CartActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
                     case R.id.profilepage:
                         return true;
                 }

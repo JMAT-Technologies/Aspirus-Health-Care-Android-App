@@ -34,8 +34,8 @@
 
     <ImageView
         android:id="@+id/back"
-        android:layout_width="35dp"
-        android:layout_height="37dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="20dp"
@@ -43,7 +43,8 @@
         android:onClick="HomePage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back" />
+        app:srcCompat="@drawable/back"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/channelingHeading"
@@ -52,7 +53,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="136dp"
         android:layout_toEndOf="@+id/back"
         android:fontFamily="arial"
@@ -66,7 +67,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/appointmentRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="516dp"
+        android:layout_height="605dp"
         android:layout_below="@+id/inputSearch"
         android:layout_marginTop="25dp" />
 
@@ -77,8 +78,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         app:itemBackground="@color/white"
-        app:itemIconTint="@drawable/selector"
-        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/nav_selector"
+        app:itemTextColor="@drawable/nav_selector"
         app:menu="@menu/menu_navigation" />
 
 </RelativeLayout>

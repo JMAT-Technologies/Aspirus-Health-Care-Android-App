@@ -16,6 +16,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
+import com.example.aspirushealthcareandroidapp.AppointmentManagement.Channeling;
+import com.example.aspirushealthcareandroidapp.AppointmentManagement.ViewDoctor;
 import com.example.aspirushealthcareandroidapp.PharmacyManagement.Pharmacy;
 import com.example.aspirushealthcareandroidapp.PharmacyManagement.ProductOneView;
 import com.example.aspirushealthcareandroidapp.UserManagement.Doctor.Doctor;
@@ -133,14 +135,14 @@ public class Homepage extends AppCompatActivity {
                 holder.speciality.setText(doctor.getSpeciality());
                 Picasso.get().load(doctor.getImage()).into(holder.doctor_image);
 
-//                holder.doctorView.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View view) {
-//                        Intent intent = new Intent(Homepage.this, ViewDoctor.class);
-//                        intent.putExtra("DoctorID",doctor.getUserID());
-//                        startActivity(intent);
-//                    }
-//                });
+                holder.doctorView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(Homepage.this, ViewDoctor.class);
+                        intent.putExtra("DoctorID",doctor.getUserID());
+                        startActivity(intent);
+                    }
+                });
             }
 
             @NonNull

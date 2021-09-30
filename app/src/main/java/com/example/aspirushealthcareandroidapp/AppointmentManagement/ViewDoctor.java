@@ -1,4 +1,4 @@
-package com.example.aspirushealthcareandroidapp;
+package com.example.aspirushealthcareandroidapp.AppointmentManagement;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +13,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.aspirushealthcareandroidapp.Homepage;
+import com.example.aspirushealthcareandroidapp.PharmacyManagement.Pharmacy;
+import com.example.aspirushealthcareandroidapp.R;
+import com.example.aspirushealthcareandroidapp.UserManagement.Patient.PatientProfile;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -62,10 +66,18 @@ public class ViewDoctor extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(), Homepage.class));
                         overridePendingTransition(0,0);
                         return true;
-
-                    case R.id.channelingpage:
+                    case R.id.pharmacypage:
+                        startActivity(new Intent(getApplicationContext() , Pharmacy.class));
+                        overridePendingTransition(0,0);
                         return true;
-
+                    case R.id.channelingpage:
+                        startActivity(new Intent(getApplicationContext() , Channeling.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.cartpage:
+//                        startActivity(new Intent(getApplicationContext() , CartActivity.class));
+//                        overridePendingTransition(0,0);
+                        return true;
                     case R.id.profilepage:
                         startActivity(new Intent(getApplicationContext() , PatientProfile.class));
                         overridePendingTransition(0,0);
@@ -139,7 +151,7 @@ public class ViewDoctor extends AppCompatActivity {
 
     }
     public void ChannelingPage(View view) {
-        Intent intent = new Intent(this,Channeling.class);
+        Intent intent = new Intent(this, Channeling.class);
         startActivity(intent);
     }
 }
