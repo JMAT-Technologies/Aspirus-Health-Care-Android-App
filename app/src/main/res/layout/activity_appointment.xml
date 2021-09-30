@@ -35,38 +35,11 @@
         app:layout_constraintStart_toEndOf="@+id/back"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/inputSearch"
-        android:layout_width="383dp"
-        android:layout_height="37dp"
-        android:layout_below="@+id/appointmentHeading"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="20dp"
-        android:width="@dimen/et_width"
-        android:height="@dimen/et_height"
-        android:background="@drawable/edittext"
-        android:drawableEnd="?android:attr/actionModeWebSearchDrawable"
-        android:elevation="10dp"
-        android:ems="10"
-        android:hint="@string/et_Search"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:paddingLeft="@dimen/et_padding_lr"
-        android:paddingRight="@dimen/et_padding_lr"
-        android:textColorHint="@color/et_hint"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.528"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TextContrastCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/appointmentRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="531dp"
-        android:layout_below="@+id/inputSearch"
+        android:layout_height="593dp"
+        android:layout_below="@+id/appointmentHeading"
         android:layout_marginTop="20dp" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
