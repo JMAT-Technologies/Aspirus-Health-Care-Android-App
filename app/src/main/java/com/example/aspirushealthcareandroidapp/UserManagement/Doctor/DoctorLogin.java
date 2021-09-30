@@ -1,4 +1,4 @@
-package com.example.aspirushealthcareandroidapp.UserManagement;
+package com.example.aspirushealthcareandroidapp.UserManagement.Doctor;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.example.aspirushealthcareandroidapp.MainActivity;
 import com.example.aspirushealthcareandroidapp.R;
+import com.example.aspirushealthcareandroidapp.UserManagement.Patient.PatientLogin;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;

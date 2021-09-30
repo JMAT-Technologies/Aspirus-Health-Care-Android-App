@@ -1,4 +1,6 @@
-package com.example.aspirushealthcareandroidapp.UserManagement;
+package com.example.aspirushealthcareandroidapp.UserManagement.Patient;
+
+import com.example.aspirushealthcareandroidapp.UserManagement.Person;
 
 public class Patient extends Person {
     private double sugarLevel;
