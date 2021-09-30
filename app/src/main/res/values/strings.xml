@@ -109,5 +109,7 @@
     <string name="cancel">Cancel</string>
     <string name="delete_profile">Delete Profile</string>
     <string name="password_reset">Reset Password</string>
+    <string name="update_details">Update Details</string>
+    <string name="update">Update</string>
 
 </resources>
