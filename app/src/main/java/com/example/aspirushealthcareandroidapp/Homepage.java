@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.aspirushealthcareandroidapp.PharmacyManagement.Pharmacy;
 import com.example.aspirushealthcareandroidapp.UserManagement.PatientLogin;
 import com.example.aspirushealthcareandroidapp.UserManagement.PatientProfile;
 import com.example.aspirushealthcareandroidapp.UserManagement.UpdatePatientProfile;
@@ -36,10 +37,10 @@ public class Homepage extends AppCompatActivity {
                 switch (item.getItemId()){
                     case R.id.homepage:
                         return true;
-//                    case R.id.pharmacypage:
-//                        startActivity(new Intent(getApplicationContext() , Pharmacy.class));
-//                        overridePendingTransition(0,0);
-//                        return true;
+                    case R.id.pharmacypage:
+                        startActivity(new Intent(getApplicationContext() , Pharmacy.class));
+                        overridePendingTransition(0,0);
+                        return true;
                     case R.id.channelingpage:
                         startActivity(new Intent(getApplicationContext() , Channeling.class));
                         overridePendingTransition(0,0);
