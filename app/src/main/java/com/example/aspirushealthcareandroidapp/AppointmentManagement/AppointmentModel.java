@@ -1,4 +1,4 @@
-package com.example.aspirushealthcareandroidapp;
+package com.example.aspirushealthcareandroidapp.AppointmentManagement;
 
 public class AppointmentModel {
 

@@ -14,12 +14,12 @@
         >
 
         <com.makeramen.roundedimageview.RoundedImageView
-            android:id="@+id/doctor_image"
+            android:id="@+id/doctor_card_image"
             android:layout_width="150dp"
             android:layout_height="175dp"
             android:clipToOutline="true"
             android:scaleType="centerCrop"
-            android:src="@drawable/doctor"
+            android:src="@drawable/avatar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -27,10 +27,10 @@
 
 
         <TextView
-            android:id="@+id/doctor_name"
+            android:id="@+id/doc_card_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/doctor_image"
+            android:layout_below="@id/doctor_card_image"
             android:layout_marginStart="6dp"
             android:layout_marginTop="10dp"
             android:text="Doctor Name"
@@ -39,10 +39,10 @@
             />
 
         <TextView
-            android:id="@+id/name_speciality"
+            android:id="@+id/doc_card_speciality"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/doctor_name"
+            android:layout_below="@id/doc_card_username"
             android:layout_marginStart="6dp"
             android:text="Speciality"
             android:textSize="12sp" />
