@@ -1,4 +1,4 @@
-package com.example.aspirushealthcareandroidapp.UserManagement;
+package com.example.aspirushealthcareandroidapp.UserManagement.Patient;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -87,10 +87,10 @@ public class PatientProfile extends AppCompatActivity implements PopupMenu.OnMen
                         startActivity(new Intent(getApplicationContext() , Channeling.class));
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.cartpage:
-                        startActivity(new Intent(getApplicationContext() , CartActivity.class));
-                        overridePendingTransition(0,0);
-                        return true;
+//                    case R.id.cartpage:
+//                        startActivity(new Intent(getApplicationContext() , CartActivity.class));
+//                        overridePendingTransition(0,0);
+//                        return true;
                     case R.id.profilepage:
                         return true;
                 }
