@@ -229,12 +229,7 @@ public class AdminAddNewProductActivity extends AppCompatActivity
                         }
                     }
                 });
-
     }
-
-
-
-
 
     public void AdminHome(View view) {
         Intent intent = new Intent(this, AdminPharmacy.class);

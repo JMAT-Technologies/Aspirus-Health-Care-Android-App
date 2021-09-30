@@ -13,18 +13,19 @@
         android:layout_height="48dp"
         android:layout_alignParentTop="true"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="30dp"
-        android:onClick="adminHome"
+        android:layout_marginTop="14dp"
+        android:onClick="AdminHome"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back" />
+        app:srcCompat="@drawable/back"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="14dp"
         android:layout_toEndOf="@+id/back_btn"
         android:text="Add New Product"
         android:textColor="@color/blue"
