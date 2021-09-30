@@ -15,7 +15,7 @@
         android:clickable="true"
         android:contentDescription="@string/btn_add"
         android:onClick="Adminaddnewproduct"
-        android:src="@mipmap/plus"
+        android:src="@drawable/plus"
         app:backgroundTint="@color/white"
         app:fabSize="mini"
         app:layout_constraintBottom_toBottomOf="parent"

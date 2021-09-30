@@ -36,8 +36,6 @@ public class Pharmacy extends AppCompatActivity {
     FirebaseRecyclerAdapter<ProductModel,ProductViewHolder>adapter;
     DatabaseReference ProductRef;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +53,6 @@ public class Pharmacy extends AppCompatActivity {
 
         recyclerView.setHasFixedSize(true);
 
-
         // search function in the load data method
         LoadData("");
         inputSearch.addTextChangedListener(new TextWatcher() {
@@ -63,12 +60,9 @@ public class Pharmacy extends AppCompatActivity {
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
             }
-
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
             }
-
             @Override
             public void afterTextChanged(Editable editable) {
                 if(editable.toString()!=null){
@@ -77,7 +71,6 @@ public class Pharmacy extends AppCompatActivity {
                 else {
                     LoadData("");
                 }
-
             }
         });
 
@@ -98,15 +91,14 @@ public class Pharmacy extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext() , Channeling.class));
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.cartpage:
+                        case R.id.cartpage:
                         startActivity(new Intent(getApplicationContext() , CartActivity.class));
                         overridePendingTransition(0,0);
-                        return true;
+                       return true;
                     case R.id.profilepage:
                         startActivity(new Intent(getApplicationContext() , PatientProfile.class));
                         overridePendingTransition(0,0);
                         return true;
-
                 }
                 return false;
             }
@@ -118,8 +110,6 @@ public class Pharmacy extends AppCompatActivity {
         //create the query for the search
 
         Query query = ProductRef.orderByChild("productName").startAt(data).endAt(data+"\uf8ff");
-
-
 
         options = new  FirebaseRecyclerOptions.Builder<ProductModel>().setQuery(query,ProductModel.class).build();
         adapter = new FirebaseRecyclerAdapter<ProductModel, ProductViewHolder>(options) {
@@ -140,10 +130,6 @@ public class Pharmacy extends AppCompatActivity {
                         startActivity(intent);
                     }
                 });
-
-
-
-
             }
 
             @NonNull
