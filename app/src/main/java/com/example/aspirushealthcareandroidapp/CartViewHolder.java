@@ -1,23 +1,22 @@
 package com.example.aspirushealthcareandroidapp;
+import android.content.Intent;
+import android.util.SparseIntArray;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
+
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.aspirushealthcareandroidapp.ItemClickListner;
-import com.example.aspirushealthcareandroidapp.R;
-
-import org.jetbrains.annotations.NotNull;
 
 public class CartViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener
 {
-
-    public TextView txtProductName, txtProductPrice, txtProductQuantity;
-    public ImageView product;
+    public TextView txtProductName, txtProductQuantity, txtProductPrice;
+    public ImageView product, minus, add;
+    public View btnDelete;
     private ItemClickListner itemClickListner;
-
+    public CheckBox checkProduct;
 
     public CartViewHolder(View itemView)
     {
@@ -25,8 +24,12 @@ public class CartViewHolder extends RecyclerView.ViewHolder implements View.OnCl
 
         txtProductName = itemView.findViewById(R.id.cart_product_name);
         txtProductPrice = itemView.findViewById(R.id.cart_product_price);
-        txtProductQuantity = itemView.findViewById(R.id.cart_product_quantity);
         product = itemView.findViewById(R.id.product);
+        btnDelete = itemView.findViewById(R.id.delete);
+        minus = itemView.findViewById((R.id.minus));
+        add = itemView.findViewById((R.id.add));
+        txtProductQuantity = itemView.findViewById(R.id.integer_number);
+        checkProduct = itemView.findViewById(R.id.checkProduct);
     }
 
     @Override

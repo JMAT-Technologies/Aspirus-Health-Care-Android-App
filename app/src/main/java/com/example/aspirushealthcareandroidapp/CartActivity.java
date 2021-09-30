@@ -11,6 +11,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -21,6 +22,7 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
@@ -29,10 +31,10 @@ public class CartActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
-    private Button NextProccessBtn;
-    private Button proceedBtn;
-    private TextView txtTotalAmount;
+    private TextView totalP;
+    private Button btn_checkout;
     String userId="A1";
+    double total = 0;
 
     private int overTotalPrice = 0;
 
@@ -45,35 +47,60 @@ public class CartActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
+//        totalP = findViewById(R.id.totalP);
+        btn_checkout = findViewById(R.id.btn_checkout);
 
-//        NextProccessBtn = (Button) findViewById(R.id.next_process_btn);
-//        proceedBtn = (Button) findViewById(R.id.proceed_btn);
-//        txtTotalAmount = (TextView) findViewById(R.id.total_amount);
-
-//        proceedBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view)
-//            {
-//                txtTotalAmount.setText("Total Price = LKR " + String.valueOf(overTotalPrice));
-//
-//                Intent intent = new Intent(CartActivity.this, CartActivity.class);
-//                intent.putExtra("Total Price", String.valueOf(overTotalPrice));
-//                startActivity(intent);
-//                finish();
-//
-//            }
-//        });
+        btn_checkout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //              checkout button
+                Intent checkout = new Intent(CartActivity.this, orderConfirmation.class);
+                checkout.putExtra("totalP", totalP.getText().toString());
+                startActivity(checkout);
+            }
+        });
+        //Navigation
+        BottomNavigationView bottomNavigationView=findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setSelectedItemId((R.id.cartpage));
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.homepage:
+                        startActivity(new Intent(getApplicationContext(), Homepage.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.pharmacypage:
+//                        startActivity(new Intent(getApplicationContext() , Pharmacy.class));
+//                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.channelingpage:
+                        startActivity(new Intent(getApplicationContext() , Channeling.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.cartpage:
+                        return true;
+                    case R.id.profilepage:
+                        startActivity(new Intent(getApplicationContext() , PatientProfile.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                }
+                return false;
+            }
+        });
     }
 
     @Override
     protected void onStart() {
         super.onStart();
 
-        final DatabaseReference cartListRef = FirebaseDatabase.getInstance().getReference().child("Cart List");
+        final DatabaseReference confirmListRef = FirebaseDatabase.getInstance().getReference().child("confirmList");
+
+        final DatabaseReference cartListRef = FirebaseDatabase.getInstance().getReference().child("CartList");
 
         FirebaseRecyclerOptions<Cart> options =
                 new FirebaseRecyclerOptions.Builder<Cart>()
-                        .setQuery(cartListRef.child("User View")
+                        .setQuery(cartListRef
                                 .child(userId),Cart.class)
                         .build();
 
@@ -82,62 +109,89 @@ public class CartActivity extends AppCompatActivity {
             @Override
             protected void onBindViewHolder(@NonNull CartViewHolder holder, @SuppressLint("RecyclerView") int position, @NonNull Cart model)
             {
-                holder.txtProductQuantity.setText(model.getQuantity());
+                holder.txtProductQuantity.setText(String.valueOf(model.getQuantity()));
                 holder.txtProductPrice.setText("LKR " + model.getPrice());
                 holder.txtProductName.setText(model.getProductName());
                 Picasso.get().load(model.getImage()).into(holder.product);
 
-//                int oneTypeProductPrice = ((Integer.parseInt(model.getPrice()))) * Integer.parseInt(model.getQuantity());
-//                overTotalPrice = overTotalPrice + oneTypeProductPrice;
-
-
-                holder.itemView.setOnClickListener(new View.OnClickListener() {
+//                delete
+                holder.btnDelete.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view)
                     {
-                        CharSequence options[] = new CharSequence[]
-                                {
-                                        "Edit",
-                                        "Remove"
-                                };
-                        AlertDialog.Builder builder = new AlertDialog.Builder(CartActivity.this);
-                        builder.setTitle("Cart Options:");
-
-                        builder.setItems(options, new DialogInterface.OnClickListener() {
+                        cartListRef.child(userId).child(model.getItemKey()).removeValue().addOnCompleteListener(new OnCompleteListener<Void>(){
                             @Override
-                            public void onClick(DialogInterface dialogInterface, int i)
+                            public void onComplete(@NonNull Task<Void> task)
                             {
-                                if (i == 0)
-                                {
-                                    Intent intent = new Intent(CartActivity.this, Homepage.class);
-                                    //intent.putExtra("ItemKey", model.getItemKey());
-                                    intent.putExtra("ItemKey",getRef(position).getKey());
-                                    startActivity(intent);
-                                }
-                                if(i==1){
-                                    cartListRef.child("User View")
-                                            .child(userId)
-                                            .child(model.getItemKey())
-                                            .removeValue()
-                                            .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                                @Override
-                                                public void onComplete(@NonNull Task<Void> task)
-                                                {
-                                                    if(task.isSuccessful())
-                                                    {
-                                                        Toast.makeText(CartActivity.this, "Item Removed successfully"
-                                                                , Toast.LENGTH_SHORT).show();
-                                                    }
-                                                }
-                                            });
+                                if(task.isSuccessful()) {
+                                    Toast.makeText(CartActivity.this, "Item Removed successfully", Toast.LENGTH_SHORT).show();
+                                }else{
+                                Toast.makeText(CartActivity.this, "Item Removed Unsuccessfully", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });
-                        builder.show() ;
                     }
                 });
-            }
 
+//                holder.add.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View view) {
+//                        int mCount=model.getQuantity();
+//                        double productPrice = model.getPrice();
+//                        double productTotal;
+//                        if (mCount < 10 ){
+//                            mCount ++;
+//                            productTotal = productPrice*mCount;
+//                            holder.txtProductQuantity.setText(String.valueOf(mCount));
+//                            mCount=Integer.valueOf(mCount);
+//                            cartListRef.child(userId).child(model.getItemKey()).child("price").setValue(productTotal);
+//                            cartListRef.child(userId).child(model.getItemKey()).child("quantity").setValue(mCount);
+//                        }
+//                    }
+//                });
+//
+//                holder.minus.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View view) {
+//                        int mCount=model.getQuantity();
+//                        double productPrice = model.getPrice();
+//                        double productTotal;
+//                        if (mCount <= 10 & mCount > 1){
+//                            mCount--;
+//                            productTotal = productPrice*mCount;
+//                            holder.txtProductQuantity.setText(String.valueOf(mCount));
+//                            mCount=Integer.valueOf(mCount);
+//                            cartListRef.child(userId).child(model.getItemKey()).child("price").setValue(productTotal);
+//                            cartListRef.child(userId).child(model.getItemKey()).child("quantity").setValue(mCount);
+//                        }
+//                    }
+//                });
+
+                if(holder.checkProduct.isChecked()){
+                    double productPrice = model.getPrice();
+                    String pName = model.getProductName();
+                    String itemID = model.getItemKey();
+                    String image = model.getImage();
+                    int qty = model.getQuantity();
+                    total= (double) (total+productPrice);
+                    totalP.setText(String.valueOf(total));
+                    confirmListRef.child(userId).child("product").child("ItemKey").setValue(itemID);
+                    confirmListRef.child(userId).child("product").child("pName").setValue(pName);
+                    confirmListRef.child(userId).child("product").child("image").setValue(image);
+                    confirmListRef.child(userId).child("product").child("quantity").setValue(qty);
+                    confirmListRef.child(userId).child("product").child("total").setValue(total);
+                    Toast.makeText(CartActivity.this, "Item Select", Toast.LENGTH_SHORT).show();
+
+                }
+//                else if(!holder.checkProduct.isChecked()){
+//                    total= 0;
+//                    totalP.setText(String.valueOf(total));
+//                    confirmListRef.child(userId).child("product").removeValue();
+////                    cartListRef.child(userId).child("Total").setValue(total);
+//                    Toast.makeText(CartActivity.this, "Item Uncheck", Toast.LENGTH_SHORT).show();
+//                }
+
+            }
             @NonNull
             @Override
             public CartViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
@@ -147,9 +201,7 @@ public class CartActivity extends AppCompatActivity {
                 return holder;
             }
         };
-
         recyclerView.setAdapter(adapter);
         adapter.startListening();
-
     }
 }
