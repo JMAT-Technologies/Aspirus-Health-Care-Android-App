@@ -3,6 +3,12 @@
     package="com.example.aspirushealthcareandroidapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,19 +23,31 @@
             android:name=".PharmacyManagement.Pharmacy"
             android:exported="true"/>
         <activity
+            android:name=".UserManagement.UpdatePatientProfile"
+            android:exported="true" />
+        <activity
+            android:name=".UserManagement.PatientProfilePicUpload"
+            android:exported="true" />
+        <activity
+            android:name=".UserManagement.PatientSignUp"
+            android:exported="true" />
+        <activity
+            android:name=".UserManagement.DoctorProfile"
+            android:exported="true" />
+        <activity
+            android:name=".UserManagement.PatientProfile"
+            android:exported="true" />
+        <activity
             android:name=".PharmacyManagement.ProductOneView"
             android:exported="true"/>
         <activity
             android:name=".PharmacyManagement.AdminAddNewProductActivity"
             android:exported="true" />
         <activity
-            android:name=".DoctorProfile"
+            android:name=".UserManagement.DoctorLogin"
             android:exported="true" />
         <activity
-            android:name=".PatientProfile"
-            android:exported="true" />
-        <activity
-            android:name=".ChannelingConfirmation"
+            android:name=".UserManagement.PatientLogin"
             android:exported="true" />
         <activity
             android:name=".Channeling"
@@ -42,12 +60,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".DoctorLogin"
-            android:exported="true" />
-        <activity
-            android:name=".PatientLogin"
-            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true"/> >

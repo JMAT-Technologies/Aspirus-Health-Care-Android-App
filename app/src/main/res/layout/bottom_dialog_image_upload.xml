@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bottom_dialog">
+
+
+    <ImageView
+        android:id="@+id/img_gallery"
+        android:layout_width="129dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_upload_image"
+        app:srcCompat="@drawable/ic_baseline_photo_library_24" />
+
+    <ImageView
+        android:id="@+id/img_camera"
+        android:layout_width="130dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/img_close"
+        app:layout_constraintStart_toEndOf="@+id/img_gallery"
+        app:layout_constraintTop_toBottomOf="@+id/label_upload_image"
+        app:srcCompat="@drawable/ic_baseline_photo_camera_24" />
+
+    <ImageView
+        android:id="@+id/img_close"
+        android:layout_width="130dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintEnd_toEndOf="@+id/label_close"
+        app:layout_constraintStart_toStartOf="@+id/label_close"
+        app:layout_constraintTop_toBottomOf="@+id/label_upload_image"
+        app:srcCompat="@drawable/ic_baseline_close_24" />
+
+    <TextView
+        android:id="@+id/label_gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/label_gallery"
+        app:layout_constraintEnd_toEndOf="@+id/img_gallery"
+        app:layout_constraintEnd_toStartOf="@+id/label_camera"
+        app:layout_constraintHorizontal_bias="0.303"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_gallery" />
+
+    <TextView
+        android:id="@+id/label_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/label_camera"
+        app:layout_constraintEnd_toEndOf="@+id/img_camera"
+        app:layout_constraintStart_toStartOf="@+id/img_camera"
+        app:layout_constraintTop_toBottomOf="@+id/img_camera" />
+
+    <TextView
+        android:id="@+id/label_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/label_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/label_camera"
+        app:layout_constraintTop_toBottomOf="@+id/img_close" />
+
+    <TextView
+        android:id="@+id/label_upload_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/upload_profilePic"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="398dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_camera"></LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
