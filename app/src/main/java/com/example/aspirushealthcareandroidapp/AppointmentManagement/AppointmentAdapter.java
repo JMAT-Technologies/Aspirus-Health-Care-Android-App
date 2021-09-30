@@ -1,4 +1,4 @@
-package com.example.aspirushealthcareandroidapp;
+package com.example.aspirushealthcareandroidapp.AppointmentManagement;
 
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
@@ -12,6 +12,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.aspirushealthcareandroidapp.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.tasks.OnFailureListener;
