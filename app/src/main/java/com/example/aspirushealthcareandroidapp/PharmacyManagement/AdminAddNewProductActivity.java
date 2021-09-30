@@ -27,7 +27,6 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
 
@@ -145,15 +144,9 @@ public class AdminAddNewProductActivity extends AppCompatActivity
 
         Calendar calendar = Calendar.getInstance();
 
-        SimpleDateFormat currentDate = new SimpleDateFormat("MMM dd, yyyy");
-        saveCurrentDate = currentDate.format(calendar.getTime());
 
-        SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm:ss a");
-        saveCurrentTime = currentTime.format(calendar.getTime());
 
-        productRandomKey = saveCurrentDate + saveCurrentTime;
-
-        StorageReference filePath = ProductImagesRef.child(ImageURI.getLastPathSegment() + productRandomKey + ".jpg");
+        StorageReference filePath = ProductImagesRef.child(ImageURI.getLastPathSegment()  + ".jpg");
 
         final UploadTask uploadTask = filePath.putFile(ImageURI);
 
@@ -214,7 +207,7 @@ public class AdminAddNewProductActivity extends AppCompatActivity
         productMap.put("price",Price);
         productMap.put("productName",ProductName);
 
-        ProductRef.child(productRandomKey).updateChildren(productMap)
+        ProductRef.child(ProductName).updateChildren(productMap)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task)
@@ -224,6 +217,8 @@ public class AdminAddNewProductActivity extends AppCompatActivity
                             loadingBar.dismiss();
                             Toast.makeText(AdminAddNewProductActivity.this,
                                     "Product is added successfully...", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(AdminAddNewProductActivity.this, AdminPharmacy.class);
+                            startActivity(intent);
                         }
                         else
                         {
@@ -234,12 +229,7 @@ public class AdminAddNewProductActivity extends AppCompatActivity
                         }
                     }
                 });
-
     }
-
-
-
-
 
     public void AdminHome(View view) {
         Intent intent = new Intent(this, AdminPharmacy.class);
