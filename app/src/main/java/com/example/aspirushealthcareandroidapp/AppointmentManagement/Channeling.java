@@ -1,4 +1,4 @@
-package com.example.aspirushealthcareandroidapp;
+package com.example.aspirushealthcareandroidapp.AppointmentManagement;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -16,6 +16,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.aspirushealthcareandroidapp.Homepage;
+import com.example.aspirushealthcareandroidapp.PharmacyManagement.Pharmacy;
+import com.example.aspirushealthcareandroidapp.R;
+import com.example.aspirushealthcareandroidapp.UserManagement.Doctor.Doctor;
+import com.example.aspirushealthcareandroidapp.UserManagement.Doctor.DoctorViewHolder;
+import com.example.aspirushealthcareandroidapp.UserManagement.Patient.PatientProfile;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -69,7 +75,6 @@ public class Channeling extends AppCompatActivity{
         });
 
         DoctorRef = FirebaseDatabase.getInstance().getReference().child("doctors");
-
         inputSearch = findViewById(R.id.inputSearch);
         recyclerView = findViewById(R.id.appointmentRecyclerView);
 
@@ -105,16 +110,15 @@ public class Channeling extends AppCompatActivity{
     private void LoadData(String data) {
         Query query = DoctorRef.orderByChild("username").startAt(data).endAt(data+"\uf8ff");
 
-
         options = new FirebaseRecyclerOptions.Builder<Doctor>().setQuery(query,Doctor.class).build();
         adapter = new FirebaseRecyclerAdapter<Doctor, DoctorViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull DoctorViewHolder holder, @SuppressLint("RecyclerView") int position, @NonNull Doctor model) {
                 holder.username.setText(model.getUsername());
                 holder.speciality.setText(model.getSpeciality());
-                Picasso.get().load(model.getImage()).into(holder.imageView);
+                Picasso.get().load(model.getImage()).into(holder.doctor_image);
                 //onclick
-                holder.view.setOnClickListener(new View.OnClickListener(){
+                holder.doctorView.setOnClickListener(new View.OnClickListener(){
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(Channeling.this, ViewDoctor.class);

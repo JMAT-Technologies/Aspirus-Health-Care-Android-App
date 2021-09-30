@@ -5,13 +5,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ViewDoctor">
+    tools:context=".AppointmentManagement.ViewDoctor">
 
 
     <ImageView
         android:id="@+id/back_btn"
-        android:layout_width="35dp"
-        android:layout_height="37dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="20dp"
@@ -19,7 +19,8 @@
         android:onClick="ChannelingPage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back" />
+        app:srcCompat="@drawable/back"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/channelingHeading"
@@ -28,7 +29,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="136dp"
         android:layout_toEndOf="@+id/back_btn"
         android:fontFamily="arial"
@@ -47,7 +48,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="1dp"
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="20dp"
         android:scaleType="centerCrop"
@@ -80,7 +81,7 @@
         android:layout_marginEnd="75dp"
         android:layout_marginBottom="30dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/doctor" />
+        android:src="@drawable/avatar" />
 
     <EditText
         android:id="@+id/et_doctorName"
@@ -110,29 +111,13 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/et_appointmentDate"
-        android:layout_width="150dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/speciality_name"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="25dp"
-        android:background="@android:color/transparent"
-        android:drawableEnd="@drawable/ic_date"
-        android:gravity="center"
-        android:hint="@string/et_appointmentDate"
-        android:inputType="textPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/et_doctorName"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <EditText
         android:id="@+id/et_appointmentTime"
         android:layout_width="150dp"
         android:layout_height="40dp"
         android:layout_below="@+id/speciality_name"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="45dp"
         android:background="@android:color/transparent"
         android:drawableEnd="@drawable/ic_time"
         android:gravity="center"
@@ -148,7 +133,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/speciality_name"
         android:layout_marginStart="130dp"
-        android:layout_marginTop="79dp"
+        android:layout_marginTop="66dp"
         android:width="@dimen/btn_sign_width"
         android:height="@dimen/btn_sign_height"
         android:background="@drawable/btn_blue_gradient"
@@ -161,6 +146,22 @@
         app:layout_constraintTop_toBottomOf="@+id/et_doctorName"
         tools:ignore="TextContrastCheck" />
 
+    <EditText
+        android:id="@+id/et_appointmentDate"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/speciality_name"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/transparent"
+        android:drawableEnd="@drawable/ic_date"
+        android:gravity="center"
+        android:hint="@string/et_appointmentDate"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/et_doctorName"
+        tools:ignore="TouchTargetSizeCheck" />
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -168,8 +169,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         app:itemBackground="@color/white"
-        app:itemIconTint="@drawable/selector"
-        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/nav_selector"
+        app:itemTextColor="@drawable/nav_selector"
         app:menu="@menu/menu_navigation" />
 
 </RelativeLayout>
