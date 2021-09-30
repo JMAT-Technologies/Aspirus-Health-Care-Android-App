@@ -1,4 +1,4 @@
-package com.example.aspirushealthcareandroidapp.UserManagement;
+package com.example.aspirushealthcareandroidapp.UserManagement.Doctor;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,12 +10,12 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.aspirushealthcareandroidapp.MainActivity;
+import com.example.aspirushealthcareandroidapp.Homepage;
 import com.example.aspirushealthcareandroidapp.R;
+import com.example.aspirushealthcareandroidapp.UserManagement.UserValidations;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -94,7 +94,7 @@ public class DoctorSignUp2 extends AppCompatActivity {
         doctor.put("nic",nic);
         doctor.put("speciality",speciality);
         doctor.put("slmc",slmc);
-        doctor.put("work",work);
+        doctor.put("workingPlace",work);
         doctor.put("fee",fee);
 
         //saving data to database
@@ -103,7 +103,7 @@ public class DoctorSignUp2 extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()){
                     Toast.makeText(DoctorSignUp2.this, "Registration Successful", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    startActivity(new Intent(getApplicationContext(), Homepage.class));
                     finish();
                 } else {
                     Toast.makeText(DoctorSignUp2.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();

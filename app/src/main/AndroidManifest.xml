@@ -17,10 +17,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AspirusHealthCareAndroidApp">
         <activity
-            android:name=".UserManagement.DoctorSignUp2"
+            android:name=".UserManagement.Doctor.DoctorSignUp2"
             android:exported="true" />
         <activity
-            android:name=".UserManagement.DoctorSignUp"
+            android:name=".UserManagement.Doctor.DoctorSignUp"
             android:exported="true" />
         <activity
             android:name=".PharmacyManagement.AdminPharmacy"
@@ -32,19 +32,19 @@
             android:name=".PharmacyManagement.Pharmacy"
             android:exported="true"/>
         <activity
-            android:name=".UserManagement.UpdatePatientProfile"
+            android:name=".UserManagement.Patient.UpdatePatientProfile"
             android:exported="true" />
         <activity
-            android:name=".UserManagement.PatientProfilePicUpload"
+            android:name=".UserManagement.Patient.PatientProfilePicUpload"
             android:exported="true" />
         <activity
-            android:name=".UserManagement.PatientSignUp"
+            android:name=".UserManagement.Patient.PatientSignUp"
             android:exported="true" />
         <activity
-            android:name=".UserManagement.DoctorProfile"
+            android:name=".UserManagement.Doctor.DoctorProfile"
             android:exported="true" />
         <activity
-            android:name=".UserManagement.PatientProfile"
+            android:name=".UserManagement.Patient.PatientProfile"
             android:exported="true" />
         <activity
             android:name=".PharmacyManagement.ProductOneView"
@@ -57,10 +57,10 @@
             android:exported="true" />
 
         <activity
-            android:name=".UserManagement.DoctorLogin"
+            android:name=".UserManagement.Doctor.DoctorLogin"
             android:exported="true" />
         <activity
-            android:name=".UserManagement.PatientLogin"
+            android:name=".UserManagement.Patient.PatientLogin"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
