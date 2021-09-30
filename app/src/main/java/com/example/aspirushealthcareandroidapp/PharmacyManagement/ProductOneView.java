@@ -12,13 +12,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.aspirushealthcareandroidapp.Channeling;
-import com.example.aspirushealthcareandroidapp.Homepage;
-import com.example.aspirushealthcareandroidapp.PatientProfile;
 import com.example.aspirushealthcareandroidapp.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -144,38 +140,6 @@ public class ProductOneView extends AppCompatActivity {
             }
         });
 
-        BottomNavigationView bottomNavigationView=findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setSelectedItemId((R.id.pharmacypage));
-
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                        case R.id.homepage:
-                            startActivity(new Intent(getApplicationContext(), Homepage.class));
-                            overridePendingTransition(0,0);
-                            return true;
-                        case R.id.pharmacypage:
-                            startActivity(new Intent(getApplicationContext() , Pharmacy.class));
-                            overridePendingTransition(0,0);
-                            return true;
-                        case R.id.channelingpage:
-                            startActivity(new Intent(getApplicationContext() , Channeling.class));
-                            overridePendingTransition(0,0);
-                            return true;
-                        case R.id.cartpage:
-                            startActivity(new Intent(getApplicationContext() , CartActivity.class));
-                            overridePendingTransition(0,0);
-                            return true;
-                        case R.id.profilepage:
-                            startActivity(new Intent(getApplicationContext() , PatientProfile.class));
-                            overridePendingTransition(0,0);
-                            return true;
-
-                }
-                return false;
-            }
-        });
     }
 
     //buy addToBuy method
