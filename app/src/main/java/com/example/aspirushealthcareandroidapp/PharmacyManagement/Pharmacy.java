@@ -18,8 +18,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.aspirushealthcareandroidapp.Channeling;
 import com.example.aspirushealthcareandroidapp.Homepage;
-import com.example.aspirushealthcareandroidapp.PatientProfile;
 import com.example.aspirushealthcareandroidapp.R;
+import com.example.aspirushealthcareandroidapp.UserManagement.PatientProfile;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
