@@ -1,4 +1,4 @@
-package com.example.aspirushealthcareandroidapp.UserManagement;
+package com.example.aspirushealthcareandroidapp.UserManagement.Patient;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;

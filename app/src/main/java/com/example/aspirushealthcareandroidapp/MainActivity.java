@@ -6,6 +6,9 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.aspirushealthcareandroidapp.UserManagement.Patient.PatientLogin;
+import com.google.firebase.auth.FirebaseAuth;
+
 import com.example.aspirushealthcareandroidapp.PharmacyManagement.Pharmacy;
 
 import java.util.Timer;

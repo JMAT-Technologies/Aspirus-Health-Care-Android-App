@@ -9,12 +9,12 @@
     <item
         android:id="@+id/pharmacypage"
         android:title="Pharmacy"
-        android:icon="@drawable/ic_drugs"/>
+        android:icon="@drawable/ic_pharmacy"/>
 
     <item
         android:id="@+id/channelingpage"
         android:title="Channel"
-        android:icon="@drawable/ic_appointment"/>
+        android:icon="@drawable/ic_add"/>
 
     <item
         android:id="@+id/cartpage"
