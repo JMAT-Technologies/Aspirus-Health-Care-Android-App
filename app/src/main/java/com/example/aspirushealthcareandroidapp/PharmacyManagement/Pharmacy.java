@@ -16,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.aspirushealthcareandroidapp.Channeling;
+import com.example.aspirushealthcareandroidapp.AppointmentManagement.Channeling;
 import com.example.aspirushealthcareandroidapp.Homepage;
 import com.example.aspirushealthcareandroidapp.R;
 import com.example.aspirushealthcareandroidapp.UserManagement.Patient.PatientProfile;
