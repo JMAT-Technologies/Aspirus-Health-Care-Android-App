@@ -82,5 +82,7 @@
     <string name="label_bmi">BMI - </string>
     <string name="label_monthlyearning">Earned This Month</string>
     <string name="label_totalearnings">Total Earnings</string>
+    <string name="update_details">Update Details</string>
+    <string name="update">Update</string>
 
 </resources>
