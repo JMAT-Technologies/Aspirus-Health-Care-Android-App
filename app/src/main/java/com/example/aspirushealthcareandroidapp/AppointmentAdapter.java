@@ -45,15 +45,11 @@ public class AppointmentAdapter extends FirebaseRecyclerAdapter<AppointmentModel
         holder.date.setText(model.getDate());
         holder.time.setText(model.getTime());
 
-
         //Edit
         holder.btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final DialogPlus dialogPlus = DialogPlus.newDialog(holder.btnEdit.getContext())
-                        .setContentHolder(new ViewHolder(R.layout.dialog_appointment_update))
-                        .setExpanded(true,600)
-                        .create();
+                final DialogPlus dialogPlus = DialogPlus.newDialog(holder.btnEdit.getContext()).setContentHolder(new ViewHolder(R.layout.dialog_appointment_update)).setExpanded(true,600).create();
 
                 View myView = dialogPlus.getHolderView();
                 TextView tv_doctorName = myView.findViewById(R.id.tv_doctorName);
@@ -68,33 +64,31 @@ public class AppointmentAdapter extends FirebaseRecyclerAdapter<AppointmentModel
 
                 dialogPlus.show();
 
+                //Update
+                btn_appointmmentUpdate.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Map<String,Object> map=new HashMap<>();
+                        map.put("time",time.getText().toString());
+                        map.put("date",date.getText().toString());
 
-                    //Update
-                    btn_appointmmentUpdate.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            Map<String,Object> map=new HashMap<>();
-                            map.put("time",time.getText().toString());
-                            map.put("date",date.getText().toString());
-
-                            FirebaseDatabase.getInstance().getReference().child("Appointments")
-                                .child(getRef(position).getKey()).updateChildren(map)
-                                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                    @Override
-                                    public void onSuccess(Void unused) {
-                                        Toast.makeText(holder.doctorName.getContext(), "Appointment Updated", Toast.LENGTH_SHORT).show();
-                                        dialogPlus.dismiss();
-                                    }
-
-                                })
-                                .addOnFailureListener(new OnFailureListener() {
-                                    @Override
-                                    public void onFailure( Exception e) {
-                                        dialogPlus.dismiss();
-                                    }
-                                });
-                        }
-                    });
+                        FirebaseDatabase.getInstance().getReference().child("Appointments")
+                            .child(getRef(position).getKey()).updateChildren(map)
+                            .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void unused) {
+                                    Toast.makeText(holder.doctorName.getContext(), "Appointment Updated", Toast.LENGTH_SHORT).show();
+                                    dialogPlus.dismiss();
+                                }
+                            })
+                            .addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure( Exception e) {
+                                    dialogPlus.dismiss();
+                                }
+                            });
+                    }
+                });
             }
         });
 
