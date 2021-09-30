@@ -12,6 +12,9 @@
     <string name="et_phProductPrice">Product Price</string>
     <string name="pharmacy">Pharmacy</string>
     <string name="et_phImgUrl">ImageUrl</string>
+    <string name="spscreen">ASPIRUS HEALTH CARE</string>
+    <string name="JMAT">JMAT Technology</string>
+    <string name="FROM">from</string>
 
 
     <string name="btn_signin">Sign In</string>
