@@ -1,4 +1,4 @@
-package com.example.aspirushealthcareandroidapp.UserManagement;
+package com.example.aspirushealthcareandroidapp.UserManagement.Doctor;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +15,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.aspirushealthcareandroidapp.R;
+import com.example.aspirushealthcareandroidapp.UserManagement.Patient.PatientLogin;
+import com.example.aspirushealthcareandroidapp.UserManagement.UserValidations;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
@@ -175,7 +177,7 @@ public class DoctorSignUp extends AppCompatActivity {
                     newDoctor.put("phone",phone);
                     newDoctor.put("dob",dob);
                     newDoctor.put("age",age);
-                    newDoctor.put("finalGender",finalGender);
+                    newDoctor.put("gender",finalGender);
                     newDoctor.put("password",password);
 
                     //saving data to database
