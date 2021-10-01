@@ -18,22 +18,19 @@
         android:theme="@style/Theme.AspirusHealthCareAndroidApp">
 
         <activity
-            android:name=".AddNewCard"
-            android:exported="true" />
-        <activity
-            android:name=".CartActivity"
+            android:name=".CartManagement.CartActivity"
             android:exported="true"/>
         <activity
-            android:name=".PaymentMethods"
+            android:name=".CartManagement.PaymentMethods"
             android:exported="true" />
         <activity
-            android:name=".addNewAddress"
+            android:name=".CartManagement.addNewAddress"
             android:exported="true" />
         <activity
-            android:name=".SelectAddress"
+            android:name=".CartManagement.SelectAddress"
             android:exported="true" />
         <activity
-            android:name=".orderConfirmation"
+            android:name=".CartManagement.orderConfirmation"
             android:exported="true" />
         <activity
             android:name=".UserManagement.Doctor.DoctorSignUp2"

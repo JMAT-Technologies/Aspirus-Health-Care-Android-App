@@ -1,6 +1,4 @@
-package com.example.aspirushealthcareandroidapp;
-import android.content.Intent;
-import android.util.SparseIntArray;
+package com.example.aspirushealthcareandroidapp.CartManagement;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageView;
@@ -8,6 +6,8 @@ import android.widget.TextView;
 
 
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.aspirushealthcareandroidapp.R;
 
 
 public class CartViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener

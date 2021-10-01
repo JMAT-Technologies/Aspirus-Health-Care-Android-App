@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PaymentMethods">
+    tools:context=".CartManagement.PaymentMethods">
 
     <Button
         android:id="@+id/address2"
@@ -22,13 +22,13 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/tv_heading_channeling5"
+        android:id="@+id/tv_heading_payment_methods"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
         android:layout_marginTop="16dp"
         android:fontFamily="arial"
-        android:text="Select Payment Method"
+        android:text="@string/select_payment"
         android:textColor="@color/blue"
         android:textSize="28sp"
         android:textStyle="bold"
@@ -45,10 +45,11 @@
         app:srcCompat="@drawable/back" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
         android:layout_width="342dp"
         android:layout_height="65dp"
         android:layout_marginTop="100dp"
-        android:background="@drawable/cart_item"
+        android:background="@drawable/white_card"
         android:elevation="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.444"
@@ -78,7 +79,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="100dp"
-            android:text="Card number"
+            android:text="@string/card_number"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -88,19 +89,19 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="342dp"
         android:layout_height="63dp"
-        android:layout_marginTop="192dp"
-        android:background="@drawable/cart_item"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/white_card"
         android:elevation="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
 
         <TextView
             android:id="@+id/textView13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="92dp"
-            android:text="Add new card"
+            android:text="@string/add_new_card"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/radioButton"

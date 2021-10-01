@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SelectAddress"
+    tools:context=".CartManagement.SelectAddress"
     tools:layout_editor_absoluteX="-98dp"
     tools:layout_editor_absoluteY="-282dp">
 
@@ -15,7 +15,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
         android:fontFamily="arial"
-        android:text="Shopping Cart"
+        android:text="@string/select_address"
         android:textColor="@color/blue"
         android:textSize="28sp"
         android:textStyle="bold"
@@ -48,7 +48,7 @@
             android:layout_height="64dp"
             android:layout_marginStart="56dp"
             android:layout_marginTop="64dp"
-            android:text="Address"
+            android:text="@string/address"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -67,7 +67,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="user"
+            android:text="@string/user"
             app:layout_constraintStart_toEndOf="@+id/imageView18"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -97,7 +97,7 @@
             android:layout_height="64dp"
             android:layout_marginStart="52dp"
             android:layout_marginTop="76dp"
-            android:text="Address"
+            android:text="@string/address"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -107,7 +107,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="2dp"
             android:layout_marginBottom="15dp"
-            android:text="user"
+            android:text="@string/user"
             app:layout_constraintBottom_toTopOf="@+id/textView8"
             app:layout_constraintStart_toEndOf="@+id/imageView15" />
 
@@ -128,7 +128,7 @@
             android:layout_marginStart="52dp"
             android:layout_marginTop="4dp"
             android:layout_marginBottom="14dp"
-            android:text="Defalt"
+            android:text="@string/defalt"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
