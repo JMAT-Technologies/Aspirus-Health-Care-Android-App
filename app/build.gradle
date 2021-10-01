@@ -28,7 +28,7 @@ android {
     sourceSets {
         main {
             res {
-                srcDirs 'src/main/res', 'src/main/res/layout/patient-layouts', 'src/main/res/layouts/patient', 'src/main/res/layouts/doctor', 'src\\main\\res', 'src\\main\\res\\layouts\\pharmacy', 'src\\main\\res\\layouts\\appointment', 'src\\main\\res\\layouts\\navigation'
+                srcDirs 'src/main/res', 'src/main/res/layout/patient-layouts', 'src/main/res/layouts/patient', 'src/main/res/layouts/doctor', 'src\\main\\res', 'src\\main\\res\\layouts\\pharmacy', 'src\\main\\res\\layouts\\appointment', 'src\\main\\res\\layouts\\navigation', 'src/main/res/layouts/navigation/layout'
             }
         }
     }
@@ -68,6 +68,7 @@ dependencies {
     implementation 'com.orhanobut:dialogplus:1.11@aar'
     implementation 'androidx.navigation:navigation-ui:2.3.5'
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.22'
+    implementation 'com.android.volley:volley:1.2.1'
 }
 
 apply plugin: 'com.google.gms.google-services'
