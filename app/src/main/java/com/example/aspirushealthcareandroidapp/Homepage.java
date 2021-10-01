@@ -15,11 +15,19 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.aspirushealthcareandroidapp.AppointmentManagement.Channeling;
 import com.example.aspirushealthcareandroidapp.AppointmentManagement.ViewDoctor;
+import com.example.aspirushealthcareandroidapp.CartManagement.CartActivity;
 import com.example.aspirushealthcareandroidapp.PharmacyManagement.Pharmacy;
-import com.example.aspirushealthcareandroidapp.PharmacyManagement.ProductOneView;
 import com.example.aspirushealthcareandroidapp.UserManagement.Doctor.Doctor;
 import com.example.aspirushealthcareandroidapp.UserManagement.Doctor.DoctorViewHolder;
 import com.example.aspirushealthcareandroidapp.UserManagement.Patient.PatientLogin;
@@ -33,6 +41,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.squareup.picasso.Picasso;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class Homepage extends AppCompatActivity {
 
     EditText doctor_search;
@@ -40,6 +51,7 @@ public class Homepage extends AppCompatActivity {
     FirebaseRecyclerOptions<Doctor> options; //pass the model class
     FirebaseRecyclerAdapter<Doctor, DoctorViewHolder> adapter;
     DatabaseReference DoctorReference;
+    TextView tv_deaths, tv_totalDeaths, tv_cases, tv_totalCases, tv_inHospitals, tv_recovered;
 
     @Override
     protected void onStart() {
@@ -54,6 +66,7 @@ public class Homepage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
 
+        //top docs
         DoctorReference = FirebaseDatabase.getInstance().getReference().child("doctors");
         doctor_search = findViewById(R.id.doctor_search);
         doctor_recycle_view = (RecyclerView) findViewById(R.id.doctor_recycle_view);
@@ -88,6 +101,15 @@ public class Homepage extends AppCompatActivity {
             }
         });
 
+        //covid dashboard
+        tv_deaths = findViewById(R.id.tv_deaths);
+        tv_totalDeaths = findViewById(R.id.tv_total_deaths);
+        tv_cases = findViewById(R.id.tv_cases);
+        tv_totalCases = findViewById(R.id.tv_total_cases);
+        tv_inHospitals = findViewById(R.id.tv_hospitals);
+        tv_recovered = findViewById(R.id.tv_recovered);
+
+        loadCovid();
 
         //navigation bar
         BottomNavigationView bottomNavigationView=findViewById(R.id.bottom_navigation);
@@ -159,6 +181,43 @@ public class Homepage extends AppCompatActivity {
 
     public void PharmacyGif(View view) {
         startActivity(new Intent(getApplicationContext() , Pharmacy.class));
+    }
+
+    private void loadCovid(){
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        String url = "https://www.hpb.health.gov.lk/api/get-current-statistical";
+
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                try {
+                    String deaths = response.getString("local_new_deaths");
+                    String totalDeaths = response.getString("local_deaths");
+                    String cases = response.getString("local_new_cases");
+                    String totalCases = response.getString("local_total_cases");
+                    String inHospitals = response.getString("local_total_number_of_individuals_in_hospitals");
+                    String recovered = response.getString("local_recovered");
+                    Toast.makeText(Homepage.this,"fuck",Toast.LENGTH_SHORT).show();
+                    tv_deaths.setText(deaths);
+                    tv_totalDeaths.setText(totalDeaths);
+                    tv_cases.setText(cases);
+                    tv_totalCases.setText(totalCases);
+                    tv_inHospitals.setText(inHospitals);
+                    tv_recovered.setText(recovered);
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener(){
+            @Override
+            public void onErrorResponse(VolleyError error){
+                //TODO: handle error
+            }
+        });
+
+        requestQueue.add(jsonObjectRequest);
     }
 }
 
