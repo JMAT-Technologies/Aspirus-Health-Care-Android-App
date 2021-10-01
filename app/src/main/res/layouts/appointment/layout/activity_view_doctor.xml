@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AppointmentManagement.ViewDoctor">
+
+
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:onClick="ChannelingPage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/channelingHeading"
+        android:layout_width="183dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="136dp"
+        android:layout_toEndOf="@+id/back_btn"
+        android:fontFamily="arial"
+        android:text="Channeling"
+        android:textColor="@color/blue"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/backdrop"
+        android:layout_width="wrap_content"
+        android:layout_height="500dp"
+        android:layout_below="@+id/channelingHeading"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/backdrop" />
+
+    <ImageView
+        android:id="@+id/backdrop1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/backdrop"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="20dp"
+        android:alpha="0.5"
+        android:scaleType="centerCrop"
+        android:src="@drawable/backdrop1" />
+
+    <ImageView
+        android:id="@+id/doctor_single_view"
+        android:layout_width="280dp"
+        android:layout_height="345dp"
+        android:layout_alignTop="@+id/backdrop"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="30dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/avatar" />
+
+    <EditText
+        android:id="@+id/et_doctorName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/doctor_single_view"
+        android:background="@android:color/transparent"
+        android:editable="false"
+        android:gravity="center"
+        android:hint="Doctor Name"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:ignore="Deprecated,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/speciality_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_doctorName"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="Speciality"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_appointmentTime"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/speciality_name"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="45dp"
+        android:background="@android:color/transparent"
+        android:drawableEnd="@drawable/ic_time"
+        android:gravity="center"
+        android:hint="@string/et_appointmentTime"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_doctorName"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/btn_appointmmentChannel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/speciality_name"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="66dp"
+        android:width="@dimen/btn_sign_width"
+        android:height="@dimen/btn_sign_height"
+        android:background="@drawable/btn_blue_gradient"
+        android:drawablePadding="-30dp"
+        android:text="@string/btn_appointmmentChannel"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:backgroundTint="@null"
+        app:layout_constraintTop_toBottomOf="@+id/et_doctorName"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/et_appointmentDate"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/speciality_name"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/transparent"
+        android:drawableEnd="@drawable/ic_date"
+        android:gravity="center"
+        android:hint="@string/et_appointmentDate"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/et_doctorName"
+        tools:ignore="TouchTargetSizeCheck" />
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/white"
+        app:itemIconTint="@drawable/nav_selector"
+        app:itemTextColor="@drawable/nav_selector"
+        app:menu="@menu/menu_navigation" />
+
+</RelativeLayout>

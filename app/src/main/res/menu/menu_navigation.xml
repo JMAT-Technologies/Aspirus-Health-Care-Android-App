@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homepage"
+        android:title="Home"
+        android:icon="@drawable/ic_home"/>
+
+    <item
+        android:id="@+id/pharmacypage"
+        android:title="Pharmacy"
+        android:icon="@drawable/ic_pharmacy"/>
+
+    <item
+        android:id="@+id/channelingpage"
+        android:title="Channel"
+        android:icon="@drawable/ic_add"/>
+
+    <item
+        android:id="@+id/cartpage"
+        android:title="Cart"
+        android:icon="@drawable/ic_cart"/>
+
+    <item
+        android:id="@+id/profilepage"
+        android:title="Profile"
+        android:icon="@drawable/ic_user"/>
+=
+</menu>

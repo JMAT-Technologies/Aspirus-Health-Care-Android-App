@@ -3,6 +3,11 @@
     package="com.example.aspirushealthcareandroidapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -31,28 +36,55 @@
             android:name=".orderConfirmation"
             android:exported="true" />
         <activity
-            android:name=".DoctorProfile"
+            android:name=".UserManagement.Doctor.DoctorSignUp2"
             android:exported="true" />
         <activity
-            android:name=".PatientProfile"
+            android:name=".UserManagement.Doctor.DoctorSignUp"
             android:exported="true" />
         <activity
-            android:name=".ChannelingConfirmation"
+            android:name=".PharmacyManagement.AdminPharmacy"
+            android:exported="true"/>
+        <activity
+            android:name=".PharmacyManagement.AdminAddNewProductActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".PharmacyManagement.Pharmacy"
+            android:exported="true"/>
+        <activity
+            android:name=".UserManagement.Patient.UpdatePatientProfile"
             android:exported="true" />
         <activity
-            android:name=".Channeling"
+            android:name=".UserManagement.Patient.PatientProfilePicUpload"
+            android:exported="true" />
+        <activity
+            android:name=".UserManagement.Patient.PatientSignUp"
+            android:exported="true" />
+        <activity
+            android:name=".UserManagement.Doctor.DoctorProfile"
+            android:exported="true" />
+        <activity
+            android:name=".UserManagement.Patient.PatientProfile"
+            android:exported="true" />
+        <activity
+            android:name=".PharmacyManagement.ProductOneView"
+            android:exported="true"/>
+        <activity
+            android:name=".AppointmentManagement.Channeling"
+            android:exported="true" />
+        <activity
+            android:name=".AppointmentManagement.ViewDoctor"
+            android:exported="true" />
+        <activity
+            android:name=".AppointmentManagement.Appointment"
             android:exported="true" />
         <activity
             android:name=".Homepage"
             android:exported="true" />
         <activity
-            android:name=".DoctorLogin"
+            android:name=".UserManagement.Doctor.DoctorLogin"
             android:exported="true" />
         <activity
-            android:name=".PatientLogin"
-            android:exported="true" />
-        <activity
-            android:name=".PharmcyStore"
+            android:name=".UserManagement.Patient.PatientLogin"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
@@ -64,5 +96,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>
