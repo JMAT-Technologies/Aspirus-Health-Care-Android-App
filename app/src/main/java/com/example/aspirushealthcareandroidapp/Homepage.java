@@ -161,7 +161,7 @@ public class Homepage extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         Intent intent = new Intent(Homepage.this, ViewDoctor.class);
-                        intent.putExtra("DoctorID",doctor.getUserID());
+                        intent.putExtra("DoctorKey", getRef(position).getKey());
                         startActivity(intent);
                     }
                 });
@@ -186,34 +186,35 @@ public class Homepage extends AppCompatActivity {
     private void loadCovid(){
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
-        String url = "https://www.hpb.health.gov.lk/api/get-current-statistical";
+        String api = "https://www.hpb.health.gov.lk/api/get-current-statistical";
 
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, api, null,new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 try {
-                    String deaths = response.getString("local_new_deaths");
-                    String totalDeaths = response.getString("local_deaths");
-                    String cases = response.getString("local_new_cases");
-                    String totalCases = response.getString("local_total_cases");
-                    String inHospitals = response.getString("local_total_number_of_individuals_in_hospitals");
-                    String recovered = response.getString("local_recovered");
-                    Toast.makeText(Homepage.this,"fuck",Toast.LENGTH_SHORT).show();
+                    JSONObject data = response.getJSONObject("data");
+
+                    String deaths = data.getString("local_new_deaths");
+                    String totalDeaths = data.getString("local_deaths");
+                    String cases = data.getString("local_new_cases");
+                    String totalCases = data.getString("local_total_cases");
+                    String inHospitals = data.getString("local_total_number_of_individuals_in_hospitals");
+                    String recovered = data.getString("local_recovered");
+
                     tv_deaths.setText(deaths);
                     tv_totalDeaths.setText(totalDeaths);
                     tv_cases.setText(cases);
                     tv_totalCases.setText(totalCases);
                     tv_inHospitals.setText(inHospitals);
                     tv_recovered.setText(recovered);
-
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
             }
-        }, new Response.ErrorListener(){
+        }, new Response.ErrorListener() {
             @Override
-            public void onErrorResponse(VolleyError error){
-                //TODO: handle error
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(Homepage.this,error.getMessage(),Toast.LENGTH_SHORT).show();
             }
         });
 
