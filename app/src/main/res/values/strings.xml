@@ -148,6 +148,7 @@
     <string name="total_cases">Total Cases</string>
     <string name="RS">Rs.</string>
     <string name="ph_amount">price</string>
+    <string name="_0">0</string>
 
 
 </resources>

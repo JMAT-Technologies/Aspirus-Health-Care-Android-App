@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="110dp"
     android:layout_height="170dp"
-    android:layout_marginLeft="15dp"
+    android:layout_marginStart="15dp"
     android:layout_marginTop="7dp"
     android:layout_marginBottom="24dp"
     android:elevation="100dp"
@@ -24,11 +24,13 @@
             android:id="@+id/doctor_card_image"
             android:layout_width="match_parent"
             android:layout_height="80dp"
+            android:contentDescription="@string/doctor"
             android:src="@drawable/avatar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck" />
 
         <TextView
             android:id="@+id/doc_card_username"
@@ -56,7 +58,8 @@
             android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/doc_card_username" />
+            app:layout_constraintTop_toBottomOf="@+id/doc_card_username"
+            tools:ignore="TextContrastCheck" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

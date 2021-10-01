@@ -63,9 +63,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
+            android:contentDescription="@string/heading_profile"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_more_vert_24" />
+            app:srcCompat="@drawable/ic_baseline_more_vert_24"
+            tools:ignore="ImageContrastCheck" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -86,6 +88,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="2dp"
+            android:contentDescription="@string/bloodGroup"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_baseline_bloodtype_24" />
@@ -131,6 +134,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:layout_marginTop="4dp"
+            android:text="@string/_0"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -155,7 +159,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="2dp"
             android:layout_marginTop="2dp"
-            android:contentDescription="barchart_icon"
+            android:contentDescription="@string/sugar"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_baseline_bar_chart_24"
@@ -167,11 +171,13 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
+            android:text="@string/_0"
             android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/img_sugar" />
+            app:layout_constraintTop_toBottomOf="@+id/img_sugar"
+            tools:ignore="TextContrastCheck" />
 
         <TextView
             android:id="@+id/label_sugar"
@@ -183,7 +189,8 @@
             android:textColor="@color/white"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_sugarLevel" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_sugarLevel"
+            tools:ignore="TextContrastCheck" />
 
         <TextView
             android:id="@+id/suagrLevel_SI"
@@ -194,7 +201,8 @@
             android:textColor="@color/white"
             android:textSize="12sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/tv_sugarLevel"
-            app:layout_constraintStart_toEndOf="@+id/tv_sugarLevel" />
+            app:layout_constraintStart_toEndOf="@+id/tv_sugarLevel"
+            tools:ignore="TextContrastCheck" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -214,6 +222,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="2dp"
             android:layout_marginTop="2dp"
+            android:contentDescription="@string/bloodPressure"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_baseline_bar_chart_24" />
@@ -224,6 +233,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
+            android:text="@string/_0"
             android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -240,7 +250,8 @@
             android:textColor="@color/white"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_bloodPressure" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_bloodPressure"
+            tools:ignore="TextContrastCheck" />
 
         <TextView
             android:id="@+id/bloodPressure_SI"
@@ -251,7 +262,8 @@
             android:textColor="@color/white"
             android:textSize="12sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/tv_bloodPressure"
-            app:layout_constraintStart_toEndOf="@+id/tv_bloodPressure" />
+            app:layout_constraintStart_toEndOf="@+id/tv_bloodPressure"
+            tools:ignore="TextContrastCheck" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -309,6 +321,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:text="@string/_0"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -322,6 +335,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:text="@string/_0"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -335,6 +349,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:text="@string/_0"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -363,10 +378,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="38dp"
         android:layout_marginTop="8dp"
+        android:contentDescription="@string/bmi"
         app:layout_constraintEnd_toStartOf="@+id/label_underweight"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bmi_card"
-        app:srcCompat="@drawable/ic_circle_orange_20" />
+        app:srcCompat="@drawable/ic_circle_orange_20"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/label_underweight"
@@ -409,14 +426,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:contentDescription="@string/bmi"
         app:layout_constraintEnd_toStartOf="@+id/label_Normal"
         app:layout_constraintTop_toBottomOf="@+id/bmi_card"
-        app:srcCompat="@drawable/ic_circle_green_20" />
+        app:srcCompat="@drawable/ic_circle_green_20"
+        tools:ignore="ImageContrastCheck" />
 
     <ImageView
         android:id="@+id/bmi_red_icon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/bmi"
         app:layout_constraintBottom_toBottomOf="@+id/label_overweight"
         app:layout_constraintEnd_toStartOf="@+id/label_overweight"
         app:layout_constraintTop_toTopOf="@+id/label_overweight"
