@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SelectAddress"
+    tools:context=".CartManagement.SelectAddress"
     tools:layout_editor_absoluteX="-98dp"
     tools:layout_editor_absoluteY="-282dp">
 
