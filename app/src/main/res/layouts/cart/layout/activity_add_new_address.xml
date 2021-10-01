@@ -30,7 +30,7 @@
         android:layout_marginStart="56dp"
         android:layout_marginTop="16dp"
         android:fontFamily="arial"
-        android:text="Add new Address"
+        android:text="@string/add_new_address"
         android:textColor="@color/blue"
         android:textSize="28sp"
         android:textStyle="bold"
@@ -60,9 +60,10 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:inputType="number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="@android:string/no"
+            android:inputType="number"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="5dp" />
 
@@ -82,9 +83,10 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:inputType=""
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="@string/street"
+            android:inputType=""
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="5dp" />
 
@@ -106,6 +108,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="@string/city"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="5dp" />
 
@@ -125,9 +128,10 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:inputType="number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="@string/postal_code"
+            android:inputType="number"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="5dp" />
 
