@@ -121,5 +121,10 @@
     <string name="password_reset">Reset Password</string>
     <string name="update_details">Update Details</string>
     <string name="update">Update</string>
+    <string name="deaths">Deaths</string>
+    <string name="total_death">Total Deaths</string>
+    <string name="label_cases">Cases</string>
+    <string name="in_hospitals">In Hospitals</string>
+    <string name="total_cases">Total Cases</string>
 
 </resources>
