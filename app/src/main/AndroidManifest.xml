@@ -16,6 +16,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AspirusHealthCareAndroidApp">
+
+        <activity
+            android:name=".AddNewCard"
+            android:exported="true" />
+        <activity
+            android:name=".CartActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".PaymentMethods"
+            android:exported="true" />
+        <activity
+            android:name=".addNewAddress"
+            android:exported="true" />
+        <activity
+            android:name=".SelectAddress"
+            android:exported="true" />
+        <activity
+            android:name=".orderConfirmation"
+            android:exported="true" />
         <activity
             android:name=".UserManagement.Doctor.DoctorSignUp2"
             android:exported="true" />
@@ -61,7 +80,6 @@
         <activity
             android:name=".Homepage"
             android:exported="true" />
-
         <activity
             android:name=".UserManagement.Doctor.DoctorLogin"
             android:exported="true" />

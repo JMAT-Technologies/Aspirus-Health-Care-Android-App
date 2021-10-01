@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="13dp"
+    app:cardElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="30dp">
+
+
+                <ImageView
+                    android:id="@+id/product"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="31dp"
+                    android:layout_toEndOf="@+id/checkProduct"
+                    android:contentDescription="TODO"
+                    android:onClick="decreaseInteger"
+                    android:visibility="visible"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <TextView
+                    android:id="@+id/cart_product_name"
+                    android:layout_width="187dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="155dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="30dp"
+                    android:text="Product Name"
+                    android:textColor="@color/black"
+                    android:textSize="23dp"
+                    android:textStyle="bold"
+                    android:visibility="visible">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/cart_product_price"
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cart_product_name"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="155dp"
+                    android:layout_marginTop="3dp"
+                    android:text="Product Price"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:visibility="visible">
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/delete"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="300dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/delete"
+                    android:backgroundTint="@null"
+                    android:hapticFeedbackEnabled="true"
+                    android:textColor="@color/red" />
+
+                <CheckBox
+                    android:id="@+id/checkProduct"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="70dp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="100dp"
+                    android:layout_toEndOf="@+id/product"
+                    android:text="Quantity :" />
+
+                <TextView
+                    android:id="@+id/integer_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cart_product_price"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_toEndOf="@+id/textView15"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textSize="20sp" />
+
+        </RelativeLayout>
+</androidx.cardview.widget.CardView>
