@@ -118,5 +118,8 @@
     <string name="password_reset">Reset Password</string>
     <string name="update_details">Update Details</string>
     <string name="update">Update</string>
+    <string name="et_doctorName_appointment">Doctor Name</string>
+    <string name="speciality_name">Speciality</string>
+    <string name="ChannelingHeading">Channeling</string>
 
 </resources>
