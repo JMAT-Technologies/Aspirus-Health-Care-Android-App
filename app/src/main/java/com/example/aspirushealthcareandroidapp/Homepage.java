@@ -18,8 +18,8 @@ import android.widget.EditText;
 
 import com.example.aspirushealthcareandroidapp.AppointmentManagement.Channeling;
 import com.example.aspirushealthcareandroidapp.AppointmentManagement.ViewDoctor;
+import com.example.aspirushealthcareandroidapp.CartManagement.CartActivity;
 import com.example.aspirushealthcareandroidapp.PharmacyManagement.Pharmacy;
-import com.example.aspirushealthcareandroidapp.PharmacyManagement.ProductOneView;
 import com.example.aspirushealthcareandroidapp.UserManagement.Doctor.Doctor;
 import com.example.aspirushealthcareandroidapp.UserManagement.Doctor.DoctorViewHolder;
 import com.example.aspirushealthcareandroidapp.UserManagement.Patient.PatientLogin;
