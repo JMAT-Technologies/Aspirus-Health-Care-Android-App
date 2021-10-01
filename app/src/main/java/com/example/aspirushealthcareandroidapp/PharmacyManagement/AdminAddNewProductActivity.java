@@ -27,7 +27,6 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-import java.util.Calendar;
 import java.util.HashMap;
 
 public class AdminAddNewProductActivity extends AppCompatActivity
@@ -142,11 +141,7 @@ public class AdminAddNewProductActivity extends AppCompatActivity
         loadingBar.show();
 
 
-        Calendar calendar = Calendar.getInstance();
-
-
-
-        StorageReference filePath = ProductImagesRef.child(ImageURI.getLastPathSegment()  + ".jpg");
+        StorageReference filePath = ProductImagesRef.child(ProductName + ".jpg");
 
         final UploadTask uploadTask = filePath.putFile(ImageURI);
 
