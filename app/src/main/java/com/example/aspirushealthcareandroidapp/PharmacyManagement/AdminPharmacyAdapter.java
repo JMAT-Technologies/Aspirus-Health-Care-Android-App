@@ -23,6 +23,8 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.core.Context;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 import com.orhanobut.dialogplus.DialogPlus;
 import com.orhanobut.dialogplus.ViewHolder;
 
@@ -128,6 +130,19 @@ public class AdminPharmacyAdapter extends FirebaseRecyclerAdapter<AdminPharmacyM
                     public void onClick(DialogInterface dialogInterface, int i) {
                         FirebaseDatabase.getInstance().getReference().child("Products")
                                 .child(getRef(position).getKey()).removeValue();
+                        StorageReference ProductImageRef = FirebaseStorage.getInstance().getReference().child("Product Images");
+                        ProductImageRef.child( getRef(position).getKey()+ ".jpg").delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                Toast.makeText(holder.productName.getContext(), "Item Deleted Successfully.", Toast.LENGTH_SHORT).show();
+
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception exception) {
+                                Toast.makeText(holder.productName.getContext(), "Item Delete Fail.", Toast.LENGTH_SHORT).show();
+                            }
+                        });
 
                     }
                 });
