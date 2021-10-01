@@ -23,7 +23,7 @@
         android:layout_width="325.28dp"
         android:layout_height="477.25dp"
         android:layout_marginTop="147dp"
-        android:contentDescription="star"
+        android:contentDescription="@string/label_patientLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,7 +68,7 @@
         android:background="@drawable/edittext"
         android:elevation="10dp"
         android:ems="10"
-        android:hint="emai"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
         android:paddingLeft="@dimen/et_padding_lr"
@@ -78,7 +78,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_tagline"
-        tools:ignore="TextContrastCheck" />
+        tools:ignore="TextContrastCheck"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/login_password"
@@ -100,7 +101,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_email"
-        tools:ignore="TextContrastCheck" />
+        tools:ignore="TextContrastCheck"
+        android:importantForAutofill="no" />
 
 
     <TextView
@@ -128,7 +130,6 @@
         android:background="@drawable/btn_blue_gradient"
         android:drawableEnd="@drawable/ic_baseline_navigate_next_24"
         android:drawablePadding="-30dp"
-        android:paddingRight="@dimen/btn_sign_padding"
         android:text="@string/btn_signin"
         android:textAllCaps="false"
         android:textColor="@color/white"
@@ -170,7 +171,8 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_signin"
         app:tint="@null"
         tools:ignore="SpeakableTextPresentCheck"
-        android:contentDescription="@string/google" />
+        android:contentDescription="@string/google"
+        android:focusable="true" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_facebook"
@@ -188,7 +190,8 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_signin"
         app:tint="@null"
         tools:ignore="SpeakableTextPresentCheck"
-        android:contentDescription="@string/facebook" />
+        android:contentDescription="@string/facebook"
+        android:focusable="true" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_twitter"
@@ -204,7 +207,8 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_signin"
         app:tint="@null"
         tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck"
-        android:contentDescription="@string/twitter" />
+        android:contentDescription="@string/twitter"
+        android:focusable="true" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/btn_doc_login"

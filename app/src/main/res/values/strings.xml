@@ -131,7 +131,6 @@
     <string name="city">City</string>
     <string name="postal_code">Postal code</string>
     <string name="order_confirmation">Order Confirmation</string>
-    <string name="card_number">Card Number</string>
     <string name="cash_on_deliver">Cash on deliver</string>
     <string name="total_price">Total Price</string>
     <string name="total">Total</string>
@@ -147,6 +146,7 @@
     <string name="label_cases">Cases</string>
     <string name="in_hospitals">In Hospitals</string>
     <string name="total_cases">Total Cases</string>
+    <string name="_0">0</string>
 
 
 </resources>
