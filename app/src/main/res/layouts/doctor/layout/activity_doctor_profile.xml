@@ -22,22 +22,21 @@
             android:id="@+id/doc_username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="Dr. Minindu Senadheera"
             android:textAlignment="viewStart"
             android:textColor="@color/white"
             android:textSize="@dimen/username_fontsize"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/doc_profile_pic"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextContrastCheck" />
 
         <TextView
             android:id="@+id/doc_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:text="minindusenadheera@gmail.com"
+            android:layout_marginStart="8dp"
             android:textColor="@color/white"
             android:textSize="@dimen/email_fontsize"
             android:textStyle="bold"
@@ -55,23 +54,26 @@
             android:src="@drawable/avatar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck" />
 
         <TextView
             android:id="@+id/tv_doc_specialization"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
             android:layout_marginBottom="8dp"
             android:background="@drawable/doc_specialization"
             android:gravity="center"
             android:shadowDy="3"
             android:shadowRadius="6"
-            android:text="Cardiologist"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/doc_email"
+            tools:ignore="TextContrastCheck" />
 
         <ImageView
             android:id="@+id/doc_profile_more_btn"
@@ -79,9 +81,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
+            android:contentDescription="@string/doctor"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_more_vert_24" />
+            app:srcCompat="@drawable/ic_baseline_more_vert_24"
+            tools:ignore="ImageContrastCheck" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -102,7 +106,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="2dp"
-            android:contentDescription="barchart_icon"
+            android:contentDescription="@string/label_monthlyearning"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_baseline_bar_chart_24"
@@ -113,12 +117,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="699"
+            android:text="@string/_0"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/monthly_unit"
-            app:layout_constraintTop_toBottomOf="@+id/img_monthlyIcon" />
+            app:layout_constraintTop_toBottomOf="@+id/img_monthlyIcon"
+            tools:ignore="TextContrastCheck" />
 
         <TextView
             android:id="@+id/label_monthly"
@@ -130,7 +135,8 @@
             android:textColor="@color/white"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/doc_monthly" />
+            app:layout_constraintTop_toBottomOf="@+id/doc_monthly"
+            tools:ignore="TextContrastCheck" />
 
         <TextView
             android:id="@+id/monthly_unit"
@@ -141,7 +147,8 @@
             android:textColor="@color/white"
             android:textSize="14sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/doc_monthly"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="TextContrastCheck" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -161,6 +168,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="2dp"
+            android:contentDescription="@string/label_totalearnings"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_baseline_bar_chart_24" />
@@ -170,7 +178,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="699"
+            android:text="@string/_0"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -187,7 +195,8 @@
             android:textColor="@color/white"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/doc_total" />
+            app:layout_constraintTop_toBottomOf="@+id/doc_total"
+            tools:ignore="TextContrastCheck" />
 
         <TextView
             android:id="@+id/total_SI"
@@ -198,7 +207,8 @@
             android:textColor="@color/white"
             android:textSize="14sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/doc_total"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="TextContrastCheck" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

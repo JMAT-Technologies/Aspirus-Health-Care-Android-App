@@ -17,6 +17,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AspirusHealthCareAndroidApp">
         <activity
+            android:name=".PharmacyManagement.AdminLogin"
+            android:exported="true"/>
+
+        <activity
+            android:name=".CartManagement.CartActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".CartManagement.PaymentMethods"
+            android:exported="true" />
+        <activity
+            android:name=".CartManagement.addNewAddress"
+            android:exported="true" />
+        <activity
+            android:name=".CartManagement.SelectAddress"
+            android:exported="true" />
+        <activity
+            android:name=".CartManagement.orderConfirmation"
+            android:exported="true" />
+        <activity
             android:name=".UserManagement.Doctor.DoctorSignUp2"
             android:exported="true" />
         <activity
@@ -61,7 +80,6 @@
         <activity
             android:name=".Homepage"
             android:exported="true" />
-
         <activity
             android:name=".UserManagement.Doctor.DoctorLogin"
             android:exported="true" />

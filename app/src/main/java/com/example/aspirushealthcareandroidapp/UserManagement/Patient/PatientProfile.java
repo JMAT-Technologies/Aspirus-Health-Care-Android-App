@@ -17,6 +17,7 @@ import com.example.aspirushealthcareandroidapp.AppointmentManagement.Appointment
 import com.example.aspirushealthcareandroidapp.AppointmentManagement.AppointmentModel;
 import com.example.aspirushealthcareandroidapp.AppointmentManagement.Channeling;
 import com.example.aspirushealthcareandroidapp.AppointmentManagement.ProfileAppointmentAdapter;
+import com.example.aspirushealthcareandroidapp.CartManagement.CartActivity;
 import com.example.aspirushealthcareandroidapp.Homepage;
 import com.example.aspirushealthcareandroidapp.PharmacyManagement.Pharmacy;
 import com.example.aspirushealthcareandroidapp.R;
