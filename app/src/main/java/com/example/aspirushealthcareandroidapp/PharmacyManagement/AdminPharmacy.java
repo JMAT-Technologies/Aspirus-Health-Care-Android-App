@@ -35,7 +35,6 @@ public class AdminPharmacy extends AppCompatActivity {
        // recyclerView.setLayoutManager(horizontalLayoutManagaer);
 
 
-
         FirebaseRecyclerOptions<AdminPharmacyModel> options =
                 new FirebaseRecyclerOptions.Builder<AdminPharmacyModel>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("Products"), AdminPharmacyModel.class)
@@ -43,10 +42,6 @@ public class AdminPharmacy extends AppCompatActivity {
 
         adminPharmacyAdapter = new  AdminPharmacyAdapter(options);
         recyclerView.setAdapter(adminPharmacyAdapter);
-
-
-
-
 
 
     }
