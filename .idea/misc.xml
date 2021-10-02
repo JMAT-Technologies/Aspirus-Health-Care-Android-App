@@ -221,6 +221,7 @@
         <entry key="app/src/main/res/layouts/patient/layout/activity_patient_profile_pic_upload.xml" value="0.2894736842105263" />
         <entry key="app/src/main/res/layouts/patient/layout/activity_patient_sign_up.xml" value="0.33" />
         <entry key="app/src/main/res/layouts/patient/layout/activity_update_patient_profile.xml" value="0.2894736842105263" />
+        <entry key="app/src/main/res/layouts/pharmacy/drawable/add.xml" value="0.2899122807017544" />
         <entry key="app/src/main/res/menu/menu_navigation.xml" value="0.2894736842105263" />
         <entry key="app/src/main/res/menu/profile_menu.xml" value="0.2894736842105263" />
       </map>
