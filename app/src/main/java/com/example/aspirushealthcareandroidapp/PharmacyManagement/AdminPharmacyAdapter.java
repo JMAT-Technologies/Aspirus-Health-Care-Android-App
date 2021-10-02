@@ -128,19 +128,19 @@ public class AdminPharmacyAdapter extends FirebaseRecyclerAdapter<AdminPharmacyM
                 buildDialog.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        FirebaseDatabase.getInstance().getReference().child("Products")
-                                .child(getRef(position).getKey()).removeValue();
+                        FirebaseDatabase.getInstance().getReference().child("Products").child(getRef(position).getKey()).removeValue();
                         StorageReference ProductImageRef = FirebaseStorage.getInstance().getReference().child("Product Images");
+
                         ProductImageRef.child( getRef(position).getKey()+ ".jpg").delete().addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
-                            public void onSuccess(Void aVoid) {
+                            public void onSuccess(Void Void) {
                                 Toast.makeText(holder.productName.getContext(), "Item Deleted Successfully.", Toast.LENGTH_SHORT).show();
 
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception exception) {
-                                Toast.makeText(holder.productName.getContext(), "Item Delete Fail.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(holder.productName.getContext(), "Item Deleted Unsuccessfully.", Toast.LENGTH_SHORT).show();
                             }
                         });
 
@@ -168,9 +168,9 @@ public class AdminPharmacyAdapter extends FirebaseRecyclerAdapter<AdminPharmacyM
 
     class myViewHolder extends RecyclerView.ViewHolder{
 
-        ImageView image;
+        ImageView image,btnEdit,btnDelete;
         TextView productName,price,description;
-        Button btnEdit,btnDelete;
+
 
 
         public myViewHolder(@NonNull View itemView) {
@@ -182,8 +182,8 @@ public class AdminPharmacyAdapter extends FirebaseRecyclerAdapter<AdminPharmacyM
             price=(TextView) itemView.findViewById(R.id.product_price);
             description=(TextView) itemView.findViewById(R.id.product_description);
 
-            btnEdit = (Button)itemView.findViewById(R.id.btn_edit);
-            btnDelete = (Button) itemView.findViewById(R.id.btn_delete);
+            btnEdit = (ImageView)itemView.findViewById(R.id.btn_edit);
+            btnDelete = (ImageView) itemView.findViewById(R.id.btn_delete);
 
 
         }
