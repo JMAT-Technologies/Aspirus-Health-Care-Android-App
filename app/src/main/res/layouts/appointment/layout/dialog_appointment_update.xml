@@ -35,20 +35,37 @@
         tools:ignore="Deprecated,MissingConstraints,TouchTargetSizeCheck"
         tools:layout_editor_absoluteX="0dp" />
 
+
     <EditText
         android:id="@+id/et_appointmentUpdateTime"
         android:layout_width="150dp"
         android:layout_height="48dp"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="12dp"
         android:background="@android:color/transparent"
         android:drawableEnd="@drawable/ic_time"
         android:gravity="center"
         android:hint="@string/et_appointmentTime"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/tv_doctorName"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/et_appointmentUpdateDate"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="36dp"
+        android:background="@android:color/transparent"
+        android:drawableEnd="@drawable/ic_date"
+        android:gravity="center"
+        android:hint="@string/et_appointmentDate"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_doctorName"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -56,7 +73,8 @@
         android:layout_width="150dp"
         android:layout_height="48dp"
         android:layout_centerVertical="true"
-        android:layout_marginTop="132dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="24dp"
         android:background="@drawable/btn_blue_gradient"
         android:gravity="center"
         android:text="Update"
@@ -65,26 +83,10 @@
         android:textSize="16sp"
         app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/et_appointmentUpdateTime"
         tools:ignore="TextContrastCheck" />
-
-    <EditText
-        android:id="@+id/et_appointmentUpdateDate"
-        android:layout_width="150dp"
-        android:layout_height="48dp"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="40dp"
-        android:background="@android:color/transparent"
-        android:drawableEnd="@drawable/ic_date"
-        android:gravity="center"
-        android:hint="@string/et_appointmentDate"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

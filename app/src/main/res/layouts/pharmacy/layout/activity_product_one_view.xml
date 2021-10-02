@@ -25,6 +25,7 @@
             android:layout_width="227dp"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
+            android:contentDescription="@string/product_name"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -45,8 +46,8 @@
         android:layout_marginStart="27dp"
         android:layout_marginTop="11dp"
         android:layout_marginEnd="32dp"
-        android:hint="Product Description"
-        android:text="Product Description" />
+        android:text="@string/et_phProductDescription"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/product_nameActivity"
@@ -56,11 +57,10 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="28dp"
         android:layout_marginTop="12dp"
-        android:hint="ProductName"
-        android:text="ProductName"
         android:textColor="@color/black"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        tools:text="@string/product_name" />
 
     <TextView
         android:id="@+id/product_priceActivity"
@@ -71,7 +71,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="341dp"
-        android:hint="Rs."
         android:text="@string/RS"
         android:textColor="@color/black"
         android:textSize="16sp" />
@@ -85,8 +84,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="130dp"
-        android:hint="Rs."
-        android:text="@string/ph_amount"
+        android:text="@string/product_price"
         android:textColor="@color/black"
         android:textSize="16sp" />
 
@@ -100,7 +98,8 @@
         android:layout_marginTop="24dp"
         android:layout_marginBottom="12dp"
         android:backgroundTint="@color/orange"
-        android:text="Add To Cart" />
+        android:text="@string/btn_phAddToCart"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/btn_buy"
@@ -111,8 +110,9 @@
         android:layout_marginStart="266dp"
         android:layout_marginTop="24dp"
         android:layout_marginBottom="12dp"
-        android:text="Buy Now"
-        app:backgroundTint="@color/red" />
+        android:text="@string/buy_now"
+        app:backgroundTint="@color/red"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/products"
@@ -121,7 +121,6 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="13dp"
         android:layout_toEndOf="@+id/backOneProduct"
@@ -140,13 +139,13 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="15dp"
-        android:layout_marginLeft="28dp"
         android:layout_marginTop="20dp"
+        android:contentDescription="@string/pharmacy"
         android:onClick="userAllProducts"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/back"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
 
 
     <TextView
@@ -154,9 +153,9 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_below="@+id/product_descriptionActivity"
-        android:layout_marginLeft="78dp"
+        android:layout_marginStart="78dp"
         android:layout_marginTop="36dp"
-        android:text="1"
+        android:text="@string/_0"
         android:textAlignment="center"
         android:textColor="@color/blue"
         android:textSize="25sp" />
@@ -166,8 +165,9 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_below="@+id/product_descriptionActivity"
-        android:layout_marginLeft="125dp"
+        android:layout_marginStart="125dp"
         android:layout_marginTop="45dp"
+        android:contentDescription="@string/pharmacy"
         android:src="@drawable/remove" />
 
     <ImageView
@@ -175,8 +175,9 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_below="@+id/product_descriptionActivity"
-        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="45dp"
+        android:contentDescription="@string/pharmacy"
         android:src="@drawable/add" />
 
 </RelativeLayout>

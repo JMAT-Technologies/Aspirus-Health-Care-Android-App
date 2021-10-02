@@ -149,7 +149,7 @@ public class Pharmacy extends AppCompatActivity {
     }
 
     public void homePage(View view) {
-        Intent intent = new Intent(this,AdminPharmacy.class);
+        Intent intent = new Intent(this,Homepage.class);
         startActivity(intent);
     }
  }
