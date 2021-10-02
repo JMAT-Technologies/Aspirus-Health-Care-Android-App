@@ -422,6 +422,54 @@
         app:layout_constraintTop_toTopOf="@+id/label_overweight"
         app:srcCompat="@drawable/ic_circle_red_20" />
 
+    <TextView
+        android:id="@+id/appointmentHeading"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="arial"
+        android:onClick="Appointment"
+        android:text="@string/appointmentprofile"
+        android:textColor="@color/blue"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bmi_green_icon"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/viewall"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:onClick="Appointment"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="arial"
+        android:text="@string/viewall"
+        android:textColor="@color/blue"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintStart_toEndOf="@+id/appointmentHeading"
+        app:layout_constraintTop_toBottomOf="@+id/bmi_green_icon"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/appointmentRecyclerViewProfile"
+        android:layout_width="380dp"
+        android:layout_height="278dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appointmentHeading" />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"

@@ -13,9 +13,11 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
+        android:onClick="HomePage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back" />
+        app:srcCompat="@drawable/back"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/appointmentHeading"
@@ -28,7 +30,7 @@
         android:layout_marginEnd="120dp"
         android:layout_toEndOf="@+id/back"
         android:fontFamily="arial"
-        android:text="Appointments"
+        android:text="@string/appointmentHeading"
         android:textColor="@color/blue"
         android:textSize="28sp"
         android:textStyle="bold"
@@ -38,9 +40,9 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/appointmentRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="578dp"
+        android:layout_height="576dp"
         android:layout_below="@+id/appointmentHeading"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="27dp" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -51,5 +53,4 @@
         app:itemIconTint="@drawable/nav_selector"
         app:itemTextColor="@drawable/nav_selector"
         app:menu="@menu/menu_navigation" />
-
 </RelativeLayout>
