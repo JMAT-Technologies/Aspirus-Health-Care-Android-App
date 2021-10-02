@@ -12,9 +12,11 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.aspirushealthcareandroidapp.CartManagement.CartActivity;
 import com.example.aspirushealthcareandroidapp.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -32,25 +34,23 @@ public class ProductOneView extends AppCompatActivity {
     private Button addToCartBtn;// cart
     private Button buybtn;
     private ImageView imageView,cartimage,buyimage;
-    TextView productName,price,description,cartproductname,cartprice,cartqty,buycartproductname,buyprice,image;
-    DatabaseReference CartRef;
-    DatabaseReference BuyRef;
+    TextView productName,price,description,cartproductname,cartprice,cartqty,buycartproductname,buyprice;
     DatabaseReference ProductRef;
     private StorageReference ProductImagesRef;
     private String ItemKey = " ";
-    String  UserId = "A1";
+    String userID;
+    FirebaseAuth firebaseAuth;
     ImageView plus,minus;
     private int mCounter = 1 ;
-
-
-
-
 
     @SuppressLint("CutPasteId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_one_view);
+
+        firebaseAuth = FirebaseAuth.getInstance();
+        userID = firebaseAuth.getCurrentUser().getUid();
 
         imageView=findViewById(R.id.image_single_viewActivity);
         productName = findViewById(R.id.product_nameActivity);
@@ -153,13 +153,11 @@ public class ProductOneView extends AppCompatActivity {
         final DatabaseReference CartListRef = FirebaseDatabase.getInstance().getReference().child("Buy");
 
         final HashMap<String, Object> cartMap = new HashMap<>();
-        cartMap.put("ItemKey", productName.getText().toString());
-        cartMap.put("productName", productName.getText().toString());
-        cartMap.put("price", price.getText().toString());
+        cartMap.put("ItemKey", ItemKey);
         cartMap.put("quantity",mCounter);
         //cartMap.put("image",imageView);
 
-        CartListRef.child(UserId)
+        CartListRef.child(userID)
                 .child(ItemKey)
                 .updateChildren(cartMap)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -170,7 +168,7 @@ public class ProductOneView extends AppCompatActivity {
                         {
                             Toast.makeText(ProductOneView.this,"Ready to Buy", Toast.LENGTH_SHORT).show();
 
-                            Intent intent = new Intent(ProductOneView.this, Pharmacy.class);
+                            Intent intent = new Intent(ProductOneView.this, CartActivity.class);
                             startActivity(intent);
                         }
                     }
@@ -184,14 +182,12 @@ public class ProductOneView extends AppCompatActivity {
         final DatabaseReference CartListRef = FirebaseDatabase.getInstance().getReference().child("CartList");
 
         final HashMap<String, Object> cartMap = new HashMap<>();
-        cartMap.put("ItemKey", productName.getText().toString());
-        cartMap.put("productName", productName.getText().toString());
-        cartMap.put("price", price.getText().toString());
+        cartMap.put("ItemKey", ItemKey);
         cartMap.put("quantity",mCounter);
         //cartMap.put("image",image.getUrls().toString());
         //cartMap.put("image",imageView);//sending image to the cart
 
-        CartListRef.child(UserId).child(ItemKey).updateChildren(cartMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+        CartListRef.child(userID).child(ItemKey).updateChildren(cartMap).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull @NotNull Task<Void> task)
             {
@@ -199,7 +195,7 @@ public class ProductOneView extends AppCompatActivity {
                 {
                     Toast.makeText(ProductOneView.this,"Added to cart List", Toast.LENGTH_SHORT).show();
 
-                    Intent intent = new Intent(ProductOneView.this, Pharmacy.class);
+                    Intent intent = new Intent(ProductOneView.this, CartActivity.class);
                     startActivity(intent);
                 }
             }
