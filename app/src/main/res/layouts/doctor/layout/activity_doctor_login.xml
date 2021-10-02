@@ -171,4 +171,17 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/btn_admin_login"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="10dp"
+        android:src="@drawable/admin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@null"
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
