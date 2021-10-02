@@ -47,7 +47,7 @@ public class AppointmentAdapter extends FirebaseRecyclerAdapter<AppointmentModel
         holder.date.setText(model.getDate());
         holder.time.setText(model.getTime());
 
-        //Edit
+        //Edit Appointment
         holder.btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -66,7 +66,7 @@ public class AppointmentAdapter extends FirebaseRecyclerAdapter<AppointmentModel
 
                 dialogPlus.show();
 
-                //Update
+                //Update Appointment
                 btn_appointmmentUpdate.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -94,6 +94,7 @@ public class AppointmentAdapter extends FirebaseRecyclerAdapter<AppointmentModel
             }
         });
 
+        //Delete Appointment
         holder.btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
