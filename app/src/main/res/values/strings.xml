@@ -7,9 +7,7 @@
     <string name="btn_phApplyChanges">Apply Changes</string>
     <string name="btn_phDelete">Delete</string>
     <string name="btn_phAddProduct">Add Product</string>
-    <string name="et_phProductName">Product Name</string>
     <string name="et_phProductDescription">Product Description</string>
-    <string name="et_phProductPrice">Product Price</string>
     <string name="pharmacy">Pharmacy</string>
     <string name="et_phImgUrl">ImageUrl</string>
     <string name="spscreen">ASPIRUS HEALTH CARE</string>
@@ -147,8 +145,12 @@
     <string name="in_hospitals">In Hospitals</string>
     <string name="total_cases">Total Cases</string>
     <string name="RS">Rs.</string>
-    <string name="ph_amount">price</string>
     <string name="_0">0</string>
+    <string name="admin_login">Pharmacist Login</string>
+    <string name="adminpagedoc">Are you a doctor? Login Here</string>
+    <string name="add_new_product">Add New Product</string>
+    <string name="add_product">Add Product</string>
+    <string name="buy_now">Buy Now</string>
 
 
 </resources>

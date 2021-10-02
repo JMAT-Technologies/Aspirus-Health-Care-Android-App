@@ -1,8 +1,5 @@
 package com.example.aspirushealthcareandroidapp.UserManagement.Doctor;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +7,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.aspirushealthcareandroidapp.MainActivity;
 import com.example.aspirushealthcareandroidapp.R;
@@ -105,7 +105,7 @@ public class DoctorLogin extends AppCompatActivity {
         firebaseAuth.signInWithEmailAndPassword(email,password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
             @Override
             public void onSuccess(AuthResult authResult) {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                startActivity(new Intent(getApplicationContext(), DoctorProfile.class));
                 finish();
             }
         }).addOnFailureListener(new OnFailureListener() {
