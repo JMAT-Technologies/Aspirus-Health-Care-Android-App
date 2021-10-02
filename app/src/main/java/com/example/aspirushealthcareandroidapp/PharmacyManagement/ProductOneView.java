@@ -1,8 +1,8 @@
 package com.example.aspirushealthcareandroidapp.PharmacyManagement;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -12,19 +12,21 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.aspirushealthcareandroidapp.CartManagement.CartActivity;
 import com.example.aspirushealthcareandroidapp.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.database.annotations.NotNull;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.HashMap;
 
 public class ProductOneView extends AppCompatActivity {
@@ -33,25 +35,26 @@ public class ProductOneView extends AppCompatActivity {
     private Button buybtn;
     private ImageView imageView,cartimage,buyimage;
     TextView productName,price,description,cartproductname,cartprice,cartqty,buycartproductname,buyprice;
-    DatabaseReference CartRef;
-    DatabaseReference BuyRef;
     DatabaseReference ProductRef;
+    private StorageReference ProductImagesRef;
     private String ItemKey = " ";
-    String  UserId = "A1";
+    String userID;
+    FirebaseAuth firebaseAuth;
     ImageView plus,minus;
     private int mCounter = 1 ;
 
-
-
-
+    @SuppressLint("CutPasteId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_one_view);
 
+        firebaseAuth = FirebaseAuth.getInstance();
+        userID = firebaseAuth.getCurrentUser().getUid();
+
         imageView=findViewById(R.id.image_single_viewActivity);
         productName = findViewById(R.id.product_nameActivity);
-        price = findViewById(R.id.product_priceActivity);
+        price = findViewById(R.id.product_amount);
         description = findViewById(R.id.product_descriptionActivity);
 
         //Add To Cart
@@ -68,12 +71,14 @@ public class ProductOneView extends AppCompatActivity {
         buyprice=findViewById(R.id.product_priceActivity);
         buyimage=findViewById(R.id.image_single_viewActivity);
 
-        //calculate product quantity
+                   //calculate product quantity
         plus = findViewById(R.id.plus);
         minus = findViewById(R.id.minus);
         cartqty = findViewById(R.id.cartqty);
+        cartqty.setText(Integer.toString(mCounter));
 
         plus.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
                 if(mCounter < 10) {
@@ -84,6 +89,7 @@ public class ProductOneView extends AppCompatActivity {
         });
 
         minus.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
                 if(mCounter > 1) {
@@ -128,7 +134,7 @@ public class ProductOneView extends AppCompatActivity {
 
                     Picasso.get().load(image).into(imageView);
                     productName.setText(ProductName);
-                    price.setText("Rs."+Price+".00");
+                    price.setText(Price+".00");
                     description.setText(Description);
 
                 }
@@ -144,27 +150,15 @@ public class ProductOneView extends AppCompatActivity {
 
     //buy addToBuy method
     private void addToBuy() {
-        String saveCurrentTime, saveCurrentDate;
-
-        Calendar calForeDate = Calendar.getInstance();
-        SimpleDateFormat currentDate = new SimpleDateFormat("MMM dd, yyyy");
-        saveCurrentDate = currentDate.format(calForeDate.getTime());
-
-        SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm:ss a");
-        saveCurrentTime = currentTime.format(calForeDate.getTime());
 
         final DatabaseReference CartListRef = FirebaseDatabase.getInstance().getReference().child("Buy");
 
         final HashMap<String, Object> cartMap = new HashMap<>();
         cartMap.put("ItemKey", ItemKey);
-        cartMap.put("productName", productName.getText().toString());
-        cartMap.put("price", price.getText().toString());
-        cartMap.put("date", saveCurrentDate);
-        cartMap.put("time", saveCurrentTime);
-        cartMap.put("quantity", cartqty.getText().toString());
+        cartMap.put("quantity",mCounter);
         //cartMap.put("image",imageView);
 
-        CartListRef.child(UserId)
+        CartListRef.child(userID)
                 .child(ItemKey)
                 .updateChildren(cartMap)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -175,7 +169,7 @@ public class ProductOneView extends AppCompatActivity {
                         {
                             Toast.makeText(ProductOneView.this,"Ready to Buy", Toast.LENGTH_SHORT).show();
 
-                            Intent intent = new Intent(ProductOneView.this, Pharmacy.class);
+                            Intent intent = new Intent(ProductOneView.this, CartActivity.class);
                             startActivity(intent);
                         }
                     }
@@ -183,28 +177,18 @@ public class ProductOneView extends AppCompatActivity {
     }
     // Add To Cart
     private void addingToCartList() {
-        String saveCurrentTime, saveCurrentDate;
 
-        Calendar calForeDate = Calendar.getInstance();
-        SimpleDateFormat currentDate = new SimpleDateFormat("MMM dd, yyyy");
-        saveCurrentDate = currentDate.format(calForeDate.getTime());
 
-        SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm:ss a");
-        saveCurrentTime = currentTime.format(calForeDate.getTime());
-
-        final DatabaseReference CartListRef = FirebaseDatabase.getInstance().getReference().child("Cart List");
+        ProductImagesRef = FirebaseStorage.getInstance().getReference().child("Cart Images");
+        final DatabaseReference CartListRef = FirebaseDatabase.getInstance().getReference().child("CartList");
 
         final HashMap<String, Object> cartMap = new HashMap<>();
         cartMap.put("ItemKey", ItemKey);
-        cartMap.put("productName", productName.getText().toString());
-       // price=Integer.valueOf(dprice);
-        cartMap.put("price", price.getText().toString());
-        cartMap.put("date", saveCurrentDate);
-        cartMap.put("time", saveCurrentTime);
-        cartMap.put("quantity", cartqty.getText().toString());
+        cartMap.put("quantity",mCounter);
+        //cartMap.put("image",image.getUrls().toString());
         //cartMap.put("image",imageView);//sending image to the cart
 
-        CartListRef.child(UserId).child(ItemKey).updateChildren(cartMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+        CartListRef.child(userID).child(ItemKey).updateChildren(cartMap).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull @NotNull Task<Void> task)
             {
@@ -212,7 +196,7 @@ public class ProductOneView extends AppCompatActivity {
                 {
                     Toast.makeText(ProductOneView.this,"Added to cart List", Toast.LENGTH_SHORT).show();
 
-                    Intent intent = new Intent(ProductOneView.this, Pharmacy.class);
+                    Intent intent = new Intent(ProductOneView.this, CartActivity.class);
                     startActivity(intent);
                 }
             }
@@ -220,17 +204,20 @@ public class ProductOneView extends AppCompatActivity {
     }
 
     private void getProductDetails(String itemKey) {
+
         DatabaseReference productsRef = FirebaseDatabase.getInstance().getReference().child("CartList");
 
         productsRef.child(ItemKey).addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists()){
                     ProductModel productsModel = dataSnapshot.getValue(ProductModel.class);
 
                     productName.setText(productsModel.getProductName());
                     price.setText(productsModel.getPrice());
-                    Picasso.get().load(productsModel.getImage()).into(imageView);
+
+                   // image.getUrls();
+
                 }
             }
             @Override

@@ -9,7 +9,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.aspirushealthcareandroidapp.R;
+import com.example.aspirushealthcareandroidapp.UserManagement.Patient.PatientLogin;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class AdminPharmacy extends AppCompatActivity {
@@ -35,7 +37,6 @@ public class AdminPharmacy extends AppCompatActivity {
        // recyclerView.setLayoutManager(horizontalLayoutManagaer);
 
 
-
         FirebaseRecyclerOptions<AdminPharmacyModel> options =
                 new FirebaseRecyclerOptions.Builder<AdminPharmacyModel>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("Products"), AdminPharmacyModel.class)
@@ -43,10 +44,6 @@ public class AdminPharmacy extends AppCompatActivity {
 
         adminPharmacyAdapter = new  AdminPharmacyAdapter(options);
         recyclerView.setAdapter(adminPharmacyAdapter);
-
-
-
-
 
 
     }
@@ -68,8 +65,10 @@ public class AdminPharmacy extends AppCompatActivity {
                startActivity(intent);
     }
 
-    public void AdminHome(View view) {
-        Intent intent = new Intent(this, Pharmacy.class);
-        startActivity(intent);
+
+    public boolean logOut(View view) {
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(getApplicationContext(), PatientLogin.class));
+        return true;
     }
 }

@@ -33,7 +33,7 @@
         android:layout_marginEnd="136dp"
         android:layout_toEndOf="@+id/back_btn"
         android:fontFamily="arial"
-        android:text="Channeling"
+        android:text="@string/tv_heading_channeling"
         android:textColor="@color/blue"
         android:textSize="28sp"
         android:textStyle="bold"
@@ -67,7 +67,8 @@
         android:layout_marginBottom="20dp"
         android:alpha="0.5"
         android:scaleType="centerCrop"
-        android:src="@drawable/backdrop1" />
+        android:src="@drawable/backdrop1"
+        tools:ignore="ImageContrastCheck" />
 
     <ImageView
         android:id="@+id/doctor_single_view"
@@ -91,11 +92,11 @@
         android:background="@android:color/transparent"
         android:editable="false"
         android:gravity="center"
-        android:hint="Doctor Name"
+        android:hint="@string/et_doctorName"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:textStyle="bold"
-        tools:ignore="Deprecated,TouchTargetSizeCheck" />
+        tools:ignore="Deprecated,TouchTargetSizeCheck,TextContrastCheck" />
 
     <TextView
         android:id="@+id/speciality_name"
@@ -105,10 +106,11 @@
         android:layout_marginTop="1dp"
         android:layout_marginBottom="10dp"
         android:gravity="center"
-        android:text="Speciality"
+        android:text="@string/speciality"
         android:textColor="@color/white"
         android:textSize="15sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        tools:ignore="TextContrastCheck" />
 
     <EditText
         android:id="@+id/et_appointmentTime"
@@ -125,7 +127,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_doctorName"
-        tools:ignore="TouchTargetSizeCheck" />
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
     <Button
         android:id="@+id/btn_appointmmentChannel"
@@ -160,7 +162,7 @@
         android:hint="@string/et_appointmentDate"
         android:inputType="textPersonName"
         app:layout_constraintTop_toBottomOf="@+id/et_doctorName"
-        tools:ignore="TouchTargetSizeCheck" />
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

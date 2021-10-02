@@ -14,11 +14,12 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="28dp"
         android:layout_marginTop="14dp"
+        android:contentDescription="@string/add_new_product"
         android:onClick="AdminHome"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/back"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -27,7 +28,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="14dp"
         android:layout_toEndOf="@+id/back_btn"
-        android:text="Add New Product"
+        android:text="@string/add_new_product"
         android:textColor="@color/blue"
         android:textSize="28sp"
         android:textStyle="bold"
@@ -49,6 +50,7 @@
         android:layout_marginStart="47dp"
         android:layout_marginTop="95dp"
         android:layout_marginEnd="67dp"
+        android:contentDescription="@string/product_name"
         android:cropToPadding="false"
         android:fadingEdge="vertical"
         android:padding="10dp"
@@ -60,14 +62,14 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/product_name"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="315dp"
+        android:layout_width="@dimen/et_material"
         android:layout_height="wrap_content"
         android:layout_below="@id/select_product_image"
         android:layout_alignParentEnd="true"
-        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="43dp"
-        android:hint="@string/et_phProductName"
+        android:layout_marginEnd="30dp"
+        android:hint="@string/product_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent">
@@ -75,20 +77,21 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-            android:inputType="text" />
+            android:inputType="textCapSentences"
+            android:maxLength="20"
+            tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/product_description"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="314dp"
-        android:layout_height="78dp"
+        android:layout_width="@dimen/et_material"
+        android:layout_height="wrap_content"
         android:layout_below="@id/product_name"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="43dp"
+        android:layout_marginEnd="30dp"
         android:hint="@string/et_phProductDescription"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5">
@@ -96,19 +99,20 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:inputType="text" />
+            android:inputType="textCapSentences"
+            tools:ignore="TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/product_price"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="315dp"
+        android:layout_width="@dimen/et_material"
         android:layout_height="wrap_content"
         android:layout_below="@id/product_description"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="43dp"
-        android:hint="Product Price"
+        android:layout_marginEnd="30dp"
+        android:hint="@string/product_price"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent">
@@ -116,7 +120,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number" />
+            android:inputType="number"
+            tools:ignore="TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -130,10 +135,11 @@
         android:layout_marginRight="45dp"
         android:background="@drawable/btn_green_gradient"
         android:padding="10dp"
-        android:text="Add Product"
-        android:textSize="9sp"
+        android:text="@string/add_product"
+        android:textSize="14sp"
         app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"></Button>
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck"></Button>
 </RelativeLayout>

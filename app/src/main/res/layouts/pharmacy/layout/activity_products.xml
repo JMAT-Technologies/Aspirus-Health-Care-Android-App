@@ -14,9 +14,10 @@
         android:layout_below="@+id/product"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="27dp"
         android:width="@dimen/et_width"
         android:height="@dimen/et_height"
         android:background="@drawable/edittext"
@@ -32,7 +33,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TextContrastCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+        tools:ignore="TextContrastCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck"
+        android:importantForAutofill="no" />
 
     <ImageView
         android:id="@+id/back"
@@ -42,11 +44,12 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
+        android:contentDescription="@string/pharmacy"
         android:onClick="homePage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/back"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
 
     <TextView
         android:id="@+id/product"
@@ -55,11 +58,11 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="136dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="137dp"
         android:layout_toEndOf="@+id/back"
         android:fontFamily="arial"
-        android:text="Pharmacy"
+        android:text="@string/pharmacy"
         android:textColor="@color/blue"
         android:textSize="28sp"
         android:textStyle="bold"
@@ -76,10 +79,8 @@
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="1dp"
-        android:layout_marginLeft="28dp"
         android:layout_marginTop="3dp"
         android:layout_marginEnd="0dp"
-        android:layout_marginRight="10dp"
         android:layout_marginBottom="0dp"
 
         android:elevation="10dp" />
