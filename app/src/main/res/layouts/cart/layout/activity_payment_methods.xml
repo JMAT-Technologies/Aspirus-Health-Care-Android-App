@@ -19,7 +19,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/tv_heading_payment_methods"
@@ -40,6 +41,7 @@
         android:layout_width="35dp"
         android:layout_height="37dp"
         android:layout_marginTop="16dp"
+        android:contentDescription="@string/select_payment"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/back" />
@@ -62,13 +64,14 @@
             android:layout_height="64dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="TouchTargetSizeCheck" />
+            tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
 
         <ImageView
             android:id="@+id/imageView20"
             android:layout_width="50dp"
             android:layout_height="39dp"
             android:layout_marginStart="32dp"
+            android:contentDescription="@string/cardname"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/radioButton2"
             app:layout_constraintTop_toTopOf="parent"
@@ -112,11 +115,13 @@
             android:layout_width="43dp"
             android:layout_height="37dp"
             android:layout_marginStart="32dp"
+            android:contentDescription="@string/add_new_card"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.615"
-            app:srcCompat="@drawable/credit" />
+            app:srcCompat="@drawable/credit"
+            tools:ignore="ImageContrastCheck" />
 
         <RadioButton
             android:id="@+id/radioButton"
