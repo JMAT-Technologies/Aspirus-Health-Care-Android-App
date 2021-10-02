@@ -51,7 +51,7 @@ public class Homepage extends AppCompatActivity {
     FirebaseRecyclerOptions<Doctor> options; //pass the model class
     FirebaseRecyclerAdapter<Doctor, DoctorViewHolder> adapter;
     DatabaseReference DoctorReference;
-    TextView tv_deaths, tv_totalDeaths, tv_cases, tv_totalCases, tv_inHospitals, tv_recovered;
+    TextView tv_deaths, tv_totalDeaths, tv_cases, tv_totalCases, tv_inHospitals, tv_recovered, tv_updated;
 
     @Override
     protected void onStart() {
@@ -108,6 +108,7 @@ public class Homepage extends AppCompatActivity {
         tv_totalCases = findViewById(R.id.tv_total_cases);
         tv_inHospitals = findViewById(R.id.tv_hospitals);
         tv_recovered = findViewById(R.id.tv_recovered);
+        tv_updated = findViewById(R.id.covid_updated);
 
         loadCovid();
 
@@ -200,6 +201,7 @@ public class Homepage extends AppCompatActivity {
                     String totalCases = data.getString("local_total_cases");
                     String inHospitals = data.getString("local_total_number_of_individuals_in_hospitals");
                     String recovered = data.getString("local_recovered");
+                    String update = data.getString("update_date_time");
 
                     tv_deaths.setText(deaths);
                     tv_totalDeaths.setText(totalDeaths);
@@ -207,6 +209,7 @@ public class Homepage extends AppCompatActivity {
                     tv_totalCases.setText(totalCases);
                     tv_inHospitals.setText(inHospitals);
                     tv_recovered.setText(recovered);
+                    tv_updated.setText("Last Updated:" + update);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

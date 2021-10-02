@@ -3,89 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/add.xml" value="0.23066666666666666" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/bloodpressure_sugar_gradient.xml" value="0.2703125" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/bottom_dialog.xml" value="0.23066666666666666" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/btn_blue_gradient.xml" value="0.2703125" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/btn_buy_red.xml" value="0.23066666666666666" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/btn_buy_red_gradient.xml" value="0.23378378378378378" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/btn_cart_orange.xml" value="0.23378378378378378" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/btn_green_gradient.xml" value="0.23378378378378378" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/btn_product.xml" value="0.2703125" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/buttonsProduct.xml" value="0.2703125" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/delete.xml" value="0.1" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/deleteproductrounded.xml" value="0.23378378378378378" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/doc_specialization.xml" value="0.23378378378378378" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/edittext.xml" value="0.23378378378378378" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/green_gradient.xml" value="0.23378378378378378" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/ic_appointment.xml" value="0.23378378378378378" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/ic_baseline_bloodtype_24.xml" value="0.23378378378378378" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/ic_baseline_navigate_next_24.xml" value="0.23378378378378378" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.23378378378378378" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/ic_baseline_visibility_24.xml" value="0.23378378378378378" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/ic_cart.xml" value="0.23066666666666666" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/ic_drugs.xml" value="0.23378378378378378" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/ic_google.xml" value="0.23378378378378378" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/channel_doc_image.xml" value="0.24074074074074073" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/deleteproductrounded.xml" value="0.2703125" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/doc_specialization.xml" value="0.2703125" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/frame.xml" value="0.2703125" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/ic_add.xml" value="0.2703125" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/ic_appointment.xml" value="0.2703125" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/ic_cart.xml" value="0.2703125" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/ic_date.xml" value="0.2703125" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/ic_drugs.xml" value="0.2703125" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/ic_home.xml" value="0.2703125" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/ic_pharmacy.xml" value="0.2703125" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/ic_time.xml" value="0.2703125" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/ic_user.xml" value="0.2703125" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/input_search.xml" value="0.30648148148148147" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/nav_selector.xml" value="0.2703125" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/round_shape_only.xml" value="0.24074074074074073" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/selector.xml" value="0.3482051282051282" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layout-land/activity_patient_profile.xml" value="0.18541666666666667" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layout/activity_appointment.xml" value="0.72" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layout/activity_bottom_navigation.xml" value="0.1" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layout/activity_channeling.xml" value="0.2" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layout/activity_channeling_confirmation.xml" value="0.2" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layout/activity_doctor_list_fragment.xml" value="0.15885416666666666" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layout/activity_doctor_login.xml" value="0.264" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layout/activity_doctor_profile.xml" value="0.6" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layout/activity_homepage.xml" value="0.22" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layout/activity_main.xml" value="0.152" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layout/activity_patient_login.xml" value="0.23229166666666667" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layout/activity_patient_profile.xml" value="0.1641337386018237" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layout/activity_pharmcy_store.xml" value="0.1641337386018237" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layout/activity_prescription_history.xml" value="0.264" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layout/activity_product_one_view.xml" value="0.21296296296296297" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layout/activity_products.xml" value="0.176" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layout/activity_test.xml" value="0.2" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layout/activity_view_appointment.xml" value="0.176" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layout/activity_view_doctor.xml" value="0.264" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layout/appointment_list_item.xml" value="0.264" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layout/bottom_navigation.xml" value="0.264" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layout/bottom_navigation_menu.xml" value="0.1" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layout/dialog_appointment_update.xml" value="0.25" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layout/doctor_list_item.xml" value="0.264" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layout/doctor_row.xml" value="0.2" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layout/doctor_single_view.xml" value="0.2" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layout/product_listview.xml" value="0.21296296296296297" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layouts/appointment/drawable/ic_sort.xml" value="0.22763157894736843" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layouts/appointment/layout/activity_appointment.xml" value="0.4" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layouts/appointment/layout/activity_appointment_list_profile.xml" value="0.4" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layouts/appointment/layout/activity_appointment_profile.xml" value="0.28421052631578947" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layouts/appointment/layout/activity_channeling.xml" value="0.264" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layouts/appointment/layout/activity_view_doctor.xml" value="0.72" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layouts/appointment/layout/appointment_list_item.xml" value="0.25416666666666665" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layouts/appointment/layout/dialog_appointment_update.xml" value="0.4" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layouts/appointment/layout/doctor_list_item.xml" value="0.25416666666666665" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layouts/patient/layout/activity_patient_profile.xml" value="0.4" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/menu/appointment_search.xml" value="0.3323076923076923" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.33980582524271846" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/menu/menu_navigation.xml" value="0.2" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/menu/menusort.xml" value="0.536" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/menu/mwnusort.xml" value="0.21403508771929824" />
-        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/menu/profile_menu.xml" value="0.21403508771929824" />
         <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
         <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.23378378378378378" />
         <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/ic_logo_background.xml" value="0.14635416666666667" />
@@ -95,13 +12,11 @@
         <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/image_item.xml" value="0.23378378378378378" />
         <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/input_design_border.xml" value="0.23066666666666666" />
         <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/input_productdesign.xml" value="0.2703125" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/nav_selector.xml" value="0.23066666666666666" />
         <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/profile_card_gradient.xml" value="0.2703125" />
         <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/remove.xml" value="0.23378378378378378" />
         <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/rounded.xml" value="0.23066666666666666" />
         <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/selector.xml" value="0.23378378378378378" />
         <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/updateproductrounded.xml" value="0.23378378378378378" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/white_card.xml" value="0.23066666666666666" />
         <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/layout-land/activity_admin_add_new_product.xml" value="0.28489583333333335" />
         <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/layout-land/activity_home.xml" value="0.20135135135135135" />
         <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/layout-land/activity_patient_profile.xml" value="0.21216216216216216" />
@@ -142,26 +57,83 @@
         <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/layout/product_listview.xml" value="0.4" />
         <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/layout/productlist.xml" value="0.21981981981981982" />
         <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/layout/rounded.xml" value="0.21981981981981982" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/layouts/doctor/layout/activity_doctor_login.xml" value="0.21981981981981982" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/layouts/doctor/layout/activity_doctor_profile.xml" value="0.21981981981981982" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/layouts/patient/layout/activity_patient_login.xml" value="0.21981981981981982" />
         <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/layouts/patient/layout/activity_patient_profile.xml" value="0.21981981981981982" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/layouts/pharmacy/drawable/add.xml" value="0.23066666666666666" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/layouts/pharmacy/drawable/btn_buy_red.xml" value="0.23066666666666666" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/layouts/pharmacy/layout-v28/activity_admin_pharmacy_item.xml" value="0.25416666666666665" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/layouts/pharmacy/layout/activity_admin_add_new_product.xml" value="0.264" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/layouts/pharmacy/layout/activity_admin_login.xml" value="0.264" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/layouts/pharmacy/layout/activity_admin_pharmacy.xml" value="0.264" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/layouts/pharmacy/layout/activity_admin_pharmacy_item.xml" value="0.6" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/layouts/pharmacy/layout/activity_product_one_view.xml" value="0.4" />
+        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/layouts/pharmacy/layout/activity_admin_add_new_product.xml" value="0.16" />
+        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/layouts/pharmacy/layout/activity_admin_pharmacy.xml" value="0.21981981981981982" />
+        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/layouts/pharmacy/layout/activity_admin_pharmacy_item.xml" value="0.4" />
+        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/layouts/pharmacy/layout/activity_product_one_view.xml" value="0.1" />
         <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/layouts/pharmacy/layout/activity_products.xml" value="0.18783783783783783" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/layouts/pharmacy/layout/admin_product_update_popup.xml" value="0.264" />
-        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/layouts/pharmacy/layout/product_listview.xml" value="0.264" />
+        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/layouts/pharmacy/layout/admin_product_update_popup.xml" value="0.1" />
+        <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/layouts/pharmacy/layout/product_listview.xml" value="0.1" />
         <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/menu/menu_navigation.xml" value="0.21981981981981982" />
         <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2703125" />
         <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.22027027027027027" />
         <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/mipmap-anydpi-v26/ic_logo.xml" value="0.14635416666666667" />
         <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/mipmap-anydpi-v26/ic_logo_round.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/add.xml" value="0.18552631578947368" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/bloodpressure_sugar_gradient.xml" value="0.2703125" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/blur.xml" value="0.18552631578947368" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/btn_blue_gradient.xml" value="0.2703125" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/btn_buy_red.xml" value="0.19583333333333333" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/btn_cart.xml" value="0.2703125" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/btn_checkout_cart.xml" value="0.22763157894736843" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/cart_item.xml" value="0.22763157894736843" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/close.xml" value="0.18552631578947368" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/delete.xml" value="0.2703125" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/doc_specialization.xml" value="0.2703125" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/edittext.xml" value="0.2703125" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/forward.xml" value="0.18552631578947368" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/ic_appointment.xml" value="0.18552631578947368" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/ic_baseline_bloodtype_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.18552631578947368" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/ic_baseline_navigate_next_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/ic_baseline_visibility_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/ic_cart.xml" value="0.18552631578947368" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/ic_drugs.xml" value="0.18552631578947368" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/ic_home.xml" value="0.18552631578947368" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/ic_pharmacy.xml" value="0.18552631578947368" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/ic_user.xml" value="0.18552631578947368" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/location.xml" value="0.18552631578947368" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/one_product_img.xml" value="0.18552631578947368" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/recycle.xml" value="0.2703125" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/remove.xml" value="0.19583333333333333" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/selector.xml" value="0.2" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/tharindu_addtocart.xml" value="0.18552631578947368" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/drawable/tharindu_btn.xml" value="0.18552631578947368" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/layout-land/activity_product_one_view.xml" value="0.176" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/layout-land/activity_products.xml" value="0.17017543859649123" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/layout/activity_add_new_address.xml" value="0.264" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/layout/activity_add_new_card.xml" value="0.21403508771929824" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/layout/activity_cart.xml" value="0.144" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/layout/activity_cart1.xml" value="0.16576086956521738" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/layout/activity_channeling.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/layout/activity_doctor_login.xml" value="0.16576086956521738" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/layout/activity_doctor_profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/layout/activity_homepage.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/layout/activity_order_confirmation.xml" value="0.264" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/layout/activity_patient_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/layout/activity_payment_methods.xml" value="0.2" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/layout/activity_product_one_view.xml" value="0.2" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/layout/activity_products.xml" value="0.10792951541850221" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/layout/activity_select_address.xml" value="0.264" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/layout/activity_test.xml" value="0.264" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/layout/cart_item.xml" value="0.4" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/layout/cart_item_layout.xml" value="0.4" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/layout/filename.xml" value="0.16576086956521738" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/layout/order_confirmation.xml" value="0.264" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/layout/product_listview.xml" value="0.264" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/layouts/cart/drawable/btn_cart.xml" value="0.18552631578947368" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/layouts/cart/drawable/cart_item.xml" value="0.18552631578947368" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/layouts/cart/drawable/location.xml" value="0.18552631578947368" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/layouts/cart/layout/activity_add_new_address.xml" value="0.264" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/layouts/cart/layout/activity_cart.xml" value="0.264" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/layouts/cart/layout/activity_order_confirmation.xml" value="0.264" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/layouts/cart/layout/activity_payment_methods.xml" value="0.2" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/layouts/cart/layout/activity_select_address.xml" value="0.4" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/layouts/cart/layout/cart_item_layout.xml" value="0.264" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/layouts/cart/layout/order_item.xml" value="0.4" />
+        <entry key="..\:/Users/ashen/AndroidStudioProjects/Aspirus-Health-Care-Android-App/app/src/main/res/menu/menu_navigation.xml" value="0.17192982456140352" />
         <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/mipmap-anydpi-v26/plus_round.xml" value="0.11388888888888889" />
         <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/mipmap-anydpi-v26/product_minus.xml" value="0.23378378378378378" />
         <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/mipmap-anydpi-v26/product_minus_round.xml" value="0.11388888888888889" />
@@ -170,9 +142,6 @@
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.29078947368421054" />
         <entry key="app/src/main/res/drawable/add.xml" value="0.3030701754385965" />
         <entry key="app/src/main/res/drawable/bloodpressure_card_gradient.xml" value="0.29078947368421054" />
-        <entry key="app/src/main/res/drawable/bloodpressure_sugar_gradient.xml" value="0.3030701754385965" />
-        <entry key="app/src/main/res/drawable/bmi_card.xml" value="0.3030701754385965" />
-        <entry key="app/src/main/res/drawable/bottom_dialog.xml" value="0.3030701754385965" />
         <entry key="app/src/main/res/drawable/btn_blue_gradient.xml" value="0.30394736842105263" />
         <entry key="app/src/main/res/drawable/btn_buy_red.xml" value="0.3030701754385965" />
         <entry key="app/src/main/res/drawable/btn_cart_orange.xml" value="0.3030701754385965" />
@@ -183,47 +152,33 @@
         <entry key="app/src/main/res/drawable/doc_specialization.xml" value="0.30394736842105263" />
         <entry key="app/src/main/res/drawable/edit.xml" value="0.29078947368421054" />
         <entry key="app/src/main/res/drawable/edittext.xml" value="0.16535087719298244" />
-        <entry key="app/src/main/res/drawable/green_gradient.xml" value="0.3030701754385965" />
-        <entry key="app/src/main/res/drawable/ic_appointment.xml" value="0.3030701754385965" />
-        <entry key="app/src/main/res/drawable/ic_baseline_bar_chart_24.xml" value="0.3030701754385965" />
-        <entry key="app/src/main/res/drawable/ic_baseline_bloodtype_24.xml" value="0.3030701754385965" />
-        <entry key="app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.3030701754385965" />
         <entry key="app/src/main/res/drawable/ic_baseline_navigate_next_24.xml" value="0.30394736842105263" />
         <entry key="app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.30394736842105263" />
-        <entry key="app/src/main/res/drawable/ic_baseline_photo_camera_24.xml" value="0.3030701754385965" />
-        <entry key="app/src/main/res/drawable/ic_baseline_photo_library_24.xml" value="0.3030701754385965" />
         <entry key="app/src/main/res/drawable/ic_baseline_visibility_24.xml" value="0.29078947368421054" />
-        <entry key="app/src/main/res/drawable/ic_cart.xml" value="0.3030701754385965" />
-        <entry key="app/src/main/res/drawable/ic_doctor.xml" value="0.3030701754385965" />
-        <entry key="app/src/main/res/drawable/ic_drugs.xml" value="0.3030701754385965" />
-        <entry key="app/src/main/res/drawable/ic_facebook.xml" value="0.3030701754385965" />
-        <entry key="app/src/main/res/drawable/ic_google.xml" value="0.3359307359307359" />
-        <entry key="app/src/main/res/drawable/ic_home.xml" value="0.3030701754385965" />
         <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.29780701754385963" />
-        <entry key="app/src/main/res/drawable/ic_pharmacy.xml" value="0.3030701754385965" />
-        <entry key="app/src/main/res/drawable/ic_twitter.xml" value="0.3030701754385965" />
-        <entry key="app/src/main/res/drawable/ic_user.xml" value="0.3030701754385965" />
         <entry key="app/src/main/res/drawable/ic_user_edit_solid.xml" value="0.29078947368421054" />
         <entry key="app/src/main/res/drawable/nbm.xml" value="0.29078947368421054" />
-        <entry key="app/src/main/res/drawable/pink_orange_gradient.xml" value="0.3030701754385965" />
         <entry key="app/src/main/res/drawable/profile_card_gradient.xml" value="0.29078947368421054" />
-        <entry key="app/src/main/res/drawable/purple_blue_gradient.xml" value="0.3030701754385965" />
-        <entry key="app/src/main/res/drawable/red_orange_gradient.xml" value="0.3030701754385965" />
-        <entry key="app/src/main/res/drawable/selector.xml" value="0.3030701754385965" />
-        <entry key="app/src/main/res/drawable/white_card.xml" value="0.3030701754385965" />
         <entry key="app/src/main/res/layout-land/activity_patient_profile.xml" value="0.29188712522045857" />
         <entry key="app/src/main/res/layout/activity_channeling.xml" value="0.16052631578947368" />
         <entry key="app/src/main/res/layout/activity_channeling_confirmation.xml" value="0.16052631578947368" />
         <entry key="app/src/main/res/layout/activity_doctor_login.xml" value="0.29035087719298247" />
         <entry key="app/src/main/res/layout/activity_doctor_profile.xml" value="0.67" />
+        <entry key="app/src/main/res/drawable/purple_blue_gradient.xml" value="0.3030701754385965" />
+        <entry key="app/src/main/res/drawable/red_orange_gradient.xml" value="0.3030701754385965" />
+        <entry key="app/src/main/res/drawable/remove.xml" value="0.3030701754385965" />
+        <entry key="app/src/main/res/drawable/selector.xml" value="0.3030701754385965" />
+        <entry key="app/src/main/res/drawable/white_card.xml" value="0.3030701754385965" />
+        <entry key="app/src/main/res/layout-land/activity_patient_profile.xml" value="0.29188712522045857" />
+        <entry key="app/src/main/res/layout/activity_admin_add_new_product.xml" value="0.2894736842105263" />
+        <entry key="app/src/main/res/layout/activity_channeling.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_channeling_confirmation.xml" value="0.16052631578947368" />
+        <entry key="app/src/main/res/layout/activity_doctor_login.xml" value="0.29035087719298247" />
+        <entry key="app/src/main/res/layout/activity_doctor_profile.xml" value="0.67" />
         <entry key="app/src/main/res/layout/activity_homepage.xml" value="0.33826247689463956" />
-        <entry key="app/src/main/res/layout/activity_homepage.xml" value="0.2894736842105263" />
-        <entry key="app/src/main/res/layout/activity_homepage.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.34479166666666666" />
         <entry key="app/src/main/res/layout/activity_patient_login.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_patient_profile.xml" value="0.5" />
-        <entry key="app/src/main/res/layout/activity_patient_profile_pic_upload.xml" value="0.2894736842105263" />
-        <entry key="app/src/main/res/layout/activity_patient_sign_up.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_pharmcy_store.xml" value="0.37964458804523427" />
         <entry key="app/src/main/res/layout/activity_products.xml" value="0.1" />
         <entry key="app/src/main/res/layout/bottom_dialog_image_upload.xml" value="0.5" />
@@ -232,6 +187,9 @@
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.16228070175438597" />
         <entry key="app/src/main/res/layout/password_confirm.xml" value="0.2894736842105263" />
         <entry key="app/src/main/res/layout/product_listview.xml" value="0.2894736842105263" />
+        <entry key="app/src/main/res/layouts/appointment/layout/activity_appointment.xml" value="0.1793859649122807" />
+        <entry key="app/src/main/res/layouts/appointment/layout/activity_channeling.xml" value="0.1793859649122807" />
+        <entry key="app/src/main/res/layouts/appointment/layout/activity_view_doctor.xml" value="0.1793859649122807" />
         <entry key="app/src/main/res/layouts/doctor/drawable/doc_specialization.xml" value="0.3030701754385965" />
         <entry key="app/src/main/res/layouts/doctor/drawable/ic_baseline_circle_24.xml" value="0.3030701754385965" />
         <entry key="app/src/main/res/layouts/doctor/drawable/ic_icons8_twitter.xml" value="0.3030701754385965" />
@@ -259,6 +217,9 @@
         <entry key="app/src/main/res/layouts/patient/layout/activity_patient_sign_up.xml" value="0.33" />
         <entry key="app/src/main/res/layouts/patient/layout/activity_update_patient_profile.xml" value="0.2894736842105263" />
         <entry key="app/src/main/res/layouts/pharmacy/drawable/add.xml" value="0.2899122807017544" />
+        <entry key="app/src/main/res/layouts/pharmacy/layout-v28/activity_admin_pharmacy_item.xml" value="0.31666666666666665" />
+        <entry key="app/src/main/res/layouts/pharmacy/layout/activity_admin_pharmacy_item.xml" value="0.31666666666666665" />
+        <entry key="app/src/main/res/layouts/pharmacy/layout/activity_product_one_view.xml" value="0.75" />
         <entry key="app/src/main/res/menu/menu_navigation.xml" value="0.2894736842105263" />
         <entry key="app/src/main/res/menu/profile_menu.xml" value="0.2894736842105263" />
       </map>
@@ -269,12 +230,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.4" />
-      </ProjectState>
-    </option>
   </component>
 </project>

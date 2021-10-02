@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -12,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.aspirushealthcareandroidapp.MainActivity;
+import com.example.aspirushealthcareandroidapp.PharmacyManagement.AdminLogin;
 import com.example.aspirushealthcareandroidapp.R;
 import com.example.aspirushealthcareandroidapp.UserManagement.Patient.PatientLogin;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -26,7 +28,7 @@ public class DoctorLogin extends AppCompatActivity {
     TextView doc_loginsignup;
     TextView btn_patient_login;
     Button doc_btn_signin;
-    Button btn_admin_login;
+    ImageView btn_admin_login;
     FirebaseAuth firebaseAuth;
 
     @Override
