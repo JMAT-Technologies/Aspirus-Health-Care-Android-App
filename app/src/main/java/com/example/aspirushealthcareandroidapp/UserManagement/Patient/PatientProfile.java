@@ -2,6 +2,8 @@ package com.example.aspirushealthcareandroidapp.UserManagement.Patient;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,11 +13,15 @@ import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 
+import com.example.aspirushealthcareandroidapp.AppointmentManagement.Appointment;
+import com.example.aspirushealthcareandroidapp.AppointmentManagement.AppointmentModel;
 import com.example.aspirushealthcareandroidapp.AppointmentManagement.Channeling;
+import com.example.aspirushealthcareandroidapp.AppointmentManagement.ProfileAppointmentAdapter;
 import com.example.aspirushealthcareandroidapp.CartManagement.CartActivity;
 import com.example.aspirushealthcareandroidapp.Homepage;
 import com.example.aspirushealthcareandroidapp.PharmacyManagement.Pharmacy;
 import com.example.aspirushealthcareandroidapp.R;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -43,12 +49,18 @@ public class PatientProfile extends AppCompatActivity implements PopupMenu.OnMen
     FirebaseAuth firebaseAuth;
     DatabaseReference database;
 
+    //Appointment
+    RecyclerView recyclerView;
+    ProfileAppointmentAdapter profileAppointmentAdapter;
+
     @Override
     protected void onStart() {
         super.onStart();
         if(FirebaseAuth.getInstance().getCurrentUser() == null){
             startActivity(new Intent(getApplicationContext(), PatientLogin.class));
         }
+        //Appointment
+        profileAppointmentAdapter.startListening();
     }
 
     @Override
@@ -67,6 +79,10 @@ public class PatientProfile extends AppCompatActivity implements PopupMenu.OnMen
         tv_height        = findViewById(R.id.tv_height);
         tv_weight        = findViewById(R.id.tv_weight);
         tv_bmi           = findViewById(R.id.tv_bmi);
+
+        //Appointment
+        recyclerView = findViewById(R.id.appointmentRecyclerViewProfile);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         //navigation bar
         BottomNavigationView bottomNavigationView=findViewById(R.id.bottom_navigation);
@@ -177,6 +193,7 @@ public class PatientProfile extends AppCompatActivity implements PopupMenu.OnMen
                 popupMenu.show();
             }
         });
+        loadAppointments();
     }
 
     //profile menu
@@ -204,4 +221,24 @@ public class PatientProfile extends AppCompatActivity implements PopupMenu.OnMen
     private void updateSugarLevel(){}
     private void updateBmi(){}
 
+    //Appointment
+    private void loadAppointments(){
+        DatabaseReference AppointmentRef = FirebaseDatabase.getInstance().getReference().child("appointments");
+
+        FirebaseRecyclerOptions<AppointmentModel> options = new FirebaseRecyclerOptions.Builder<AppointmentModel>().setQuery(AppointmentRef.child(userID).orderByChild("date").limitToFirst(5), AppointmentModel.class).build();
+        profileAppointmentAdapter = new ProfileAppointmentAdapter(options);
+        recyclerView.setAdapter(profileAppointmentAdapter);
+    }
+
+    //Appointment
+    @Override
+    protected void onStop() {
+        super.onStop();
+        profileAppointmentAdapter.stopListening();
+    }
+
+    public void Appointment(View view) {
+        Intent intent = new Intent(this, Appointment.class);
+        startActivity(intent);
+    }
 }
