@@ -121,5 +121,10 @@
     <string name="et_doctorName_appointment">Doctor Name</string>
     <string name="speciality_name">Speciality</string>
     <string name="ChannelingHeading">Channeling</string>
+    <string name="appointmentHeading">Appointments</string>
+    <string name="channelingHeading">Channeling</string>
+    <string name="btnSort">sort</string>
+    <string name="appointmentprofile">Recent Appointments</string>
+    <string name="viewall">view all</string>
 
 </resources>
