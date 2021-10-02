@@ -156,6 +156,8 @@
         <entry key="app/src/main/res/layout/activity_channeling_confirmation.xml" value="0.16052631578947368" />
         <entry key="app/src/main/res/layout/activity_doctor_login.xml" value="0.29035087719298247" />
         <entry key="app/src/main/res/layout/activity_doctor_profile.xml" value="0.67" />
+        <entry key="app/src/main/res/layout/activity_homepage.xml" value="0.33826247689463956" />
+        <entry key="app/src/main/res/layout/activity_homepage.xml" value="0.2894736842105263" />
         <entry key="app/src/main/res/layout/activity_homepage.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.34479166666666666" />
         <entry key="app/src/main/res/layout/activity_patient_login.xml" value="0.33" />
@@ -196,6 +198,7 @@
         <entry key="app/src/main/res/layouts/patient/layout/activity_patient_profile_pic_upload.xml" value="0.2894736842105263" />
         <entry key="app/src/main/res/layouts/patient/layout/activity_patient_sign_up.xml" value="0.33" />
         <entry key="app/src/main/res/layouts/patient/layout/activity_update_patient_profile.xml" value="0.2894736842105263" />
+        <entry key="app/src/main/res/layouts/pharmacy/drawable/add.xml" value="0.2899122807017544" />
         <entry key="app/src/main/res/menu/menu_navigation.xml" value="0.2894736842105263" />
         <entry key="app/src/main/res/menu/profile_menu.xml" value="0.2894736842105263" />
       </map>

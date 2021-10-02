@@ -26,6 +26,7 @@ public class DoctorLogin extends AppCompatActivity {
     TextView doc_loginsignup;
     TextView btn_patient_login;
     Button doc_btn_signin;
+    Button btn_admin_login;
     FirebaseAuth firebaseAuth;
 
     @Override
@@ -41,11 +42,19 @@ public class DoctorLogin extends AppCompatActivity {
         doc_loginsignup       = findViewById(R.id.doc_loginsignup);
         btn_patient_login     = findViewById(R.id.doc_patientLogin);
         doc_btn_signin        = findViewById(R.id.doc_btn_signin);
+        btn_admin_login        = findViewById(R.id.btn_admin_login);
 
         //link to patient login screen
         btn_patient_login.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 startActivity(new Intent(getApplicationContext(), PatientLogin.class));
+            }
+        });
+
+        //link to admin login screen
+        btn_admin_login.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                startActivity(new Intent(getApplicationContext(), AdminLogin.class));
             }
         });
 
