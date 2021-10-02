@@ -29,7 +29,7 @@ android {
         main {
             res {
 
-                srcDirs 'src/main/res', 'src/main/res/layout/patient-layouts', 'src/main/res/layouts/patient', 'src/main/res/layouts/doctor', 'src\\main\\res', 'src\\main\\res\\layouts\\pharmacy', 'src\\main\\res\\layouts\\appointment', 'src\\main\\res\\layouts\\navigation', 'src/main/res/layouts/navigation/layout', 'src\\main\\res\\layouts\\cart'
+                srcDirs 'src/main/res', 'src/main/res/layout/patient-layouts', 'src/main/res/layouts/patient', 'src/main/res/layouts/doctor', 'src/main/res/layouts/pharmacy', 'src/main/res/layouts/appointment', 'src/main/res/layouts/navigation', 'src/main/res/layouts/navigation/layout', 'src/main/res/layouts/cart'
             }
         }
     }

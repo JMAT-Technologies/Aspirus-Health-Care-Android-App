@@ -71,17 +71,19 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/doctor_search" />
 
-            <pl.droidsonroids.gif.GifImageView
+
+            <ImageView
                 android:id="@+id/home_pharmacy_gif"
                 android:layout_width="match_parent"
                 android:layout_height="177dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
+                android:contentDescription="@string/pharmacy"
                 android:elevation="10dp"
                 android:foregroundGravity="center"
                 android:onClick="PharmacyGif"
-                android:src="@drawable/pharmacy_gif"
+                android:src="@drawable/pharmacy_home"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
