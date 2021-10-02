@@ -62,8 +62,8 @@ public class Appointment extends AppCompatActivity  {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.cartpage:
-//                        startActivity(new Intent(getApplicationContext() , CartActivity.class));
-//                        overridePendingTransition(0,0);
+                        startActivity(new Intent(getApplicationContext() , CartActivity.class));
+                        overridePendingTransition(0,0);
                         return true;
                     case R.id.profilepage:
                         startActivity(new Intent(getApplicationContext() , PatientProfile.class));
