@@ -19,6 +19,7 @@ import android.widget.EditText;
 import com.example.aspirushealthcareandroidapp.AppointmentManagement.Channeling;
 import com.example.aspirushealthcareandroidapp.AppointmentManagement.ViewDoctor;
 import com.example.aspirushealthcareandroidapp.PharmacyManagement.Pharmacy;
+import com.example.aspirushealthcareandroidapp.PharmacyManagement.ProductOneView;
 import com.example.aspirushealthcareandroidapp.UserManagement.Doctor.Doctor;
 import com.example.aspirushealthcareandroidapp.UserManagement.Doctor.DoctorViewHolder;
 import com.example.aspirushealthcareandroidapp.UserManagement.Patient.PatientLogin;
@@ -60,7 +61,7 @@ public class Homepage extends AppCompatActivity {
         LinearLayoutManager horizontalLayoutManagaer = new LinearLayoutManager(Homepage.this, LinearLayoutManager.HORIZONTAL, false);
         doctor_recycle_view.setLayoutManager(horizontalLayoutManagaer);
 
-        //this code is for vertical recycle view
+//        this code is for vertical recycle view
 //        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,3);
 //        doctor_recycle_view.setLayoutManager(gridLayoutManager);
 
@@ -155,6 +156,10 @@ public class Homepage extends AppCompatActivity {
         doctor_recycle_view.setAdapter(adapter);
     }
 
+
+    public void PharmacyGif(View view) {
+        startActivity(new Intent(getApplicationContext() , Pharmacy.class));
+    }
 }
 
 

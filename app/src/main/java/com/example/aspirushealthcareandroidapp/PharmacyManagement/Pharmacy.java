@@ -45,9 +45,11 @@ public class Pharmacy extends AppCompatActivity {
         inputSearch=findViewById(R.id.inputSeacrh);
         recyclerView=(RecyclerView) findViewById(R.id.recylerView);
 
-        //LinearLayoutManager horizontalLayoutManagaer = new LinearLayoutManager(Products.this, LinearLayoutManager.HORIZONTAL, false);
-        //recyclerView.setLayoutManager(horizontalLayoutManagaer);
+                    //this is slide show code
+        //LinearLayoutManager horizontalLayoutManagaer = new LinearLayoutManager(Pharmacy.this, LinearLayoutManager.HORIZONTAL, false);
+       // recyclerView.setLayoutManager(horizontalLayoutManagaer);
 
+                 //this is grid layoutcode
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this,2);
         recyclerView.setLayoutManager(gridLayoutManager);
 
@@ -91,10 +93,10 @@ public class Pharmacy extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext() , Channeling.class));
                         overridePendingTransition(0,0);
                         return true;
-                        case R.id.cartpage:
+                    case R.id.cartpage:
                         startActivity(new Intent(getApplicationContext() , CartActivity.class));
                         overridePendingTransition(0,0);
-                       return true;
+                        return true;
                     case R.id.profilepage:
                         startActivity(new Intent(getApplicationContext() , PatientProfile.class));
                         overridePendingTransition(0,0);
