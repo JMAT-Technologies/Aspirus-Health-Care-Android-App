@@ -13,7 +13,7 @@ import com.example.aspirushealthcareandroidapp.R;
 public class CartViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener
 {
     public TextView txtProductName, txtProductQuantity, txtProductPrice;
-    public ImageView product, minus, add;
+    public ImageView product;
     public View btnDelete;
     private ItemClickListner itemClickListner;
     public CheckBox checkProduct;
