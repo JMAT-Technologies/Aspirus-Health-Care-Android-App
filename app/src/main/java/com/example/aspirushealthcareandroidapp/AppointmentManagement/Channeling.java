@@ -25,12 +25,16 @@ import com.example.aspirushealthcareandroidapp.UserManagement.Patient.PatientPro
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.squareup.picasso.Picasso;
 
 public class Channeling extends AppCompatActivity{
+
+    String userID;
+    FirebaseAuth firebaseAuth;
 
     EditText inputSearch;
     RecyclerView recyclerView;
@@ -42,6 +46,9 @@ public class Channeling extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_channeling);
+
+        firebaseAuth = FirebaseAuth.getInstance();
+        userID = firebaseAuth.getCurrentUser().getUid();
 
         //Navigation
         BottomNavigationView bottomNavigationView=findViewById(R.id.bottom_navigation);
