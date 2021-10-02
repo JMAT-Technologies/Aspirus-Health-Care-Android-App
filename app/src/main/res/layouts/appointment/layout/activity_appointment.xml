@@ -30,7 +30,7 @@
         android:layout_marginEnd="120dp"
         android:layout_toEndOf="@+id/back"
         android:fontFamily="arial"
-        android:text="@string/appointmentHeading"
+        android:text="@string/appointments"
         android:textColor="@color/blue"
         android:textSize="28sp"
         android:textStyle="bold"
