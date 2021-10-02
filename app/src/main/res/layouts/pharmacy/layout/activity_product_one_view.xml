@@ -155,7 +155,7 @@
         android:layout_below="@+id/product_descriptionActivity"
         android:layout_marginStart="78dp"
         android:layout_marginTop="36dp"
-        android:text="@string/_0"
+        android:gravity="center"
         android:textAlignment="center"
         android:textColor="@color/blue"
         android:textSize="25sp" />
@@ -165,8 +165,8 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_below="@+id/product_descriptionActivity"
-        android:layout_marginStart="125dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="42dp"
         android:contentDescription="@string/pharmacy"
         android:src="@drawable/remove" />
 
@@ -175,8 +175,8 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_below="@+id/product_descriptionActivity"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="42dp"
         android:contentDescription="@string/pharmacy"
         android:src="@drawable/add" />
 

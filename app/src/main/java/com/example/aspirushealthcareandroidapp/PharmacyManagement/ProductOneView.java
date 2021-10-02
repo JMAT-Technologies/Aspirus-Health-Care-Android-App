@@ -75,6 +75,7 @@ public class ProductOneView extends AppCompatActivity {
         plus = findViewById(R.id.plus);
         minus = findViewById(R.id.minus);
         cartqty = findViewById(R.id.cartqty);
+        cartqty.setText(Integer.toString(mCounter));
 
         plus.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
