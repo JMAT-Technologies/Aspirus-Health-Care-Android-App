@@ -28,11 +28,12 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.util.HashMap;
+import java.util.UUID;
 
 public class AdminAddNewProductActivity extends AppCompatActivity
 {
     private TextInputLayout InputProductName,InputProductDescription,InputProductPrice;
-    private String Description,ProductName,Price,productRandomKey,saveCurrentDate,saveCurrentTime,downloadImageUrl;
+    private String Description,ProductName,Price,productRandomKey,downloadImageUrl;
     private Button AddNewProductButton;
     private ImageView InputProductImage;
     private static final int GalleryPick = 1;
@@ -140,8 +141,21 @@ public class AdminAddNewProductActivity extends AppCompatActivity
         loadingBar.setCanceledOnTouchOutside(false);
         loadingBar.show();
 
+        //Calendar calendar = Calendar.getInstance();
 
-        StorageReference filePath = ProductImagesRef.child(ProductName + ".jpg");
+       // SimpleDateFormat currentDate = new SimpleDateFormat("MMM dd, yyyy");
+       // saveCurrentDate = currentDate.format(calendar.getTime());
+
+       // SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm:ss a");
+       // saveCurrentTime = currentTime.format(calendar.getTime());
+
+       // productRandomKey = saveCurrentTime+saveCurrentDate;
+
+        //unique ID
+        productRandomKey = UUID.randomUUID().toString();
+
+
+        StorageReference filePath = ProductImagesRef.child(productRandomKey + ".jpg");
 
         final UploadTask uploadTask = filePath.putFile(ImageURI);
 
@@ -194,15 +208,13 @@ public class AdminAddNewProductActivity extends AppCompatActivity
     private void saveProductInfoToDatabase()
     {
         HashMap<String, Object> productMap = new HashMap<>();
-        productMap.put("pid",productRandomKey);
-        productMap.put("date",saveCurrentDate);
-        productMap.put("time",saveCurrentTime);
+        productMap.put("ItemKey",productRandomKey);
         productMap.put("description",Description);
         productMap.put("image",downloadImageUrl);
         productMap.put("price",Price);
         productMap.put("productName",ProductName);
 
-        ProductRef.child(ProductName).updateChildren(productMap)
+        ProductRef.child(productRandomKey).updateChildren(productMap)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task)
