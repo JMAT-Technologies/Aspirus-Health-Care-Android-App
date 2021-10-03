@@ -47,7 +47,9 @@ public class CartActivity extends AppCompatActivity {
     private Button btn_checkout;
     private Map<String, Double> itemKeys = new HashMap<>();
     String userID;
+    double allTotal;
     FirebaseAuth firebaseAuth;
+
     public static final String EXTRA_ITEM_MAP  = "com.example.aspirushealthcareandroidapp.CartManagement.ITEM_MAP";
 
     @Override
@@ -68,8 +70,6 @@ public class CartActivity extends AppCompatActivity {
         btn_checkout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.v("HashMapTest", String.valueOf(itemKeys.get("0c109b13-c473-4542-bd73-3ca66202f1bc")));
-                Log.v("HashMapTest2", String.valueOf(itemKeys.get("6c8b8129-c8c4-4d8d-9875-a2a674df3822")));
                 Intent Checkout = new Intent(CartActivity.this, orderConfirmation.class);
                 Checkout.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 Checkout.putExtra(EXTRA_ITEM_MAP, (Serializable) itemKeys);
@@ -145,7 +145,7 @@ public class CartActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view)
                     {
-                        cartListRef.child(userID).child(model.getProductName()).removeValue().addOnCompleteListener(new OnCompleteListener<Void>(){
+                        cartListRef.child(userID).child(model.getItemKey()).removeValue().addOnCompleteListener(new OnCompleteListener<Void>(){
                             @Override
                             public void onComplete(@NonNull Task<Void> task)
                             {
@@ -158,17 +158,21 @@ public class CartActivity extends AppCompatActivity {
                         });
                     }
                 });
-
+//              checkbox
                 holder.checkProduct.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         if (holder.checkProduct.isChecked()){
                             double totalPrice = model.getQuantity() * model.getPrice();
                             itemKeys.put(model.getItemKey(),totalPrice);
-                            Toast.makeText(CartActivity.this, String.valueOf(totalPrice), Toast.LENGTH_SHORT).show();
+                            allTotal = allTotal+totalPrice;
+                            btn_checkout.setText("Checkout("+String.valueOf(allTotal)+"0)");
                         }else if (!holder.checkProduct.isChecked()){
                             itemKeys.remove(model.getItemKey());
-                            Toast.makeText(CartActivity.this, "fuck", Toast.LENGTH_SHORT).show();
+                            double totalPrice = model.getQuantity() * model.getPrice();
+                            itemKeys.put(model.getItemKey(),totalPrice);
+                            allTotal = allTotal-totalPrice;
+                            btn_checkout.setText("Checkout("+String.valueOf(allTotal)+"0)");
                         }
                     }
                 });
