@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.aspirushealthcareandroidapp.CartManagement.CartActivity;
+import com.example.aspirushealthcareandroidapp.CartManagement.orderConfirmation;
 import com.example.aspirushealthcareandroidapp.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -43,6 +44,10 @@ public class ProductOneView extends AppCompatActivity {
     ImageView plus,minus;
     private int mCounter = 1 ;
 
+    public static final String EXTRA_ITEM_ID  = "com.example.aspirushealthcareandroidapp.PharmacyManagement.ITEM_ID";
+    public static final String EXTRA_ITEM_QTY  = "com.example.aspirushealthcareandroidapp.PharmacyManagement.QUANTITY";
+
+
     @SuppressLint("CutPasteId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,34 +56,22 @@ public class ProductOneView extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
         userID = firebaseAuth.getCurrentUser().getUid();
-
+        ItemKey = getIntent().getStringExtra("ItemKey");
         imageView=findViewById(R.id.image_single_viewActivity);
         productName = findViewById(R.id.product_nameActivity);
         price = findViewById(R.id.product_amount);
         description = findViewById(R.id.product_descriptionActivity);
+        addToCartBtn=findViewById(R.id.addtocartbtn);
+        buybtn=findViewById(R.id.btn_buy);
 
-        //Add To Cart
-        ItemKey = getIntent().getStringExtra("ItemKey");
-        addToCartBtn=findViewById(R.id.addtocartbtn); // cart
-        cartproductname=findViewById(R.id.product_nameActivity);
-        cartprice=findViewById(R.id.product_priceActivity);
-        cartimage=findViewById(R.id.image_single_viewActivity);
-
-        ///buy button
-        ItemKey = getIntent().getStringExtra("ItemKey");
-        buybtn=findViewById(R.id.btn_buy); // cart
-        buycartproductname=findViewById(R.id.product_nameActivity);
-        buyprice=findViewById(R.id.product_priceActivity);
-        buyimage=findViewById(R.id.image_single_viewActivity);
-
-                   //calculate product quantity
+        //calculate product quantity
         plus = findViewById(R.id.plus);
         minus = findViewById(R.id.minus);
         cartqty = findViewById(R.id.cartqty);
         cartqty.setText(Integer.toString(mCounter));
 
         plus.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
+
             @Override
             public void onClick(View view) {
                 if(mCounter < 10) {
@@ -89,7 +82,7 @@ public class ProductOneView extends AppCompatActivity {
         });
 
         minus.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
+
             @Override
             public void onClick(View view) {
                 if(mCounter > 1) {
@@ -105,14 +98,6 @@ public class ProductOneView extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 addingToCartList();
-            }
-        });
-
-        //buy
-        buybtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                addToBuy();
             }
         });
 
@@ -146,35 +131,18 @@ public class ProductOneView extends AppCompatActivity {
             }
         });
 
+        //buy
+        buybtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent buyIntent = new Intent(getApplicationContext(),orderConfirmation.class);
+                buyIntent.putExtra(EXTRA_ITEM_ID,ItemKey);
+                buyIntent.putExtra(EXTRA_ITEM_QTY,String.valueOf(mCounter));
+                startActivity(buyIntent);
+            }
+        });
     }
 
-    //buy addToBuy method
-    private void addToBuy() {
-
-        final DatabaseReference CartListRef = FirebaseDatabase.getInstance().getReference().child("Buy");
-
-        final HashMap<String, Object> cartMap = new HashMap<>();
-        cartMap.put("ItemKey", ItemKey);
-        cartMap.put("quantity",mCounter);
-        //cartMap.put("image",imageView);
-
-        CartListRef.child(userID)
-                .child(ItemKey)
-                .updateChildren(cartMap)
-                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull @NotNull Task<Void> task)
-                    {
-                        if(task.isSuccessful())
-                        {
-                            Toast.makeText(ProductOneView.this,"Ready to Buy", Toast.LENGTH_SHORT).show();
-
-                            Intent intent = new Intent(ProductOneView.this, CartActivity.class);
-                            startActivity(intent);
-                        }
-                    }
-                });
-    }
     // Add To Cart
     private void addingToCartList() {
 

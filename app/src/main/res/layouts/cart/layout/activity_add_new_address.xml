@@ -9,7 +9,7 @@
     tools:layout_editor_absoluteY="0dp">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/save"
         android:layout_width="337dp"
         android:layout_height="48dp"
         android:layout_marginBottom="16dp"
