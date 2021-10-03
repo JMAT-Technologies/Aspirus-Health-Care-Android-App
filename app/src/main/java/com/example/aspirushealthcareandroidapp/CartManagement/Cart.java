@@ -2,37 +2,16 @@ package com.example.aspirushealthcareandroidapp.CartManagement;
 
 public class Cart {
 
-    private String ItemKey, productName, image;
-    private double price;
+    private String productName, ItemKey, Image;
     private int quantity;
+    private double Price;
 
     public Cart() {
     }
 
-    public Cart(String itemKey, String productName, Double price, int quantity, String image) {
+    public Cart(String itemKey, int quantity) {
         ItemKey = itemKey;
-        this.productName = productName;
-        this.price = price;
         this.quantity = quantity;
-        this.image = image;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-    public String getItemKey() {
-
-        return ItemKey;
-    }
-
-    public void setItemKey(String itemKey) {
-
-        ItemKey = itemKey;
     }
 
     public String getProductName() {
@@ -43,16 +22,20 @@ public class Cart {
         this.productName = productName;
     }
 
-    public Cart(String productName) {
-        this.productName = productName;
+    public String getItemKey() {
+        return ItemKey;
     }
 
-    public Double getPrice() {
-        return price;
+    public void setItemKey(String itemKey) {
+        ItemKey = itemKey;
     }
 
-    public void setPrice(Double price) {
-        this.price = price;
+    public String getImage() {
+        return Image;
+    }
+
+    public void setImage(String image) {
+        Image = image;
     }
 
     public int getQuantity() {
@@ -63,4 +46,11 @@ public class Cart {
         this.quantity = quantity;
     }
 
+    public double getPrice() {
+        return Price;
+    }
+
+    public void setPrice(double price) {
+        Price = price;
+    }
 }
