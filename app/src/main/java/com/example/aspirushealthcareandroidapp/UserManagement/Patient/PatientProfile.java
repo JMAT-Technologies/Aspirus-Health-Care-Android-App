@@ -241,4 +241,9 @@ public class PatientProfile extends AppCompatActivity implements PopupMenu.OnMen
         Intent intent = new Intent(this, Appointment.class);
         startActivity(intent);
     }
+
+    public void VideoCall(View view) {
+        Intent intent = new Intent(this,VideoCall.class);
+        startActivity(intent);
+    }
 }
