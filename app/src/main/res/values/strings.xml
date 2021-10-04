@@ -155,5 +155,10 @@
     <string name="add_new_product">Add New Product</string>
     <string name="add_product">Add Product</string>
     <string name="buy_now">Buy Now</string>
+    <string name="patientprofile">Patient Profile</string>
+    <string name="video_message">Please share this code with your patient to start channeling video call.</string>
+    <string name="hint_secretcode">Secret Code</string>
+    <string name="video_join">Join</string>
+    <string name="video_share">Share</string>
 
 </resources>
