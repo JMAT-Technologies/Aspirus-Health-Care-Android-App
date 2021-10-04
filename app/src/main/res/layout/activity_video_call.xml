@@ -65,7 +65,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ImageContrastCheck" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -102,7 +103,7 @@
                     android:layout_margin="10dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_blue_gradient"
-                    android:drawableLeft="@drawable/add"
+                    android:drawableLeft="@drawable/addvideo"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     app:backgroundTint="@null"
