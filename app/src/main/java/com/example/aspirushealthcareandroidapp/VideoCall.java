@@ -2,6 +2,8 @@ package com.example.aspirushealthcareandroidapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -41,14 +43,38 @@ public class VideoCall extends AppCompatActivity {
         } catch (MalformedURLException e){
             e.printStackTrace();
         }
-        joinBtn.setOnClickListener(new View.OnClickListener() {
+
+        secretCodeBox.addTextChangedListener(new TextWatcher() {
+
             @Override
-            public void onClick(View view) {
-                JitsiMeetConferenceOptions options = new JitsiMeetConferenceOptions.Builder()
-                        .setRoom(secretCodeBox.getText().toString())
-                        .setWelcomePageEnabled(false)
-                        .build();
-                JitsiMeetActivity.launch(VideoCall.this,options);
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                if(s.toString().trim().length()==0){
+                    joinBtn.setEnabled(false);
+                } else {
+                    joinBtn.setEnabled(true);
+                    joinBtn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            JitsiMeetConferenceOptions options = new JitsiMeetConferenceOptions.Builder()
+                                    .setRoom(secretCodeBox.getText().toString())
+                                    .setWelcomePageEnabled(false)
+                                    .build();
+                            JitsiMeetActivity.launch(VideoCall.this,options);
+
+                        }
+                    });
+                }
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
 
             }
         });
