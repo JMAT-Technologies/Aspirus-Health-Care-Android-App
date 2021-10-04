@@ -46,7 +46,6 @@ public class ProfileAppointmentAdapter extends FirebaseRecyclerAdapter<Appointme
     class myViewHolder extends RecyclerView.ViewHolder{
 
         TextView doctorName,date,time;
-        Button btnEdit;
 
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
