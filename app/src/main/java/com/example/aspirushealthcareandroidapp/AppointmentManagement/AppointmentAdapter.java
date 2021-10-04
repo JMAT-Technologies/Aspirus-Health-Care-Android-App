@@ -18,6 +18,7 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.core.Context;
 import com.orhanobut.dialogplus.DialogPlus;
@@ -27,6 +28,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AppointmentAdapter extends FirebaseRecyclerAdapter<AppointmentModel, AppointmentAdapter.myViewHolder> {
+
+    String userID;
+    FirebaseAuth firebaseAuth;
 
     /**
      * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
@@ -46,6 +50,9 @@ public class AppointmentAdapter extends FirebaseRecyclerAdapter<AppointmentModel
         holder.doctorName.setText(model.getDoctorName());
         holder.date.setText(model.getDate());
         holder.time.setText(model.getTime());
+
+        firebaseAuth = FirebaseAuth.getInstance();
+        userID = firebaseAuth.getCurrentUser().getUid();
 
         //Edit Appointment
         holder.btnEdit.setOnClickListener(new View.OnClickListener() {
@@ -74,8 +81,7 @@ public class AppointmentAdapter extends FirebaseRecyclerAdapter<AppointmentModel
                         map.put("time",time.getText().toString());
                         map.put("date",date.getText().toString());
 
-                        FirebaseDatabase.getInstance().getReference().child("Appointments")
-                            .child(getRef(position).getKey()).updateChildren(map)
+                        FirebaseDatabase.getInstance().getReference().child("appointments").child(userID).child(getRef(position).getKey()).updateChildren(map)
                             .addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void unused) {
@@ -105,10 +111,8 @@ public class AppointmentAdapter extends FirebaseRecyclerAdapter<AppointmentModel
                 buildDialog.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        FirebaseDatabase.getInstance().getReference().child("Appointments")
-                                .child(getRef(position).getKey()).removeValue();
+                        FirebaseDatabase.getInstance().getReference().child("appointments").child(userID).child(getRef(position).getKey()).removeValue();
                         Toast.makeText(holder.doctorName.getContext(), "Appointment Cancelled", Toast.LENGTH_SHORT).show();
-
                     }
                 });
                 buildDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
