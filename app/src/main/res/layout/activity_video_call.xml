@@ -59,9 +59,9 @@
             <pl.droidsonroids.gif.GifImageView
                 android:id="@+id/logogif"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="match_parent"
                 android:foregroundGravity="center"
-                android:src="@drawable/splashscreen"
+                android:src="@drawable/videocallgif"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
