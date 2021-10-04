@@ -3,7 +3,100 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:visibility="visible">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/profile_card_width"
+        android:layout_height="130dp"
+        android:layout_marginTop="24dp"
+        android:elevation="100dp"
+        android:visibility="visible"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/address">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="10dp"
+            android:visibility="visible">
+
+
+            <ImageView
+                android:id="@+id/oder_product"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:contentDescription="@string/product_name"
+                android:src="@drawable/select_product_image"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/order_product_name"
+                android:layout_width="187dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/product_name"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintStart_toEndOf="@+id/oder_product"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/order_product_price"
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/order_product_name"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/product_price"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintStart_toEndOf="@+id/oder_product"
+                app:layout_constraintTop_toBottomOf="@+id/order_product_name" />
+
+            <TextView
+                android:id="@+id/order_qty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@+id/oder_product"
+                android:text="@string/quantity"
+                app:layout_constraintStart_toEndOf="@+id/oder_product"
+                app:layout_constraintTop_toBottomOf="@+id/order_product_price" />
+
+            <TextView
+                android:id="@+id/order_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/order_product_price"
+                android:layout_marginStart="7dp"
+                android:layout_toEndOf="@+id/order_qty"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/order_qty"
+                app:layout_constraintStart_toEndOf="@+id/order_qty" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/creditCard"
@@ -55,24 +148,13 @@
         android:id="@+id/tv_heading_channeling"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="arial"
         android:text="@string/order_confirmation"
         android:textColor="@color/blue"
         android:textSize="28sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/back"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/back"
-        android:layout_width="35dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:contentDescription="@string/order_confirmation"
-        android:src="@drawable/back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -173,6 +255,7 @@
             android:layout_height="38dp"
             android:layout_marginEnd="16dp"
             android:background="@drawable/btn_cart"
+            android:onClick="HomePage"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
             android:text="@string/btn_Checkout"
@@ -205,7 +288,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="28dp"
             android:layout_marginTop="24dp"
-            android:text="@string/total_price"
+            android:text="@string/_0"
             android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@+id/textView3"
             app:layout_constraintTop_toTopOf="parent" />
@@ -231,16 +314,5 @@
             android:layout_height="58dp"
             tools:ignore="TouchTargetSizeCheck" />
     </RadioGroup>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/confirmation_list"
-        android:layout_width="392dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/creditCard"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/address" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
