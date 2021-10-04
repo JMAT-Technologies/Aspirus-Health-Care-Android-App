@@ -21,6 +21,7 @@ import com.example.aspirushealthcareandroidapp.CartManagement.CartActivity;
 import com.example.aspirushealthcareandroidapp.Homepage;
 import com.example.aspirushealthcareandroidapp.PharmacyManagement.Pharmacy;
 import com.example.aspirushealthcareandroidapp.R;
+import com.example.aspirushealthcareandroidapp.VideoCall;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -239,6 +240,11 @@ public class PatientProfile extends AppCompatActivity implements PopupMenu.OnMen
 
     public void Appointment(View view) {
         Intent intent = new Intent(this, Appointment.class);
+        startActivity(intent);
+    }
+
+    public void VideoCall(View view) {
+        Intent intent = new Intent(this, VideoCall.class);
         startActivity(intent);
     }
 }

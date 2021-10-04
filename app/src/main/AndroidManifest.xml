@@ -17,12 +17,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AspirusHealthCareAndroidApp">
         <activity
-            android:name=".PharmacyManagement.AdminLogin"
+            android:name=".VideoCall"
             android:exported="true"/>
-
+        <activity
+            android:name=".PharmacyManagement.AdminLogin"
+            android:exported="true" />
         <activity
             android:name=".CartManagement.CartActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".CartManagement.PaymentMethods"
             android:exported="true" />
@@ -43,13 +45,13 @@
             android:exported="true" />
         <activity
             android:name=".PharmacyManagement.AdminPharmacy"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".PharmacyManagement.AdminAddNewProductActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".PharmacyManagement.Pharmacy"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".UserManagement.Patient.UpdatePatientProfile"
             android:exported="true" />
@@ -67,7 +69,7 @@
             android:exported="true" />
         <activity
             android:name=".PharmacyManagement.ProductOneView"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".AppointmentManagement.Channeling"
             android:exported="true" />
@@ -88,7 +90,7 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
