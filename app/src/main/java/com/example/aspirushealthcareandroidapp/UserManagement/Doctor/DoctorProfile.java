@@ -58,7 +58,7 @@ public class DoctorProfile extends AppCompatActivity implements PopupMenu.OnMenu
                     String username = snapshot.child("username").getValue().toString();
                     String email = snapshot.child("email").getValue().toString();
                     String age = snapshot.child("age").getValue().toString();
-                    String specialization = snapshot.child("specialization").getValue().toString();
+                    String specialization = snapshot.child("speciality").getValue().toString();
 //                    String image = snapshot.child("image").getValue().toString();
 
                     //setting the values to views

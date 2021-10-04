@@ -103,7 +103,7 @@ public class DoctorSignUp2 extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()){
                     Toast.makeText(DoctorSignUp2.this, "Registration Successful", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(getApplicationContext(), Homepage.class));
+                    startActivity(new Intent(getApplicationContext(), DoctorProfile.class));
                     finish();
                 } else {
                     Toast.makeText(DoctorSignUp2.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
