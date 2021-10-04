@@ -38,29 +38,15 @@
             app:riv_corner_radius="11dp" />
 
         <TextView
-            android:id="@+id/appointment_dr"
-            android:layout_width="20dp"
-            android:layout_height="15dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="118dp"
-            android:layout_marginLeft="6dp"
-            android:layout_marginTop="10dp"
-            android:text="Dr."
-            android:textColor="@color/black"
-            android:textSize="12sp" />
-
-        <TextView
             android:id="@+id/appointment_doc_name"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="2dp"
+            android:layout_marginStart="80dp"
             android:layout_marginLeft="6dp"
             android:layout_marginTop="10dp"
-            android:layout_toEndOf="@+id/appointment_dr"
-            android:textColor="@color/black"
             android:text="Doctor Name"
+            android:textColor="@color/black"
             android:textSize="12sp" />
 
         <TextView
@@ -83,11 +69,20 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/appointment_doc_name"
             android:layout_alignParentStart="true"
-            android:layout_marginStart="118dp"
+            android:layout_marginStart="80dp"
             android:layout_marginTop="7dp"
             android:text="Date"
             android:textColor="@color/black"
             android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="290dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/video"
+            android:onClick="VideoCall"
+            />
 
     </RelativeLayout>
 

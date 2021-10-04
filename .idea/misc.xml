@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layouts/appointment/layout/activity_appointment_list_profile.xml" value="0.5" />
+        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layouts/appointment/layout/appointment_list_item.xml" value="0.5" />
+        <entry key="..\:/02. SLIIT/2Y2S/Mobile Application Development - IT2010 (2021JUL)/FinalProject/Aspirus-Health-Care-Android-App/app/src/main/res/layouts/appointment/layout/doctor_list_item.xml" value="0.21125541125541125" />
         <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
         <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.23378378378378378" />
         <entry key="..\:/Try/Android studio/AspirusHealthCare/app/src/main/res/drawable/ic_logo_background.xml" value="0.14635416666666667" />
