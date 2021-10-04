@@ -37,7 +37,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/back" />
 
-    android:id="@+id/product_name"
 
     <ImageView
         android:id="@+id/select_product_image"
