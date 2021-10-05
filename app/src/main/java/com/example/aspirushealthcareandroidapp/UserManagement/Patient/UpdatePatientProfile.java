@@ -57,7 +57,6 @@ public class UpdatePatientProfile extends AppCompatActivity {
 
     ImageView profilePic;
     Uri ImageURI = Uri.EMPTY;
-    String downloadImageUrl = null;
     TextInputLayout et_username;
     TextInputLayout et_phone;
     TextInputLayout et_bloodGroup;
@@ -225,52 +224,6 @@ public class UpdatePatientProfile extends AppCompatActivity {
         }
     }
 
-    private void saveData(){
-
-        StorageReference ProfilePicRef = FirebaseStorage.getInstance().getReference().child("Patient Profile Pictures");
-        StorageReference filePath = ProfilePicRef.child(userID + ".jpg");
-
-        final UploadTask uploadTask = filePath.putFile(ImageURI);
-
-        uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-            @Override
-            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot)
-            {
-                Task<Uri> urlTask = uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
-                    @Override
-                    public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception
-                    {
-                        if(!task.isSuccessful())
-                        {
-                            throw task.getException();
-                        }
-
-                        downloadImageUrl = filePath.getDownloadUrl().toString();
-                        return filePath.getDownloadUrl();
-                    }
-                }).addOnCompleteListener(new OnCompleteListener<Uri>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Uri> task)
-                    {
-                        if (task.isSuccessful())
-                        {
-                            downloadImageUrl = task.getResult().toString();
-                        } else {
-                            Toast.makeText(UpdatePatientProfile.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e)
-            {
-                Toast.makeText(UpdatePatientProfile.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-        });
-
-    }
-
     public void updateProfile(){
         String username = et_username.getEditText().getText().toString();
         String phone = et_phone.getEditText().getText().toString();
@@ -280,8 +233,6 @@ public class UpdatePatientProfile extends AppCompatActivity {
         String height = et_height.getEditText().getText().toString();
         String weight = et_weight.getEditText().getText().toString();
 
-        saveData();
-
         if(UserValidations.usernameNull(et_username)){
             return;
         }
@@ -290,19 +241,19 @@ public class UpdatePatientProfile extends AppCompatActivity {
             return;
         }
 
-        if(!UserValidations.weightValidation(et_weight)){
-            return;
-        }
-
-        if(!UserValidations.heightValidation(et_height)){
-            return;
-        }
-
         if(!UserValidations.bloodGroupValidation(et_bloodGroup)){
             return;
         }
 
         if(!UserValidations.bloodPressureValidation(et_bloodPressure)){
+            return;
+        }
+
+        if(!UserValidations.weightValidation(et_weight)){
+            return;
+        }
+
+        if(!UserValidations.heightValidation(et_height)){
             return;
         }
 
@@ -322,9 +273,6 @@ public class UpdatePatientProfile extends AppCompatActivity {
         updatedPatient.put("height",height);
         updatedPatient.put("weight",weight);
         updatedPatient.put("bmi",bmi);
-        if(downloadImageUrl != null){
-            updatedPatient.put("image",downloadImageUrl);
-        }
 
         database.child(userID).updateChildren(updatedPatient).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override

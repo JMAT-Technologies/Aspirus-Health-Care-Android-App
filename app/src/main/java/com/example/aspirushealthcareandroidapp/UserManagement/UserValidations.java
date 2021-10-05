@@ -163,7 +163,7 @@ public class UserValidations {
         double dWeight = Double.parseDouble(weight);
         double result;
 
-        result = dWeight / (dHeight * dWeight);
+        result = dWeight / (dHeight * dHeight);
         return Math.round(result*100.0)/100.0;
     }
 
@@ -175,10 +175,14 @@ public class UserValidations {
         if(bloodGroup.isEmpty()){
             et_bloodGroup.setError("Required");
             return false;
-        } else {
+        } else if(bloodGroup.equals("A+") || bloodGroup.equals("A-") || bloodGroup.equals("AB+") || bloodGroup.equals("B+") || bloodGroup.equals("B-") || bloodGroup.equals("AB-") || bloodGroup.equals("O+") || bloodGroup.equals("O-")){
             et_bloodGroup.setError(null);
             et_bloodGroup.setErrorEnabled(false);
             return true;
+        }
+        else {
+            et_bloodGroup.setError("Enter a Blood Group");
+            return false;
         }
     }
 
@@ -187,7 +191,7 @@ public class UserValidations {
 
         String bloodPressure = et_bloodPressure.getEditText().getText().toString();
 
-        if(bloodPressure.isEmpty()){
+        if(bloodPressure.isEmpty() || bloodPressure.equals("null")){
             et_bloodPressure.setError("Required");
             return false;
         } else {
