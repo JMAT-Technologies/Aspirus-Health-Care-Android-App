@@ -24,8 +24,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.aspirushealthcareandroidapp.Homepage;
 import com.example.aspirushealthcareandroidapp.R;
 import com.example.aspirushealthcareandroidapp.UserManagement.UserValidations;
+import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -42,6 +44,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
@@ -238,19 +241,19 @@ public class UpdatePatientProfile extends AppCompatActivity {
             return;
         }
 
-        if(!UserValidations.weightValidation(et_weight)){
-            return;
-        }
-
-        if(!UserValidations.heightValidation(et_height)){
-            return;
-        }
-
         if(!UserValidations.bloodGroupValidation(et_bloodGroup)){
             return;
         }
 
         if(!UserValidations.bloodPressureValidation(et_bloodPressure)){
+            return;
+        }
+
+        if(!UserValidations.weightValidation(et_weight)){
+            return;
+        }
+
+        if(!UserValidations.heightValidation(et_height)){
             return;
         }
 
